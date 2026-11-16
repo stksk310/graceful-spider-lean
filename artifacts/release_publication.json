@@ -9,6 +9,9 @@
   "tag_target_verified": true,
   "all_four_assets_match_verified_manifest": true,
   "zenodo_repository_enabled_confirmation": "User screenshot with project switch ON",
-  "zenodo_status": "Checking public record",
-  "zenodo_version_doi": null
+  "zenodo_status": "Published and archive verified",
+  "zenodo_version_doi": "10.5281/zenodo.24270171",
+  "zenodo_concept_doi": "10.5281/zenodo.24270170",
+  "zenodo_record_url": "https://zenodo.org/records/24270171",
+  "zenodo_archive_verification": "artifacts/zenodo_archive_verification.json"
 }

@@ -21,8 +21,9 @@ record the release metadata.
 5. Record the actual version DOI and concept DOI, and add the version DOI
    to CITATION.cff and README. No DOI is invented or prefilled.
 
-The first DOI is not yet recorded in this release preparation. Both metadata
-formats are supplied; Zenodo gives `.zenodo.json` precedence over CITATION.cff.
+The published v1.0.0 version DOI is <https://doi.org/10.5281/zenodo.24270171>;
+the all-versions concept DOI is <https://doi.org/10.5281/zenodo.24270170>.
+Both metadata formats are supplied; Zenodo gives `.zenodo.json` precedence over CITATION.cff.
 The software record's primary license is Apache-2.0, while the manuscript's
 CC BY 4.0 terms are stated in its description and LICENSING.md.
 

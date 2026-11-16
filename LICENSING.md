@@ -24,4 +24,4 @@ The canonical legal code is <https://creativecommons.org/licenses/by/4.0/>.
 
 Suggested manuscript attribution: Keisuke Sato, *ARIADNE: A∞ and graceful
 labelings of all six- and seven-arm spiders*, version 1.0.0, 2026. Cite the
-version DOI once the archive is published; the first DOI has not yet been minted.
+version DOI <https://doi.org/10.5281/zenodo.24270171> for the archived v1.0.0 software and accompanying manuscript.

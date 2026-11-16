@@ -8,6 +8,8 @@ authors:
     affiliation: "Independent researcher, Japan"
     orcid: "https://orcid.org/0009-0005-4230-0268"
 version: 1.0.0
+doi: "10.5281/zenodo.24270171"
+date-released: "2026-11-16"
 repository-code: "https://github.com/stksk310/graceful-spider-lean"
 license: Apache-2.0
 keywords:

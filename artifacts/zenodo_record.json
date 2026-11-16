@@ -1,0 +1,72 @@
+{
+  "record_id": 24270171,
+  "version_doi": "10.5281/zenodo.24270171",
+  "concept_doi": "10.5281/zenodo.24270170",
+  "record_url": "https://zenodo.org/records/24270171",
+  "metadata": {
+    "title": "ARIADNE: Lean 4 Formalization of A∞ and Graceful Labelings for All Six- and Seven-Arm Spiders",
+    "doi": "10.5281/zenodo.24270171",
+    "publication_date": "2026-11-16",
+    "description": "<p>ARIADNE provides Lean 4 proofs of the A∞ three-arm alpha-labeling theorem and of graceful-labeling existence for every spider with six positive arm lengths and every spider with seven positive arm lengths.</p><p>The formalization uses indexed spiders with exact vertex-label and absolute edge-difference bijections, endpoint paths, shell/core fusion, explicit unbounded offset cores, and complete integer case coverage. Finite witnesses and finite numeric partitions are checked by Lean's kernel. The main theorems depend only on propext, Classical.choice, and Quot.sound; unproved CR3 and O-MIN statements are not assumptions.</p><p>The audited proof snapshot passed a 951-job build with Lean 4.24.0 and mathlib revision f897ebcf72cd16f89ab4577d0c826cd14afaafc7. The release includes the Japanese 20-page proof book, frozen source certificates, reproducibility scripts, and audit/review reports. Finite data are expanded to simplify kernel obligations; the release does not claim to retain the original certificate compression inside Lean.</p><p>Software and certificate data are licensed under Apache-2.0. Manuscripts and prose documentation are separately licensed under CC BY 4.0; see LICENSING.md. Eight-arm spiders remain future work.</p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Sato, Keisuke",
+        "affiliation": "Independent researcher, Japan",
+        "orcid": "0009-0005-4230-0268"
+      }
+    ],
+    "keywords": [
+      "graceful labeling",
+      "spider trees",
+      "Lean 4",
+      "formal verification",
+      "graph theory",
+      "proof assistants"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "https://github.com/stksk310/graceful-spider-lean",
+        "relation": "isSupplementTo",
+        "resource_type": "software",
+        "scheme": "url"
+      }
+    ],
+    "version": "1.0.0",
+    "language": "eng",
+    "custom": {
+      "code:codeRepository": "https://github.com/stksk310/graceful-spider-lean"
+    },
+    "resource_type": {
+      "title": "Software",
+      "type": "software"
+    },
+    "license": {
+      "id": "apache2.0"
+    },
+    "relations": {
+      "version": [
+        {
+          "index": 0,
+          "is_last": true,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "24270170"
+          }
+        }
+      ]
+    }
+  },
+  "files": [
+    {
+      "id": "82efcc46-f3c9-4dc2-9ee4-b5b5d86126a3",
+      "key": "stksk310/graceful-spider-lean-v1.0.0.zip",
+      "size": 1633377,
+      "checksum": "md5:c590e613cbc9631ed16dd048cb7c2416",
+      "links": {
+        "self": "https://zenodo.org/api/records/24270171/files/stksk310/graceful-spider-lean-v1.0.0.zip/content"
+      }
+    }
+  ],
+  "verification_source": "Zenodo public API, retrieved from the GitHub release-verification workflow after resolving the user-provided DOI."
+}

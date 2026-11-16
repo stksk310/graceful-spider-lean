@@ -77,8 +77,11 @@ Keisuke Sato is the sole author. AI assistance was used during research,
 certificate construction, and Lean proof development. The recorded verification
 checks the proof terms with Lean's kernel; it does not assume AI correctness.
 
-Use [`CITATION.cff`](CITATION.cff) for citation metadata. The first Zenodo DOI
-will be recorded after archival publication; no DOI has been assigned yet.
+Use [`CITATION.cff`](CITATION.cff) for citation metadata.
+Version 1.0.0 DOI: [10.5281/zenodo.24270171](https://doi.org/10.5281/zenodo.24270171).
+All-versions DOI: [10.5281/zenodo.24270170](https://doi.org/10.5281/zenodo.24270170).
+The [GitHub Release](https://github.com/stksk310/graceful-spider-lean/releases/tag/v1.0.0)
+contains the source ZIP, manuscript PDF, licensing notice, and checksums.
 
 Software and certificate data are **Apache-2.0**. Manuscripts and prose
 documentation are **CC BY 4.0**. See [LICENSING.md](LICENSING.md),

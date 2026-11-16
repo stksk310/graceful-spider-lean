@@ -1,0 +1,14 @@
+{
+  "record_id": 24270171,
+  "doi": "10.5281/zenodo.24270171",
+  "conceptdoi": "10.5281/zenodo.24270170",
+  "sha256": "fb338068e975c84e6259cebdd9d4a39c96e8aa181938155194c30c61f6d6e7b4",
+  "proof_files": 127,
+  "frozen_source_files": 54,
+  "status": "PASS",
+  "record_url": "https://zenodo.org/records/24270171",
+  "workflow_run": "https://github.com/stksk310/graceful-spider-lean/actions/runs/43808541599",
+  "validation": "Anonymous download; Zenodo MD5 and ZIP CRC checked; all 127 audited Lean SHA-256 hashes and all 54 frozen source bytes match.",
+  "github_release_url": "https://github.com/stksk310/graceful-spider-lean/releases/tag/v1.0.0",
+  "release_commit": "65aea7183a2d3ae1d9decab5387fead44ae16de4"
+}

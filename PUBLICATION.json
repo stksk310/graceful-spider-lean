@@ -8,9 +8,11 @@
   "source_ref": "lean-complete-v1.0.0",
   "source_commit": "569553a6daf64a82bd8171fed2f3c3329f7ea00c",
   "source_file_count": 243,
-  "unchanged_source_file_count": 242,
+  "unchanged_source_file_count": 240,
   "modified_source_paths": [
-    "README.md"
+    ".gitignore",
+    "README.md",
+    "lakefile.toml"
   ],
   "original_readme_preserved_at": "docs/ORIGINAL_README_JA.md",
   "lean_proof_files_unchanged": true,
@@ -41,8 +43,8 @@
     "software_license": "Apache-2.0",
     "manuscript_license": "CC-BY-4.0",
     "github_release_created": true,
-    "zenodo_doi": null,
-    "note": "Verified GitHub Release is public; checking the Zenodo archival record and DOI.",
+    "zenodo_doi": "10.5281/zenodo.24270171",
+    "note": "GitHub v1.0.0 and the corresponding public Zenodo version record are verified. CITATION.cff cites the fixed version DOI.",
     "requested_state": "published",
     "github_release_draft": false,
     "github_release_id": 446610493,
@@ -52,6 +54,12 @@
     "zenodo_enable_confirmation": "User-provided screenshot shows stksk310/graceful-spider-lean switched ON.",
     "github_release_url": "https://github.com/stksk310/graceful-spider-lean/releases/tag/v1.0.0",
     "github_release_published_at": "2026-11-16T04:54:03Z",
-    "zenodo_reported_doi": "10.5281/zenodo.24270170"
+    "zenodo_reported_doi": "10.5281/zenodo.24270170",
+    "zenodo_concept_doi": "10.5281/zenodo.24270170",
+    "zenodo_record_id": 24270171,
+    "zenodo_record_url": "https://zenodo.org/records/24270171",
+    "zenodo_metadata_verified": true,
+    "zenodo_archive_verified": true,
+    "zenodo_archive_sha256": "fb338068e975c84e6259cebdd9d4a39c96e8aa181938155194c30c61f6d6e7b4"
   }
 }

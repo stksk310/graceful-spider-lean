@@ -11,7 +11,9 @@ ORCID: [0009-0005-4230-0268](https://orcid.org/0009-0005-4230-0268)。
 コード・証書データは **Apache-2.0**、原稿・文章は **CC BY 4.0**。
 適用範囲は [LICENSING.md](LICENSING.md)、引用情報は [CITATION.cff](CITATION.cff)、
 英文概要は [README.en.md](README.en.md) を参照してください。
-Zenodoの初回DOIはアーカイブ公開後に追記します。
+公開版 **v1.0.0**：[GitHub Release](https://github.com/stksk310/graceful-spider-lean/releases/tag/v1.0.0)。
+この版を固定して引用するDOI：[10.5281/zenodo.24270171](https://doi.org/10.5281/zenodo.24270171)。
+全バージョン共通DOI：[10.5281/zenodo.24270170](https://doi.org/10.5281/zenodo.24270170)。
 
 AIを研究・証書構成・Lean証明開発の補助に用いました。
 数学的結論はLeanカーネルによる検証に基づきます。
