@@ -17,6 +17,7 @@ concurrency:
 jobs:
   release:
     runs-on: ubuntu-24.04
+    timeout-minutes: 10
     steps:
       - name: Check out the requested snapshot
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
@@ -88,3 +89,32 @@ jobs:
               echo "Release is already published; leaving its tag and assets unchanged."
             fi
           fi
+
+      - name: Check the public Zenodo archive
+        if: env.RELEASE_STATE == 'published'
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, os, time
+          from urllib.parse import urlencode
+          from urllib.request import Request, urlopen
+          repo = 'https://github.com/' + os.environ['GITHUB_REPOSITORY']
+          query = urlencode({'q': '"ARIADNE"', 'sort': 'mostrecent', 'size': 100})
+          url = 'https://zenodo.org/api/records/?' + query
+          for attempt in range(6):
+              request = Request(url, headers={'Accept': 'application/json', 'User-Agent': 'ARIADNE-release-archive-verification/1.0'})
+              with urlopen(request, timeout=30) as response:
+                  data = json.load(response)
+              hits = data.get('hits', {}).get('hits', [])
+              matches = [r for r in hits if repo in json.dumps(r)]
+              if matches:
+                  for r in matches:
+                      result = {k: r.get(k) for k in ('id', 'doi', 'conceptdoi', 'metadata', 'links', 'files')}
+                      print('ZENODO_RECORD=' + json.dumps(result, ensure_ascii=False))
+                  break
+              print('Zenodo archive not yet visible; attempt', attempt + 1)
+              if attempt < 5:
+                  time.sleep(20)
+          else:
+              print('ZENODO_STATUS=PENDING; no DOI has been inferred.')
+          PY
