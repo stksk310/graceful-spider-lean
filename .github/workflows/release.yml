@@ -100,7 +100,7 @@ jobs:
           from urllib.request import Request, urlopen
           from urllib.error import HTTPError
           repo = 'https://github.com/' + os.environ['GITHUB_REPOSITORY']
-          query = urlencode({'q': '"ARIADNE"', 'sort': 'mostrecent', 'size': 100})
+          query = urlencode({'q': '"ARIADNE"', 'sort': 'mostrecent', 'size': 25})
           url = 'https://zenodo.org/api/records/?' + query
           for attempt in range(6):
               request = Request(url, headers={'Accept': 'application/json', 'User-Agent': 'ARIADNE-release-archive-verification/1.0'})
