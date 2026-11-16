@@ -42,13 +42,15 @@
     "manuscript_license": "CC-BY-4.0",
     "github_release_created": true,
     "zenodo_doi": null,
-    "note": "Zenodo integration confirmed by the user; publish the verified draft and await DOI assignment.",
+    "note": "Verified GitHub Release is public; checking the Zenodo archival record and DOI.",
     "requested_state": "published",
-    "github_release_draft": true,
+    "github_release_draft": false,
     "github_release_id": 446610493,
     "github_release_target_commit": "65aea7183a2d3ae1d9decab5387fead44ae16de4",
     "verified_assets_manifest": "artifacts/release_draft_verification.json",
     "zenodo_repository_enabled": true,
-    "zenodo_enable_confirmation": "User-provided screenshot shows stksk310/graceful-spider-lean switched ON."
+    "zenodo_enable_confirmation": "User-provided screenshot shows stksk310/graceful-spider-lean switched ON.",
+    "github_release_url": "https://github.com/stksk310/graceful-spider-lean/releases/tag/v1.0.0",
+    "github_release_published_at": "2026-11-16T04:54:03Z"
   }
 }

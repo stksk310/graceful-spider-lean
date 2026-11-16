@@ -1,0 +1,14 @@
+{
+  "github_release_id": 446610493,
+  "github_release_url": "https://github.com/stksk310/graceful-spider-lean/releases/tag/v1.0.0",
+  "tag": "v1.0.0",
+  "target_commit": "65aea7183a2d3ae1d9decab5387fead44ae16de4",
+  "published_at": "2026-11-16T04:54:03Z",
+  "draft": false,
+  "published_workflow_run": "https://github.com/stksk310/graceful-spider-lean/actions/runs/43806819844",
+  "tag_target_verified": true,
+  "all_four_assets_match_verified_manifest": true,
+  "zenodo_repository_enabled_confirmation": "User screenshot with project switch ON",
+  "zenodo_status": "Checking public record",
+  "zenodo_version_doi": null
+}
