@@ -3,6 +3,19 @@
 任意の正整数の腕長を持つ6腕・7腕スパイダーの graceful labeling の存在定理を形式化した Lean 4 プロジェクトです。
 証明に必要な A∞（3腕の α-labeling）の形式化、有限証書、原資料と検証記録を含みます。
 
+## 著者・ライセンス・引用
+
+**Keisuke Sato**（単独著者）、Independent researcher, Japan。
+ORCID: [0009-0005-4230-0268](https://orcid.org/0009-0005-4230-0268)。
+
+コード・証書データは **Apache-2.0**、原稿・文章は **CC BY 4.0**。
+適用範囲は [LICENSING.md](LICENSING.md)、引用情報は [CITATION.cff](CITATION.cff)、
+英文概要は [README.en.md](README.en.md) を参照してください。
+Zenodoの初回DOIはアーカイブ公開後に追記します。
+
+AIを研究・証書構成・Lean証明開発の補助に用いました。
+数学的結論はLeanカーネルによる検証に基づきます。
+
 ## 主定理
 
 ```lean

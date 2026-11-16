@@ -1,0 +1,15 @@
+ARIADNE
+Copyright 2026 Keisuke Sato
+
+Author: Keisuke Sato
+Affiliation: Independent researcher, Japan
+ORCID: https://orcid.org/0009-0005-4230-0268
+
+Software and certificate data are licensed under the Apache License, Version 2.0.
+Manuscripts and prose documentation are licensed under CC BY 4.0.
+See LICENSE, LICENSES/CC-BY-4.0.txt, and LICENSING.md for scope and terms.
+
+Lean 4, mathlib, and their transitive dependencies are external software with
+their own copyright notices and licenses. Their ownership and licensing are
+not changed by this notice. Dependency sources and toolchain binaries are
+not included in this source release.

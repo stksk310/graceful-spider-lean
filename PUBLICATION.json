@@ -31,5 +31,17 @@
     "symlink_check": "PASS",
     "lean_rebuild_performed": false,
     "lean_rebuild_limitation": "Lean/lake are not installed in the publication workspace. Existing build and axiom logs are preserved historical evidence."
+  },
+  "release_preparation": {
+    "version": "1.0.0",
+    "tag": "v1.0.0",
+    "author": "Keisuke Sato",
+    "affiliation": "Independent researcher, Japan",
+    "orcid": "0009-0005-4230-0268",
+    "software_license": "Apache-2.0",
+    "manuscript_license": "CC-BY-4.0",
+    "github_release_created": false,
+    "zenodo_doi": null,
+    "note": "Enable the repository in Zenodo before publishing the first GitHub Release."
   }
 }
