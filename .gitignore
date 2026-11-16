@@ -15,3 +15,6 @@ Thumbs.db
 *.olean
 *.ilean
 __pycache__/
+
+# Packaged release assets
+/dist/

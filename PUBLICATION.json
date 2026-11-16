@@ -42,6 +42,7 @@
     "manuscript_license": "CC-BY-4.0",
     "github_release_created": false,
     "zenodo_doi": null,
-    "note": "Enable the repository in Zenodo before publishing the first GitHub Release."
+    "note": "Enable the repository in Zenodo before publishing the first GitHub Release.",
+    "requested_state": "draft"
   }
 }

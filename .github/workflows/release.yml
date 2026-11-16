@@ -1,0 +1,84 @@
+name: Prepare or publish ARIADNE release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - PUBLICATION.json
+      - .github/workflows/release.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ariadne-release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out the requested snapshot
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+
+      - name: Check metadata and audited proof hashes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib, json, os, re, tomllib
+          from pathlib import Path
+          metadata = json.loads(Path('.zenodo.json').read_text())
+          config = json.loads(Path('PUBLICATION.json').read_text())['release_preparation']
+          version = metadata['version']
+          assert re.fullmatch(r'[0-9]+\.[0-9]+\.[0-9]+', version)
+          assert version == config['version'] == tomllib.loads(Path('lakefile.toml').read_text())['version']
+          assert config['requested_state'] in ('draft', 'published')
+          assert metadata['creators'] == [{'name': 'Sato, Keisuke', 'affiliation': 'Independent researcher, Japan', 'orcid': '0009-0005-4230-0268'}]
+          assert metadata['license'] == 'apache-2.0'
+          audit = json.loads(Path('artifacts/audit.json').read_text())
+          assert audit['status'] == 'PASS'
+          for name, digest in audit['source_sha256'].items():
+              assert hashlib.sha256(Path(name).read_bytes()).hexdigest() == digest, name
+          with open(os.environ['GITHUB_ENV'], 'a') as output:
+              output.write(f'VERSION={version}\nRELEASE_TAG=v{version}\nRELEASE_STATE={config["requested_state"]}\n')
+          print('Metadata and all audited Lean source hashes match; this is not a new Lean build.')
+          PY
+          python3 -B scripts/audit_checkpoint.py --axiom-log artifacts/axioms.log --output "$RUNNER_TEMP/release-inventory.json"
+
+      - name: Package the source and manuscript
+        if: env.RELEASE_STATE == 'draft'
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          git archive --format=zip --prefix="graceful-spider-lean-${VERSION}/" \
+            --output="dist/graceful-spider-lean-${VERSION}.zip" HEAD
+          cp SOURCES/integrated_v2/PROOF_BOOK_JA.pdf "dist/ARIADNE_Proof_Book_JA_${VERSION}.pdf"
+          cp LICENSES/CC-BY-4.0.txt dist/LICENSE-manuscript-CC-BY-4.0.txt
+          (cd dist && sha256sum ./*.zip ./*.pdf ./*.txt > SHA256SUMS)
+
+      - name: Create draft or publish the existing draft
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "$RELEASE_STATE" = draft ]; then
+            if gh release view "$RELEASE_TAG" --json isDraft > "$RUNNER_TEMP/existing-release.json" 2>/dev/null; then
+              echo "Release already exists; leaving its tag, assets, and state unchanged."
+            else
+              gh release create "$RELEASE_TAG" --target "$GITHUB_SHA" \
+                --title "ARIADNE ${RELEASE_TAG}" --draft --notes-file RELEASE_NOTES.md dist/*
+            fi
+          else
+            gh release view "$RELEASE_TAG" --json isDraft > "$RUNNER_TEMP/existing-release.json"
+            if python3 -c 'import json,sys; sys.exit(not json.load(open(sys.argv[1]))["isDraft"])' "$RUNNER_TEMP/existing-release.json"; then
+              gh release edit "$RELEASE_TAG" --draft=false
+            else
+              echo "Release is already published; leaving its tag and assets unchanged."
+            fi
+          fi
