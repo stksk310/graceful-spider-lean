@@ -95,7 +95,7 @@ jobs:
         shell: bash
         run: |
           python3 - <<'PY'
-          import json, os, re
+          import hashlib, io, json, os, re, zipfile
           from pathlib import Path
           from urllib.parse import urlparse
           from urllib.request import Request, urlopen
@@ -115,6 +115,33 @@ jobs:
                   record = json.load(response)
               result = {k: record.get(k) for k in ('id', 'doi', 'conceptdoi', 'metadata', 'links', 'files')}
               print('ZENODO_RECORD=' + json.dumps(result, ensure_ascii=False))
+              metadata = record['metadata']
+              assert metadata['version'].lstrip('v') == os.environ['VERSION']
+              assert metadata['creators'] == [{'name': 'Sato, Keisuke', 'affiliation': 'Independent researcher, Japan', 'orcid': '0009-0005-4230-0268'}]
+              assert metadata['license']['id'].lower() in ('apache2.0', 'apache-2.0')
+              assert reported in (record['doi'], record['conceptdoi'])
+              assert 'https://github.com/' + os.environ['GITHUB_REPOSITORY'] in json.dumps(metadata)
+              archives = [f for f in record['files'] if f['key'].endswith('.zip')]
+              assert len(archives) == 1
+              archive = archives[0]
+              assert archive['size'] < 20 * 1024 * 1024
+              with urlopen(Request(archive['links']['self'], headers=headers), timeout=60) as response:
+                  payload = response.read(20 * 1024 * 1024 + 1)
+              assert len(payload) == archive['size']
+              assert 'md5:' + hashlib.md5(payload, usedforsecurity=False).hexdigest() == archive['checksum']
+              audit = json.loads(Path('artifacts/audit.json').read_text())
+              with zipfile.ZipFile(io.BytesIO(payload)) as bundle:
+                  assert bundle.testzip() is None
+                  assert len(bundle.namelist()) == len(set(bundle.namelist()))
+                  roots = [n[:-len('Ariadne.lean')] for n in bundle.namelist() if n.endswith('/Ariadne.lean')]
+                  assert len(roots) == 1
+                  prefix = roots[0]
+                  for name, digest in audit['source_sha256'].items():
+                      assert hashlib.sha256(bundle.read(prefix + name)).hexdigest() == digest, name
+                  sources = [p for p in Path('SOURCES/integrated_v2').rglob('*') if p.is_file()]
+                  for path in sources:
+                      assert bundle.read(prefix + path.as_posix()) == path.read_bytes(), str(path)
+              print('ZENODO_ARCHIVE_VERIFIED=' + json.dumps({'record_id': record['id'], 'doi': record['doi'], 'conceptdoi': record['conceptdoi'], 'sha256': hashlib.sha256(payload).hexdigest(), 'proof_files': len(audit['source_sha256']), 'frozen_source_files': len(sources)}))
           else:
               print('ZENODO_STATUS=PENDING; awaiting the record DOI, not inferring one from search.')
           PY
