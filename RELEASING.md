@@ -39,6 +39,8 @@ or the workflow itself. It checks metadata and the saved audited source hashes;
 it does not claim to run a new Lean build. A `requested_state` of `draft` creates
 a draft with a source ZIP, proof-book PDF, CC BY license notice, and SHA256SUMS.
 After Zenodo is enabled, changing the requested state to `published` publishes
-that existing draft without moving its tag or replacing its assets. Existing
+that existing draft without moving its tag or replacing its assets. Before
+publication, the workflow verifies the pinned release ID, target commit, notes,
+asset inventory/digests, and any existing tag against the recorded manifest. Existing
 published releases are left unchanged. The workflow's repository token is used
 only by GitHub's release commands, with `contents: write` permission.

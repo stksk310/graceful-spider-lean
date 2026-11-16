@@ -1,0 +1,20 @@
+test_duplicate_difference_with_distinct_vertices (test_certificate_producer.ProducerRejections.test_duplicate_difference_with_distinct_vertices) ... ok
+test_duplicate_vertex (test_certificate_producer.ProducerRejections.test_duplicate_vertex) ... ok
+test_nonzero_hub_is_not_silently_replaced (test_certificate_producer.ProducerRejections.test_nonzero_hub_is_not_silently_replaced) ... ok
+test_out_of_range_vertex (test_certificate_producer.ProducerRejections.test_out_of_range_vertex) ... ok
+test_renderer_does_not_claim_alpha (test_certificate_producer.ProducerRejections.test_renderer_does_not_claim_alpha) ... ok
+test_wrong_shape (test_certificate_producer.ProducerRejections.test_wrong_shape) ... ok
+test_accepts_matching_existing_tag (test_release_draft.ReleaseDraftGate.test_accepts_matching_existing_tag) ... ok
+test_accepts_the_verified_draft (test_release_draft.ReleaseDraftGate.test_accepts_the_verified_draft) ... ok
+test_rejects_changed_commit (test_release_draft.ReleaseDraftGate.test_rejects_changed_commit) ... ok
+test_rejects_changed_notes (test_release_draft.ReleaseDraftGate.test_rejects_changed_notes) ... ok
+test_rejects_duplicate_asset (test_release_draft.ReleaseDraftGate.test_rejects_duplicate_asset) ... ok
+test_rejects_missing_asset (test_release_draft.ReleaseDraftGate.test_rejects_missing_asset) ... ok
+test_rejects_moved_tag (test_release_draft.ReleaseDraftGate.test_rejects_moved_tag) ... ok
+test_rejects_replaced_archive (test_release_draft.ReleaseDraftGate.test_rejects_replaced_archive) ... ok
+test_rejects_replaced_release (test_release_draft.ReleaseDraftGate.test_rejects_replaced_release) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.374s
+
+OK

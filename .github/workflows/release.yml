@@ -50,6 +50,8 @@ jobs:
 
       - name: Package the source and manuscript
         if: env.RELEASE_STATE == 'draft'
+        env:
+          TZ: UTC
         shell: bash
         run: |
           set -euo pipefail
@@ -75,9 +77,13 @@ jobs:
                 --title "ARIADNE ${RELEASE_TAG}" --draft --notes-file RELEASE_NOTES.md dist/*
             fi
           else
-            gh release view "$RELEASE_TAG" --json isDraft > "$RUNNER_TEMP/existing-release.json"
-            if python3 -c 'import json,sys; sys.exit(not json.load(open(sys.argv[1]))["isDraft"])' "$RUNNER_TEMP/existing-release.json"; then
-              gh release edit "$RELEASE_TAG" --draft=false
+            expected_id=$(python3 -c 'import json; print(json.load(open("artifacts/release_draft_verification.json"))["release_id"])')
+            gh api "repos/${GH_REPO}/releases/${expected_id}" > "$RUNNER_TEMP/existing-release.json"
+            if python3 -c 'import json,sys; sys.exit(not json.load(open(sys.argv[1]))["draft"])' "$RUNNER_TEMP/existing-release.json"; then
+              gh api "repos/${GH_REPO}/git/matching-refs/tags/${RELEASE_TAG}" > "$RUNNER_TEMP/release-tag-refs.json"
+              python3 -B scripts/check_release_draft.py artifacts/release_draft_verification.json \
+                "$RUNNER_TEMP/existing-release.json" --tag-refs "$RUNNER_TEMP/release-tag-refs.json"
+              gh api --method PATCH "repos/${GH_REPO}/releases/${expected_id}" -F draft=false --silent
             else
               echo "Release is already published; leaving its tag and assets unchanged."
             fi

@@ -40,9 +40,13 @@
     "orcid": "0009-0005-4230-0268",
     "software_license": "Apache-2.0",
     "manuscript_license": "CC-BY-4.0",
-    "github_release_created": false,
+    "github_release_created": true,
     "zenodo_doi": null,
     "note": "Enable the repository in Zenodo before publishing the first GitHub Release.",
-    "requested_state": "draft"
+    "requested_state": "draft",
+    "github_release_draft": true,
+    "github_release_id": 446610493,
+    "github_release_target_commit": "65aea7183a2d3ae1d9decab5387fead44ae16de4",
+    "verified_assets_manifest": "artifacts/release_draft_verification.json"
   }
 }

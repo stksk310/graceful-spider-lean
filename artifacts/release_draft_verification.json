@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "release_id": 446610493,
+  "tag_name": "v1.0.0",
+  "target_commit": "65aea7183a2d3ae1d9decab5387fead44ae16de4",
+  "body": "# ARIADNE v1.0.0\n\nThis release provides complete Lean 4 formalizations of A∞ and graceful\nlabeling existence for all positive six-arm and seven-arm spiders.\n\nAuthor: **Keisuke Sato**, Independent researcher, Japan.\nORCID: <https://orcid.org/0009-0005-4230-0268>.\n\n## Main theorems\n\n- `Ariadne.AInfinity.ainf`: for `1 ≤ a ≤ b ≤ c` and `7 ≤ c`, a three-arm\n  spider has a hub-zero alpha labeling at its canonical kappa cutoff.\n- `Ariadne.Six.six_graceful`: every `l : Fin 6 → ℕ` satisfying `Positive l`\n  admits a graceful labeling.\n- `Ariadne.Seven.seven_graceful`: the corresponding result for `Fin 7`.\n\nThe six- and seven-arm statements allow arbitrary input order and preserve\ndistinct equal-length arms. Vertex labels and actual absolute edge differences\nare proved to be bijections onto their required intervals.\n\n## Validation\n\nThe audited proof snapshot passed a 951-job project build. The main theorem\naxiom lists contain only `propext`, `Classical.choice`, and `Quot.sound`.\nThere are no proof holes, custom unproved axioms, `native_decide`, or unsafe\nproof mechanisms. Unproved CR3 or O-MIN statements are not premises.\n\nThe kernel checks 2,544 finite A∞ targets, 111 integrated source role records,\n164 materialized finite offset cores, and numeric partitions covering all\n924 sorted six-arm inputs through 7 and all 3,432 sorted seven-arm inputs\nthrough 8. Infinite coverage is supplied by actual construction and case proofs.\n\nThe Japanese 20-page proof book is included at\n`SOURCES/integrated_v2/PROOF_BOOK_JA.pdf`. Its frozen snapshot predates the\nLean implementation; the root README and audit describe the final formalization.\n\nReproduce with Lean 4.24.0, the pinned mathlib revision, and\n`bash scripts/check.sh`. The source archive omits toolchain/build caches;\nan initial dependency download and substantial first-build resources are needed.\n\n## Licensing and scope\n\nSoftware/certificate data: Apache-2.0. Manuscripts/prose: CC BY 4.0.\nSee `LICENSING.md`. Eight-arm spiders remain future work.\n",
+  "assets": [
+    {
+      "name": "ARIADNE_Proof_Book_JA_1.0.0.pdf",
+      "size": 282715,
+      "digest": "sha256:84ba6ef31525211b2999fc24c8610317ff1f7b1a0a80793ec1a3417adf357164"
+    },
+    {
+      "name": "graceful-spider-lean-1.0.0.zip",
+      "size": 1627019,
+      "digest": "sha256:afdab3c4daaabb92ac57c541913c726fbb0ef101081d8d2aecc8f12299c9a141"
+    },
+    {
+      "name": "LICENSE-manuscript-CC-BY-4.0.txt",
+      "size": 17023,
+      "digest": "sha256:d557539df68e771cc1eedcc91d13f70fca930e508d11eedcafa4b15db49e3744"
+    },
+    {
+      "name": "SHA256SUMS",
+      "size": 300,
+      "digest": "sha256:9a4debc9e320a8421b9a3c63f7bd4c6b5bcb3a845560446bb8b23a7e9c5272c6"
+    }
+  ],
+  "draft": true,
+  "release_url": "https://github.com/stksk310/graceful-spider-lean/releases/tag/untagged-9dfec3efb4a92b0024b1",
+  "workflow_run": "https://github.com/stksk310/graceful-spider-lean/actions/runs/43804983251",
+  "asset_verification": "All four GitHub asset digests match local regeneration with TZ=UTC; every source ZIP entry matches its target commit.",
+  "zenodo_doi": null
+}
