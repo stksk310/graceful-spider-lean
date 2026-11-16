@@ -1,7 +1,9 @@
 {
   "prepared_on": "2026-11-16",
   "intended_repository": "stksk310/graceful-spider-lean",
-  "github_repository_created": false,
+  "github_repository_created": true,
+  "repository_url": "https://github.com/stksk310/graceful-spider-lean",
+  "repository_visibility": "public",
   "source_repository": "stksk310/graceful-spider",
   "source_ref": "lean-complete-v1.0.0",
   "source_commit": "569553a6daf64a82bd8171fed2f3c3329f7ea00c",
