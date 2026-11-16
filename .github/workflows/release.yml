@@ -95,32 +95,26 @@ jobs:
         shell: bash
         run: |
           python3 - <<'PY'
-          import json, os, time
-          from urllib.parse import urlencode
+          import json, os, re
+          from pathlib import Path
+          from urllib.parse import urlparse
           from urllib.request import Request, urlopen
-          from urllib.error import HTTPError
-          repo = 'https://github.com/' + os.environ['GITHUB_REPOSITORY']
-          query = urlencode({'q': '"ARIADNE" OR "graceful-spider-lean"', 'sort': 'mostrecent', 'size': 25})
-          url = 'https://zenodo.org/api/records/?' + query
-          for attempt in range(3):
-              request = Request(url, headers={'Accept': 'application/json', 'User-Agent': 'ARIADNE-release-archive-verification/1.0'})
-              try:
-                  with urlopen(request, timeout=30) as response:
-                      data = json.load(response)
-              except HTTPError as error:
-                  print('ZENODO_HTTP_ERROR', error.code, error.url, error.read(4000).decode(errors='replace'))
-                  raise
-              hits = data.get('hits', {}).get('hits', [])
-              print('ZENODO_HITS', data.get('hits', {}).get('total'), 'on page', len(hits))
-              matches = [r for r in hits if repo in json.dumps(r) or '0009-0005-4230-0268' in json.dumps(r)]
-              if matches:
-                  for r in matches:
-                      result = {k: r.get(k) for k in ('id', 'doi', 'conceptdoi', 'metadata', 'links', 'files')}
-                      print('ZENODO_RECORD=' + json.dumps(result, ensure_ascii=False))
-                  break
-              print('Zenodo archive not yet visible; attempt', attempt + 1)
-              if attempt < 2:
-                  time.sleep(20)
+          config = json.loads(Path('PUBLICATION.json').read_text())['release_preparation']
+          reported = config.get('zenodo_reported_doi')
+          if reported:
+              assert re.fullmatch(r'10\.5281/zenodo\.[0-9]+', reported)
+              headers = {'User-Agent': 'ARIADNE-release-archive-verification/1.0'}
+              with urlopen(Request('https://doi.org/' + reported, headers=headers), timeout=30) as response:
+                  resolved = response.url
+              parsed = urlparse(resolved)
+              assert parsed.hostname in ('zenodo.org', 'www.zenodo.org'), resolved
+              match = re.search(r'/records?/([0-9]+)', parsed.path)
+              assert match, resolved
+              print('ZENODO_RESOLVED_URL=' + resolved)
+              with urlopen(Request('https://zenodo.org/api/records/' + match[1], headers=headers), timeout=30) as response:
+                  record = json.load(response)
+              result = {k: record.get(k) for k in ('id', 'doi', 'conceptdoi', 'metadata', 'links', 'files')}
+              print('ZENODO_RECORD=' + json.dumps(result, ensure_ascii=False))
           else:
-              print('ZENODO_STATUS=PENDING; no DOI has been inferred.')
+              print('ZENODO_STATUS=PENDING; awaiting the record DOI, not inferring one from search.')
           PY

@@ -51,6 +51,7 @@
     "zenodo_repository_enabled": true,
     "zenodo_enable_confirmation": "User-provided screenshot shows stksk310/graceful-spider-lean switched ON.",
     "github_release_url": "https://github.com/stksk310/graceful-spider-lean/releases/tag/v1.0.0",
-    "github_release_published_at": "2026-11-16T04:54:03Z"
+    "github_release_published_at": "2026-11-16T04:54:03Z",
+    "zenodo_reported_doi": "10.5281/zenodo.24270170"
   }
 }
