@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "xelatex_exit": 0,
+  "layout_issues": [],
+  "paper": "A4",
+  "pages": 20,
+  "visual_review_pages": [
+    4,
+    7,
+    16
+  ]
+}

@@ -1,0 +1,359 @@
+{
+  "status": "PASS",
+  "result": "COMPRESSED_CERTIFIED_CLOSED",
+  "novelty": "HOLD",
+  "scope": "All integers 1<=a<=b<=c with c>=7; hub exactly zero; alpha labeling",
+  "python": "3.12.14",
+  "verification": {
+    "manifest": {
+      "status": "PASS",
+      "hashed_files": 188
+    },
+    "independent_37": {
+      "status": "PASS",
+      "source": "certificate_core.json",
+      "sha256": "88e4a298bb41e5e84b8321e16fa0328acf18db73bef2018aaf7315a1631db0ac",
+      "logical_sha256": "582d1ff3fba58d3a0480c716c7663bd960ab716b089a8dfffab56f94c5020dfa",
+      "input_schema": "ARIADNE_R02_ANALYTIC_COMPACT_V1",
+      "literal_witnesses": 37,
+      "finite_literal_profiles": 19,
+      "finite_recipes": 306,
+      "path_initial_table_size": 0,
+      "infinite_label_witnesses_required": 0,
+      "analytic_bounds": {
+        "EE": {
+          "0": 24,
+          "2": 22,
+          "4+4q": 20,
+          "6+4q": 14
+        },
+        "OO": {
+          "0": 23,
+          "2": 21,
+          "4+4q": 19,
+          "6+4q": 13
+        },
+        "EO": {
+          "1": 19,
+          "3+4q": 23,
+          "5+4q": 17
+        },
+        "OE": {
+          "1": 24,
+          "3+4q": 22,
+          "5+4q": 20
+        }
+      },
+      "finite_box_size": 2544,
+      "finite_box_routes": {
+        "one_short_arm": 279,
+        "parity_router": 1940,
+        "finite_recipe": 306,
+        "finite_literal": 19
+      },
+      "analytic_box_residual": 325,
+      "checks": {
+        "ee_local_router_identities_verified": 6,
+        "additional_local_router_identities_verified": 4,
+        "parity_front_period_states_verified": 10,
+        "validated_spiders": 11104,
+        "validated_endpoint_paths": 5739,
+        "all_integer_router_families_audited": 14,
+        "formula_sources_reconstructed": 271,
+        "trade3_steps_verified": 532,
+        "finite_recipes_reconstructed": 306,
+        "global_boundary_examples_reconstructed": 1279
+      },
+      "all_integer_basis": "Definition-level local connector identities, two parity states of all five front recurrences, all fourteen symbolic failure bounds, general endpoint induction, and the complete a=1 formula.",
+      "limits": "The c>=25 and a=1 domains are certificate-free. The remaining finite-box recipes still depend on the retained explicit label witnesses; numerical examples are not used in place of the all-integer proofs."
+    },
+    "actual_outputs_37": {
+      "status": "PASS",
+      "certificate_sha256": "88e4a298bb41e5e84b8321e16fa0328acf18db73bef2018aaf7315a1631db0ac",
+      "finite_outputs_checked": 2544,
+      "finite_routes": {
+        "one_short_arm": 279,
+        "parity_router": 1940,
+        "recipe": 306,
+        "finite": 19
+      },
+      "fixed_boundary_and_large_outputs": 23,
+      "input_permutation_outputs": 3,
+      "maximum_arm_checked": 100003,
+      "checks": [
+        "hub exactly zero",
+        "all labels 0..n once",
+        "all edge differences 1..n once",
+        "common alpha cutoff",
+        "exact requested three path lengths"
+      ],
+      "meaning": "Actual-output verification, not extrapolation to infinitely many inputs."
+    },
+    "negative_37": {
+      "status": "PASS",
+      "rejections": 11,
+      "cases": [
+        {
+          "mutation": "repeated vertex label",
+          "result": "REJECTED"
+        },
+        {
+          "mutation": "zero repeated away from hub",
+          "result": "REJECTED"
+        },
+        {
+          "mutation": "missing direct finite target",
+          "result": "REJECTED"
+        },
+        {
+          "mutation": "missing finite recipe target",
+          "result": "REJECTED"
+        },
+        {
+          "mutation": "incorrect target length",
+          "result": "REJECTED"
+        },
+        {
+          "mutation": "nonexistent source formula",
+          "result": "REJECTED"
+        },
+        {
+          "mutation": "nonexistent exchange edges",
+          "result": "REJECTED"
+        },
+        {
+          "mutation": "invalid exchange direction",
+          "result": "REJECTED"
+        },
+        {
+          "mutation": "invalid extension arm",
+          "result": "REJECTED"
+        },
+        {
+          "mutation": "unknown operation tag",
+          "result": "REJECTED"
+        },
+        {
+          "mutation": "verification assertions disabled with -O",
+          "result": "REJECTED"
+        }
+      ]
+    },
+    "codec_roundtrip": {
+      "status": "PASS",
+      "source_sha256": "88e4a298bb41e5e84b8321e16fa0328acf18db73bef2018aaf7315a1631db0ac",
+      "literal_witnesses": 37,
+      "formulas": 147,
+      "direct": 19,
+      "recipes": 306
+    },
+    "alternative_325": {
+      "status": "PASS",
+      "source": "alternative_direct325.json",
+      "sha256": "c5e3aa9103134cea2f5306c2574a75ef650e691c3417bbe85debae747f3c449f",
+      "logical_sha256": "c5e3aa9103134cea2f5306c2574a75ef650e691c3417bbe85debae747f3c449f",
+      "input_schema": "ARIADNE_R02_ANALYTIC_RAW325_V1",
+      "literal_witnesses": 325,
+      "finite_literal_profiles": 325,
+      "finite_recipes": 0,
+      "path_initial_table_size": 0,
+      "infinite_label_witnesses_required": 0,
+      "analytic_bounds": {
+        "EE": {
+          "0": 24,
+          "2": 22,
+          "4+4q": 20,
+          "6+4q": 14
+        },
+        "OO": {
+          "0": 23,
+          "2": 21,
+          "4+4q": 19,
+          "6+4q": 13
+        },
+        "EO": {
+          "1": 19,
+          "3+4q": 23,
+          "5+4q": 17
+        },
+        "OE": {
+          "1": 24,
+          "3+4q": 22,
+          "5+4q": 20
+        }
+      },
+      "finite_box_size": 2544,
+      "finite_box_routes": {
+        "one_short_arm": 279,
+        "parity_router": 1940,
+        "finite_literal": 325
+      },
+      "analytic_box_residual": 325,
+      "checks": {
+        "ee_local_router_identities_verified": 6,
+        "additional_local_router_identities_verified": 4,
+        "parity_front_period_states_verified": 10,
+        "validated_spiders": 10366,
+        "validated_endpoint_paths": 5544,
+        "all_integer_router_families_audited": 14,
+        "global_boundary_examples_reconstructed": 1279
+      },
+      "all_integer_basis": "Definition-level local connector identities, two parity states of all five front recurrences, all fourteen symbolic failure bounds, general endpoint induction, and the complete a=1 formula.",
+      "limits": "The c>=25 and a=1 domains are certificate-free. The remaining finite-box recipes still depend on the retained explicit label witnesses; numerical examples are not used in place of the all-integer proofs."
+    },
+    "independent_239_a": {
+      "status": "PASS: independent definitions, infinite hypotheses and finite closure",
+      "witnesses": 239,
+      "non_hub_label_integers": 6108,
+      "fronts_and_terminals": 22,
+      "head_profiles": 61,
+      "head_seed_references": 68,
+      "short_profiles": 28,
+      "extra_families": 8,
+      "terminal_conductors": {
+        "8": 13,
+        "10": 16,
+        "12": 18,
+        "6": 8
+      },
+      "near_classes_checked": 100,
+      "near_front": 39,
+      "near_head": 61,
+      "small_pairs_checked": 100,
+      "finite_triples_checked": 2544,
+      "finite_coverage": {
+        "general": 2384,
+        "recipe": 58,
+        "literal": 102
+      },
+      "finite_recipes_rebuilt": 58,
+      "finite_literal_targets": 102,
+      "global_scope": "1<=a<=b<=c and c>=7; hub exactly 0; alpha labeling",
+      "infinite_logic": "all gaps>=25; 100 periodic near classes; 100 small pairs; exact tail bounds",
+      "novelty": "HOLD",
+      "certificate_sha256": "a68528b4c435111d31c795c32b8df2cc482f9fcf927cff770ecff8f099bd73c7",
+      "certificate_bytes": 42267
+    },
+    "independent_239_b": {
+      "status": "PASS",
+      "source": "certificate_core.json",
+      "sha256": "a68528b4c435111d31c795c32b8df2cc482f9fcf927cff770ecff8f099bd73c7",
+      "literal_witnesses": 239,
+      "front_witness_references": 22,
+      "head_profiles": 61,
+      "head_seed_references": 68,
+      "short_profiles": 28,
+      "extra_profiles": 8,
+      "finite_literal_profiles": 102,
+      "finite_recipes": 58,
+      "terminal_conductors": {
+        "8": 13,
+        "10": 16,
+        "12": 18,
+        "6": 8
+      },
+      "finite_box_size": 2544,
+      "finite_box_routes": {
+        "finite_recipe": 58,
+        "extra": 296,
+        "finite_literal": 102,
+        "short": 388,
+        "head": 1380,
+        "front": 320
+      },
+      "checks": {
+        "validated_spiders": 8570,
+        "validated_endpoint_paths": 3277,
+        "validated_sites": 6701,
+        "all_integer_premises_verified": 1,
+        "finite_recipes_reconstructed": 58,
+        "global_boundary_examples_reconstructed": 588
+      },
+      "all_integer_basis": "Weak subdivision and splice proofs; endpoint-path induction; all literal hypotheses; 100 near profiles; 100 small pairs; far-cone inequality q>=1 and R<=u+6.",
+      "limits": "This establishes a finite-certificate-assisted construction, not a certificate-free proof. Source code was not imported."
+    },
+    "actual_outputs_239": {
+      "status": "PASS",
+      "certificate_sha256": "a68528b4c435111d31c795c32b8df2cc482f9fcf927cff770ecff8f099bd73c7",
+      "finite_outputs_checked": 2544,
+      "finite_routes": {
+        "recipe": 58,
+        "extra": 296,
+        "finite": 102,
+        "short": 388,
+        "head": 1380,
+        "front": 320
+      },
+      "fixed_boundary_and_large_outputs": 8,
+      "input_permutation_outputs": 3,
+      "maximum_arm_checked": 100003,
+      "checks": [
+        "hub exactly zero",
+        "all labels 0..n once",
+        "all edge differences 1..n once",
+        "common alpha cutoff",
+        "exact requested three path lengths"
+      ],
+      "meaning": "Actual-output verification, not extrapolation to infinitely many inputs."
+    },
+    "negative_239": {
+      "status": "PASS",
+      "targeted_rejections": 13,
+      "attacks": [
+        {
+          "attack": "duplicate or zero vertex label",
+          "rejected": true
+        },
+        {
+          "attack": "noninteger vertex label",
+          "rejected": true
+        },
+        {
+          "attack": "site touching hub row",
+          "rejected": true
+        },
+        {
+          "attack": "empty required head family",
+          "rejected": true
+        },
+        {
+          "attack": "unproved optimistic conductor",
+          "rejected": true
+        },
+        {
+          "attack": "false terminal inner length",
+          "rejected": true
+        },
+        {
+          "attack": "missing required finite literal",
+          "rejected": true
+        },
+        {
+          "attack": "wrong finite target lengths",
+          "rejected": true
+        },
+        {
+          "attack": "duplicated arm in witness reference",
+          "rejected": true
+        },
+        {
+          "attack": "wrong finite recipe endpoint",
+          "rejected": true
+        },
+        {
+          "attack": "forbidden endpoint length r=1, m=5",
+          "rejected": true
+        },
+        {
+          "attack": "forbidden endpoint length r=2, m=9",
+          "rejected": true
+        },
+        {
+          "attack": "forbidden endpoint length r=3, m=13",
+          "rejected": true
+        }
+      ]
+    }
+  },
+  "limits": "The all-integer proof is in the accompanying mathematical text. Checks and numerical examples support it, without replacing induction. The whole c>=7 theorem still has finite certificate dependencies."
+}

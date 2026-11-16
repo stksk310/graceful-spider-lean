@@ -1,0 +1,331 @@
+{
+  "PHASE": "A∞, all six-arm and all seven-arm graceful spider formalization COMPLETE; eight arms future work",
+  "FULL_AINFINITY_PROVED": true,
+  "ACTUAL_LEAN_PROVED": [
+    "Indexed spider specification and range/bijection equivalence",
+    "Alpha reverse, arm reindexing, kappa reindexing",
+    "Arbitrary-length zero-start alpha path",
+    "AlphaHZ3 1 1 c for every c",
+    "Local grid routers and initial forests",
+    "14-family parameter classification and threshold arithmetic",
+    "Ariadne.AInfinity.ainf_bounded: all 1≤a≤b≤c with 7≤c≤24, hub 0 and cutoff kappa",
+    "Ariadne.endpoint_alpha_path_exists: every admissible prescribed low-endpoint alpha path",
+    "Ariadne.leafExtension_exists: full alpha leaf extension including zero-length arm",
+    "Actual indexed grid bridge, B/N/B2/B4 arbitrary forest iterations and all fourteen RouterSeed families",
+    "Ariadne.AInfinity.routerSeedSupply: complete constructive seed supply with no global assumptions",
+    "Ariadne.AInfinity.oneShortArm: every first-arm-one triple in the target region",
+    "Ariadne.AInfinity.ainf_23: exceptional pair in the large region",
+    "Ariadne.AInfinity.ainf_large: every sorted positive triple with c≥25",
+    "Ariadne.AInfinity.ainf: ∀ a b c, 1≤a → a≤b → b≤c → 7≤c → AlphaHZ3 a b c",
+    "Ariadne.Six.six_graceful: every positive indexed six-arm spider is graceful",
+    "Ariadne.Seven.seven_graceful: every positive indexed seven-arm spider is graceful",
+    "Generic indexed shell/core fusion, offset-zero conversion and alpha preservation",
+    "Arbitrary prescribed graceful endpoint paths, one-arm offset/alpha cores, OP two-arm cores",
+    "K2 even boundary, K3 odd equal splice, unbounded equal-core and top-band constructions",
+    "Exact cap7 six-arm splitting, numeric B8 coverage, largest-repeat EQ3, GP/BS and all-integer seven split"
+  ],
+  "UNPAID_OBLIGATIONS": "UNPAID_OBLIGATIONS.md",
+  "SORRY_AXIOM_COUNT": 0,
+  "STANDARD_AXIOMS_ALLOWED": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "LEAN_VERSION": "4.24.0 (797c613eb9b6d4ec95db23e3e00af9ac6657f24b)",
+  "MATHLIB_COMMIT": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+  "LAKE_BUILD_RESULT": "PASS",
+  "FINITE_CERTIFICATES_KERNEL_CHECKED": {
+    "AInfinityFiniteBox": 2544,
+    "R02_239Comparison": 10,
+    "SmallBoundaryWitnesses": 3,
+    "VerifiedMaxima": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "IntegratedV2SourceRoles": {
+      "alpha_small": 44,
+      "six_hz": 7,
+      "six_direct": 18,
+      "offset": 22,
+      "seven_direct": 20,
+      "fixed_offset": 0
+    },
+    "IntegratedV2ExpandedFiniteOffsetCores": 164
+  },
+  "EXTERNAL_ONLY_VERIFIED": [
+    "Python constructor algorithms and external runtime regressions; no external pass flag is a Lean premise"
+  ],
+  "MAIN_THEOREM_PRINT_AXIOMS": {
+    "Ariadne.exactRange_iff_bijective": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.parent_ne_child": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Ariadne.card_spiderVertex": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.undirected_edge_index_unique": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Ariadne.graceful_of_cell_sums": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.kappa_reindex": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.ExactRange.of_right_inverse": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.AlphaCutoff.reverse": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.AlphaCutoff.reindex": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.pathLabel_alpha": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.AInfinity.ainf_double_leaf": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.AInfinity.terminal_paths": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.AInfinity.B_new_ports": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.AInfinity.initial_paths": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.AInfinity.pair_classification": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.AInfinity.threshold_reached": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.AInfinity.ainf_bounded": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.endpoint_alpha_path_exists": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.leafExtension_exists": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.AInfinity.routerSeedSupply": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.AInfinity.oneShortArm": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.AInfinity.ainf_23": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.AInfinity.ainf_large": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.AInfinity.ainf": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.HasAlphaShell.fuse_offsetCore": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.HasAlphaShell.fuse_alphaCore": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.HasAlphaCore.fuse_offsetCore": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.HasAlphaCore.fuse_alphaCore": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.graceful_endpoint_path_exists": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.oneArmOffsetCore": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.oneArmAlphaCore": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.outerPairCore": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.Compact.alphaSupply": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.Compact.finiteOffsetCore": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.Six.six_graceful": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.Seven.even_double_band": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.Seven.exceptional_equal_core": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.Seven.equal_core": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.Seven.top_band": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.Seven.base_eight": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.Seven.equalThree_large": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.Seven.balanced_graceful": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.Seven.seven_graceful": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "INPUT_ARCHIVE_SHA256": "15c707ce4136af0f8b5b59e9a5356082619f202155f934da7c104c2b76239c46",
+  "ARTIFACTS": [
+    "artifacts/external",
+    "data/finite_box.json",
+    "Ariadne/Verify/Axioms.lean",
+    "PROOF_DEPENDENCY_LOCK.md",
+    "MATHEMATICAL_CORRESPONDENCE.md",
+    "artifacts/lake_build.log",
+    "artifacts/axioms.log",
+    "artifacts/audit.json",
+    "artifacts/lake_c23.log",
+    "artifacts/lake_c24.log",
+    "RESUME.md",
+    "Ariadne/AInfinity/Main.lean",
+    "artifacts/ainf_main.log",
+    "artifacts/review.md",
+    "Ariadne/Six/Main.lean",
+    "Ariadne/Seven/Main.lean",
+    "SOURCES/integrated_v2",
+    "artifacts/compact_certificate_manifest.json",
+    "artifacts/integrated_v2_provenance.json",
+    "artifacts/integrated_v2/full_report.json",
+    "artifacts/six_seven_review.md",
+    "artifacts/python_tests.log"
+  ],
+  "RESTART_COMMAND": "ARIADNE_LEAN_BIN=/workspace/ariadne_work/toolchain/lean-4.24.0-linux/bin bash scripts/check.sh",
+  "MEMORY_LIMIT_GIB": 16,
+  "SORRY_COUNT": 0,
+  "CUSTOM_UNPROVED_AXIOM_COUNT": 0,
+  "A_INFINITY_UNPAID_COUNT": 0,
+  "LAKE_BUILD_JOBS": 951,
+  "FULL_SIX_PROVED": true,
+  "FULL_SEVEN_PROVED": true,
+  "SIX_UNPAID_COUNT": 0,
+  "SEVEN_UNPAID_COUNT": 0,
+  "FINITE_NUMERIC_PARTITIONS_KERNEL_CHECKED": {
+    "SixSortedCap7": 924,
+    "SevenSortedBase8": 3432,
+    "SevenBaseKernelBlocks": 120
+  },
+  "INTEGRATED_V2_ARCHIVE_SHA256": "b286f7b1b426219a92aa353f63697c4bd8771abf09594e4e0c62ca05a5ed37bc",
+  "INTEGRATED_V2_CORE_SHA256": "433c784118dd1a394fae65902d01eb98e27f7dfb900ac014faad257a2534e95b"
+}

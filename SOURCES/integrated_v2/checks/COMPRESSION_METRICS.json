@@ -1,0 +1,23 @@
+{
+  "scope": "Whole proof: elementary lemmas + A∞ + six + seven + certificate explanation; no proof moved outside comparison",
+  "old_markdown_characters": 36338,
+  "new_markdown_characters": 35157,
+  "unicode_source_reduction_percent": 3.25,
+  "source_measure_note": "Unicode codepoints include TeX notation; changing mathematical typesetting affects this number.",
+  "same_typesetting": {
+    "paper": "A4",
+    "font_size": "10pt",
+    "margins": "22mm",
+    "toc_depth": 2,
+    "old_reassembled_pdf": "work/BASELINE.pdf",
+    "old_pages": 22,
+    "new_pages": 20,
+    "page_reduction_percent": 9.09
+  },
+  "old_seven_literal_count": 24,
+  "new_seven_literal_count": 22,
+  "old_fixed_offset_count": 1,
+  "new_fixed_offset_count": 0,
+  "old_seven_finite_total_excluding_Ainf": 89,
+  "new_seven_finite_total_excluding_Ainf": 86
+}

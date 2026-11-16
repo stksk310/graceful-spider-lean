@@ -1,0 +1,153 @@
+[
+  {
+    "source": "AINF_R02_RESULT/ARIADNE_AINF_ULTRASHORT_R02_RESULT_20261115/03_CERTIFICATE_AND_CHECKS/construct_final.py",
+    "target": "vendor/ainf37/construct_final.py",
+    "sha256": "8e439d28d4e2b8e4e28ac91c1e30faae7429074f8e62ed9bac7affc80f8047a9",
+    "unchanged": true,
+    "target_sha256": "8e439d28d4e2b8e4e28ac91c1e30faae7429074f8e62ed9bac7affc80f8047a9"
+  },
+  {
+    "source": "AINF_R02_RESULT/ARIADNE_AINF_ULTRASHORT_R02_RESULT_20261115/03_CERTIFICATE_AND_CHECKS/parity_router.py",
+    "target": "vendor/ainf37/parity_router.py",
+    "sha256": "6c71da6ffde2c14a56db20181115949f476dc7d6fe36e6c221564169da04ef47",
+    "unchanged": true,
+    "target_sha256": "6c71da6ffde2c14a56db20181115949f476dc7d6fe36e6c221564169da04ef47"
+  },
+  {
+    "source": "AINF_R02_RESULT/ARIADNE_AINF_ULTRASHORT_R02_RESULT_20261115/03_CERTIFICATE_AND_CHECKS/even_router.py",
+    "target": "vendor/ainf37/even_router.py",
+    "sha256": "e2f19657d0876045f0680054baef335d4ec5040e2d40d3826248858f44f14e81",
+    "unchanged": true,
+    "target_sha256": "e2f19657d0876045f0680054baef335d4ec5040e2d40d3826248858f44f14e81"
+  },
+  {
+    "source": "AINF_R02_RESULT/ARIADNE_AINF_ULTRASHORT_R02_RESULT_20261115/03_CERTIFICATE_AND_CHECKS/one_short_arm_no_bases.py",
+    "target": "vendor/ainf37/one_short_arm_no_bases.py",
+    "sha256": "6ac174c9e2f64d51810cfc830351639bbea460d48e4b2f128db61f022e0a4fd8",
+    "unchanged": true,
+    "target_sha256": "6ac174c9e2f64d51810cfc830351639bbea460d48e4b2f128db61f022e0a4fd8"
+  },
+  {
+    "source": "AINF_R02_RESULT/ARIADNE_AINF_ULTRASHORT_R02_RESULT_20261115/03_CERTIFICATE_AND_CHECKS/alpha_path_no_bases.py",
+    "target": "vendor/ainf37/alpha_path_no_bases.py",
+    "sha256": "9768f032dd2e7172c757eb892b4d8e028c7a1b9a5cf98d46e97c277bad53f6ec",
+    "unchanged": true,
+    "target_sha256": "9768f032dd2e7172c757eb892b4d8e028c7a1b9a5cf98d46e97c277bad53f6ec"
+  },
+  {
+    "source": "AINF_R02_RESULT/ARIADNE_AINF_ULTRASHORT_R02_RESULT_20261115/03_CERTIFICATE_AND_CHECKS/compact_codec.py",
+    "target": "vendor/ainf37/compact_codec.py",
+    "sha256": "2864013672ca2dd0e26879148d73e7c90ed39e7be92ff8dc920cd6ba73223614",
+    "unchanged": true,
+    "target_sha256": "2864013672ca2dd0e26879148d73e7c90ed39e7be92ff8dc920cd6ba73223614"
+  },
+  {
+    "source": "AINF_R02_RESULT/ARIADNE_AINF_ULTRASHORT_R02_RESULT_20261115/03_CERTIFICATE_AND_CHECKS/certificate_core.json",
+    "target": "vendor/ainf37/certificate_core.json",
+    "sha256": "88e4a298bb41e5e84b8321e16fa0328acf18db73bef2018aaf7315a1631db0ac",
+    "unchanged": true,
+    "target_sha256": "88e4a298bb41e5e84b8321e16fa0328acf18db73bef2018aaf7315a1631db0ac"
+  },
+  {
+    "source": "AINF_R02_RESULT/ARIADNE_AINF_ULTRASHORT_R02_RESULT_20261115/03_CERTIFICATE_AND_CHECKS/independent_check.py",
+    "target": "vendor/ainf37/independent_check.py",
+    "sha256": "16e497beaed40166c552c15b26a4be7b994dafd0dd56ece0e81719d58fcfeaad",
+    "unchanged": true,
+    "target_sha256": "16e497beaed40166c552c15b26a4be7b994dafd0dd56ece0e81719d58fcfeaad"
+  },
+  {
+    "source": "SEVEN_R01_DELTA_RESULT/ARIADNE_SEVEN_R01_ASTRAPRO_DELTA_RESULT_20261114/CODE/even_boundary.py",
+    "target": "src/local_paths.py",
+    "sha256": "885bb9ea22da809e7ee579f3d54a57b7e9de6ff4d820ad210a8d7bea2fe5bc2f",
+    "unchanged": false,
+    "transformation": "Retain listed function definitions verbatim; trim unused code and adapt import to local module.",
+    "verbatim_functions": [
+      {
+        "name": "zigzag",
+        "sha256": "4587f6d3c3cc7c9cce1f633f7a49b6b9f7ffad3d4db05e413aae0596b3316c4d"
+      },
+      {
+        "name": "alpha_path",
+        "sha256": "8116813a5d6dd63186097977f9156962270f889574f2fa31fe9168aaa2e69e9e"
+      },
+      {
+        "name": "graceful_path",
+        "sha256": "9c171a3cc84d0df73a757c3fe1e49e4b435e00c37438d395b8cbce51301d5658"
+      }
+    ],
+    "target_sha256": "360b68cbd7a65edb72dbd2fd9c0de2e60e42ed1e21bc0b840eb7527a749b48b2"
+  },
+  {
+    "source": "SEVEN_R01_DELTA_RESULT/ARIADNE_SEVEN_R01_ASTRAPRO_DELTA_RESULT_20261114/CODE/independent_outer_path.py",
+    "target": "src/local_cores.py",
+    "sha256": "6a6972c696fb335efb1d488fb026ce82a7aa2e7c82fb3d757b84fa10c60a245b",
+    "unchanged": false,
+    "transformation": "Retain the listed original function definitions verbatim; trim unused code and adapt the import. Add serial_triple as a new v2 helper composing the existing one-arm alpha and graceful path formulas by offset interval insertion twice.",
+    "verbatim_functions": [
+      {
+        "name": "alpha_ok",
+        "sha256": "1d23a5a50f05798286db85ea5e3cd0c1cfae5ef6e3353bd94874db2192001fd1"
+      },
+      {
+        "name": "check_path",
+        "sha256": "70684b2ecd898084ef1b1c9619817b07404c7c1f2c2f5ecb10066c35f996230d"
+      },
+      {
+        "name": "check_core",
+        "sha256": "5f3ddfb42534c2b36cc604bfcba47b302b4390f13670d7cdef3353dab592810c"
+      },
+      {
+        "name": "twoarm_domain",
+        "sha256": "8a14de27e788c55f78a297b268bf967f2f82083113dbdc56a18e65ca86029fb3"
+      },
+      {
+        "name": "outer_pair",
+        "sha256": "91c42d1566dfe685b51fbc922b662063c74227ece40a50e87f048f6aad4d76de"
+      },
+      {
+        "name": "peeled_triple",
+        "sha256": "0ee1d61f0e36639eb47efb15066e36522938ce3aae192c7e9c25f17a7fed3f97"
+      },
+      {
+        "name": "exceptional_path",
+        "sha256": "e17d9d4db114b7f968d06434e3736f8c4bd10b17e72cba79aa5effbf1af946b9"
+      },
+      {
+        "name": "generalized_odd_surgery",
+        "sha256": "bb4ca6b6641c1b527ac7ea211625fb7b05ea0bf2e642a01cf370c38656c99a52"
+      },
+      {
+        "name": "even_double_band",
+        "sha256": "40c17062dc9ee509645ffc0705002b444141a144217e35bc09d892a66f4f828c"
+      },
+      {
+        "name": "equal_core",
+        "sha256": "f55f33144f7b8146d7d3740dd0aa39c482651561bd8c9f09d69103088f8afb9a"
+      },
+      {
+        "name": "top_double_band",
+        "sha256": "31eed4430b10b1758788f86581e1cef2c1e40ef5cf6841f997a51c5f102cafd0"
+      }
+    ],
+    "added_functions": [
+      "serial_triple"
+    ],
+    "target_sha256": "b9e65dfc337437a4d8acfe524c96416ceefc5311a155458baa1d3b771a9e7081"
+  },
+  {
+    "source": "SEVEN_R01_DELTA_RESULT/ARIADNE_SEVEN_R01_ASTRAPRO_DELTA_RESULT_20261114/CODE/three_equal_seven.py",
+    "target": "src/routing.py",
+    "sha256": "7bbd9d36c209ec35de16465daa75cf2abbd191a10363f598888760a257c669f3",
+    "unchanged": false,
+    "transformation": "Adapt the original global and EQ3 arithmetic branches. Choose the largest triply repeated length and remove the resulting impossible three-pendant and fixed-offset routes. For the <=7 base choose a nonexceptional shell triple first, then the minimum of its four-arm complement as the bridge arm. Keep the count-of-8 and largest-three balanced selectors. Remove original library loading and CLI.",
+    "target_sha256": "cab6b47022e119dfe55e24284deb0e197fdfb39f3b5998af11cddef969fc0d04"
+  },
+  {
+    "source": "SEVEN_R01_DELTA_RESULT/ARIADNE_SEVEN_R01_ASTRAPRO_DELTA_RESULT_20261114/CODE/global_seven.py",
+    "target": "src/routing.py",
+    "sha256": "1e7509b03ddd6ebeca6718e278da3f59d95c5356d6345189fc596d72abb675a6",
+    "unchanged": false,
+    "transformation": "Adapt the original global and EQ3 arithmetic branches. Choose the largest triply repeated length and remove the resulting impossible three-pendant and fixed-offset routes. For the <=7 base choose a nonexceptional shell triple first, then the minimum of its four-arm complement as the bridge arm. Keep the count-of-8 and largest-three balanced selectors. Remove original library loading and CLI.",
+    "target_sha256": "cab6b47022e119dfe55e24284deb0e197fdfb39f3b5998af11cddef969fc0d04"
+  }
+]

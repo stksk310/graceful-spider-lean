@@ -1,0 +1,6 @@
+ℹ [715/716] Replayed Ariadne.Cert.FiniteInverse
+info: Ariadne/Cert/FiniteInverse.lean:38:0: 'Ariadne.ExactRange.of_right_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [716/716] Replayed Ariadne.AInfinity.Finite.C23
+info: Ariadne/AInfinity/Finite/C23.lean:4017:0: 'Ariadne.AInfinity.box_1_1_23_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/Finite/C23.lean:4018:0: 'Ariadne.AInfinity.box_23_23_23_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (716 jobs).

@@ -1,0 +1,107 @@
+{
+  "source_sha256": "a68528b4c435111d31c795c32b8df2cc482f9fcf927cff770ecff8f099bd73c7",
+  "count": 10,
+  "scope": "Literal labels only; no interface, recipe, or infinite-coverage claim.",
+  "records": [
+    {
+      "record": "w000",
+      "module": "Ariadne.AInfinity.Literals.W000",
+      "lengths": [
+        22,
+        6,
+        8
+      ],
+      "sha256": "4af2b75a6d4768e9c562527992e2a852fba66051c57d66cd5ed25685c2048cc4"
+    },
+    {
+      "record": "w001",
+      "module": "Ariadne.AInfinity.Literals.W001",
+      "lengths": [
+        14,
+        21,
+        8
+      ],
+      "sha256": "22f037b3caed652028d1890d62eedd37e6bc05d3572d5f18659d44ee64b3f3c8"
+    },
+    {
+      "record": "w002",
+      "module": "Ariadne.AInfinity.Literals.W002",
+      "lengths": [
+        5,
+        16,
+        6
+      ],
+      "sha256": "67c1d939871132c94d12583f4af9ff1434d09a030c7769d85e13065b6f51d49c"
+    },
+    {
+      "record": "w003",
+      "module": "Ariadne.AInfinity.Literals.W003",
+      "lengths": [
+        5,
+        23,
+        10
+      ],
+      "sha256": "a74e807b04e38356cf2d436a21f3defcedaaa575124b185820b3bcc4c3c8399f"
+    },
+    {
+      "record": "w004",
+      "module": "Ariadne.AInfinity.Literals.W004",
+      "lengths": [
+        22,
+        6,
+        10
+      ],
+      "sha256": "5aec6d306baa5e17cdc4ac24a2700af747b9b6a5f10f86b3868de764beb5cd9f"
+    },
+    {
+      "record": "w005",
+      "module": "Ariadne.AInfinity.Literals.W005",
+      "lengths": [
+        8,
+        21,
+        6
+      ],
+      "sha256": "b4a2bc73dfafbb488db793199779fdb612d5e4d6f95ae1ac3ee1b6d189f74d36"
+    },
+    {
+      "record": "w006",
+      "module": "Ariadne.AInfinity.Literals.W006",
+      "lengths": [
+        6,
+        22,
+        7
+      ],
+      "sha256": "6c1674b6a9228e4b725b063150a95aa168fc1f84d7c1c2a4f213de1a3232d8e9"
+    },
+    {
+      "record": "w007",
+      "module": "Ariadne.AInfinity.Literals.W007",
+      "lengths": [
+        25,
+        6,
+        7
+      ],
+      "sha256": "45f5f7d3e9b8f9a4b02e87c3ec40ef4c2c768400b40a3e5be843ee608e448800"
+    },
+    {
+      "record": "w008",
+      "module": "Ariadne.AInfinity.Literals.W008",
+      "lengths": [
+        14,
+        10,
+        2
+      ],
+      "sha256": "d8fa7402e276e2402b9cab0a4ae2bbddbd4bae09974ebe2b181f91583f9fe2b7"
+    },
+    {
+      "record": "w009",
+      "module": "Ariadne.AInfinity.Literals.W009",
+      "lengths": [
+        10,
+        2,
+        15
+      ],
+      "sha256": "f3e23aeaa9107ed86f7c510f7b13e8c35fef1c5e264a0d05b203b1d0a7436f53"
+    }
+  ]
+}

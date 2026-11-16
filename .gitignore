@@ -1,0 +1,17 @@
+# Local archives and generated bundles
+*.zip
+
+# Existing linked workspace kept outside this repository
+Angra_play_land/
+
+# Common local/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Lean build products and Python caches
+.lake/
+*.olean
+*.ilean
+__pycache__/

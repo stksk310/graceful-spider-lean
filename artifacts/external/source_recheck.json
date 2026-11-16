@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "archives": [
+    {
+      "archive": "AINF_R01_RESULT.zip",
+      "sha256": "028ad92a20dd7c58a04959235e58389c7e704a1a40c8c03b5ec2bd14c2c64af7",
+      "unchanged_extracted_files": 60
+    },
+    {
+      "archive": "AINF_R02_RESULT.zip",
+      "sha256": "493fad9c742e5d72cf5cbe01953a2ff5817bc7fa0ffca78e06312adb0fa15848",
+      "unchanged_extracted_files": 189
+    },
+    {
+      "archive": "FABLE58_PINNED_FOR_SEVEN.zip",
+      "sha256": "0d9fe947d6d7ebd4721f2b26026064f95f3c8aeec1b4374f33514d7940da41b5",
+      "unchanged_extracted_files": 85
+    },
+    {
+      "archive": "SEVEN_R01_DELTA_RESULT.zip",
+      "sha256": "d189a36368d6333ac0e8b5f3e21923889ea11b2bfe847021f03380405e8a058b",
+      "unchanged_extracted_files": 57
+    },
+    {
+      "archive": "SEVEN_R01_INPUT.zip",
+      "sha256": "890d462d433e9789385a2e5ced52c983d5c92447e82b00d51c91cee8f1a6087f",
+      "unchanged_extracted_files": 12
+    }
+  ]
+}

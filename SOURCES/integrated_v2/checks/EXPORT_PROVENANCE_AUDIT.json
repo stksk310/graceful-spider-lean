@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "core_sha256": "433c784118dd1a394fae65902d01eb98e27f7dfb900ac014faad257a2534e95b",
+  "exact_reexport_bytes": true,
+  "exact_source_role_records": 111,
+  "distinct_literal_arrays_with_hub_offset": 110,
+  "role_counts": {
+    "alpha_small": 44,
+    "six_hz": 7,
+    "six_direct": 18,
+    "offset": 22,
+    "seven_direct": 20,
+    "fixed_offset": 0
+  },
+  "verbatim_ainf_files": 8,
+  "verbatim_source_functions": 14,
+  "new_v2_composition_helpers": [
+    "serial_triple"
+  ],
+  "scope": "Exact JSON source keys, hashes and retained function text; original code is never executed."
+}

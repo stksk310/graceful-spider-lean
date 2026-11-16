@@ -1,0 +1,9 @@
+Ariadne.Six.six_graceful (l : Fin 6 → ℕ) (hl : Positive l) : GracefulSpider l
+Ariadne.Seven.seven_graceful (l : Fin 7 → ℕ) (hl : Positive l) : GracefulSpider l
+'Ariadne.Six.six_graceful' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ariadne.Seven.seven_graceful' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ariadne.Seven.base_eight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ariadne.Seven.equal_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ariadne.Seven.top_band' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ariadne.Seven.repeated_choice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ariadne.Compact.finiteOffsetCore' depends on axioms: [propext, Classical.choice, Quot.sound]

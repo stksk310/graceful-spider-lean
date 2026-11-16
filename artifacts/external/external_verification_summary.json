@@ -1,0 +1,24 @@
+{
+  "AINF_R02_VERIFY_RESULT": {
+    "exit_code": 0,
+    "log": "ainf_r02.log"
+  },
+  "FABLE58_check_library": {
+    "exit_code": 0,
+    "log": "fable58.log"
+  },
+  "SEVEN_VERIFY_INPUT": {
+    "exit_code": 0,
+    "log": "seven_input.log"
+  },
+  "SEVEN_09_VERIFY_DELTA": {
+    "exit_code": 0,
+    "log": "seven_delta.log"
+  },
+  "SEVEN_INDEPENDENT_FULL": {
+    "exit_code": 0,
+    "log": "seven_full.log",
+    "report": "seven_full_report.json"
+  },
+  "scope": "External definition checks, NOT Lean proofs"
+}

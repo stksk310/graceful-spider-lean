@@ -1,0 +1,23 @@
+PASS finite certificates: six=6, combined=43, inherited O=164, new O=135, random actual=59, unresolved=69
+PASS negative checker tests: 19
+FULL sorted<=12: 4000
+FULL sorted<=12: 8000
+FULL sorted<=12: 12000
+FULL sorted<=12: 16000
+FULL sorted<=12: 20000
+FULL sorted<=12: 24000
+FULL sorted<=12: 28000
+FULL seeded random: 200
+FULL seeded random: 400
+FULL seeded random: 600
+FULL seeded random: 800
+FULL seeded random: 1000
+FULL large: balanced_consecutive_40000 edges= 280021 PASS
+FULL large: three_equal_large_odd_surgery edges= 260012 PASS
+FULL large: fixed_226_266_with_long_arm edges= 250024 PASS
+FULL large: extreme_imbalance edges= 300021 PASS
+{
+  "status": "PASS_FINAL_DISTRIBUTION_INDEPENDENT_DEFINITION_CHECKS",
+  "report": "/workspace/ariadne_work/logs/seven_full_report.json",
+  "elapsed_seconds": 77.515987546
+}

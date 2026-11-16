@@ -1,0 +1,523 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  10pt,
+  a4paper,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{Noto Serif CJK JP}
+  \setsansfont[]{Noto Sans CJK JP}
+  \setmonofont[]{Noto Sans Mono CJK JP}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% CJK layout does not use Latin microtype inheritance lists.
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=20mm]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\XeTeXlinebreaklocale "ja"
+\XeTeXlinebreakskip=0pt plus 0.5pt
+\usepackage{setspace}
+\setstretch{1.18}
+\setlength{\parskip}{4pt plus 1pt minus 1pt}
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{2em}
+\usepackage{needspace}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small R02 完全証明・37実物版}
+\fancyhead[R]{\small AINF / NOVELTY\_HOLD}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\renewcommand{\headrulewidth}{0.3pt}
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries}{}{0pt}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{12pt plus 3pt minus 2pt}{6pt}
+\titlespacing*{\subsection}{0pt}{10pt plus 2pt minus 1pt}{5pt}
+\setlength{\LTpre}{5pt}
+\setlength{\LTpost}{5pt}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\allowdisplaybreaks[1]
+\let\originaltexttt\texttt
+\renewcommand{\texttt}[1]{\leavevmode\allowbreak\mbox{\originaltexttt{#1}}}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  colorlinks=true,
+  linkcolor={Maroon},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdftitle={R02 完全証明：全整数の直接構成と37実物の有限核},
+  pdfsubject={A4・10pt・20mm余白、37実物版の完全文},
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{R02
+完全証明：全整数の直接構成と37実物の有限核}\label{r02-ux5b8cux5168ux8a3cux660eux5168ux6574ux6570ux306eux76f4ux63a5ux69cbux6210ux306837ux5b9fux7269ux306eux6709ux9650ux6838}
+
+\textbf{主定理.} 整数 \texttt{1≤a≤b≤c}、\texttt{c≥7} に対し、三腕spider
+\texttt{S(a,b,c)} はhub0 α-labelingを持つ。
+
+三腕spiderとは、一本ずつの長さがa,b,cで、hub以外の頂点を共有しない三本の道である。\texttt{n=a+b+c}、\texttt{k=\ensuremath{\lfloor}a/2\ensuremath{\rfloor}+\ensuremath{\lfloor}b/2\ensuremath{\rfloor}+\ensuremath{\lfloor}c/2\ensuremath{\rfloor}}
+と置く。求めるラベリングはhubを0に固定し、全頂点ラベル
+\texttt{0,…,n}、全辺差 \texttt{1,…,n} をそれぞれ一度ずつ用い、各辺が
+\texttt{{[}0,k{]}} と \texttt{{[}k+1,n{]}} を結ぶものとする。
+
+§1--7は有限種を使わず \texttt{c≥25} の全整数と \texttt{a=1,c≥7}
+を構成する。§8--9は \texttt{7≤c≤24}
+の残りを、37個の実物配列と306本の有限手順により厳密に閉じる。この有限データは証明の必須部分であり、§1--7の無限証明を置き換えるものではない。全域の判定は
+\textbf{COMPRESSED\_CERTIFIED\_CLOSED / NOVELTY\_HOLD}。
+
+必須の有限データは
+\texttt{03\_CERTIFICATE\_AND\_CHECKS/certificate\_core.json}（20,376
+bytes）。名前付きの同一内容は \texttt{certificate\_named.json}（67,193
+bytes）で閲覧できる。両表現の一致と全手順を独立検証する。旧R01の証書・探索器・一般端点道の外部定理への依存はない。
+
+\subsection{1. 道と葉の挿入}\label{ux9053ux3068ux8449ux306eux633fux5165}
+
+\texttt{A(N,r)} はラベル \texttt{0,…,N−1}、臨界値
+\texttt{k=\ensuremath{\lfloor}(N−1)/2\ensuremath{\rfloor}}、始点rのα道を表す。\texttt{r=0} ではジグザグ列
+\texttt{(0,N−1,1,N−2,…)}。\texttt{r\textgreater{}0}、\texttt{N≥2r+1,N≠4r+1}
+では次の再帰で定める。
+
+\[
+\begin{aligned}
+&N\le4r:\quad A(N,r)=C_N(A(N,k-r)),\\[3pt]
+&N\ge4r+2,\ N\ne6r+2:\\
+&\qquad A(N,r)=(r,N-r,r-1,N-r+1,\ldots,1,N-1,0)\\
+&\hspace{8em}\Vert(N-r-1-A(N-2r-1,r)),\\[3pt]
+&N=6r+2:\\
+&\qquad A(N,r)=(r,5r+1,r-1,5r+2,\ldots,0,6r+1)\\
+&\hspace{8em}\Vert(r+1+A(4r,r)),
+\end{aligned}
+\]
+
+ここで
+\texttt{C\_N(x)=k−x}（低側）、\texttt{C\_N(x)=N+k−x}（高側）。第一分岐は
+\texttt{0≤k−r\textless{}r}、他の分岐はNを厳密に減らすので辞書式順序
+\texttt{(N,r)} で停止する。第一分岐の子が禁止値なら \texttt{N=4(k−r)+1}
+から \texttt{k−r=r}
+となって矛盾する。通常分岐の子が禁止値になるのは第三分岐の場合だけである。
+
+\texttt{C\_N} は各側のラベル区間を保ち、辺差dを \texttt{N−d}
+に変える。通常接頭部の差は \texttt{N−2r,…,N−1}、結合差は
+\texttt{N−2r−1}、後半内部差は \texttt{1,…,N−2r−2}。特別接頭部の差は
+\texttt{4r+1,…,6r+1}、結合差は \texttt{4r}、後半内部差は
+\texttt{1,…,4r−1}。ラベル区間は各々ちょうど分割され、低高の交互性も続く。従って全再帰がα道を与える。
+
+辺差を高−低として加算すると、他端は \texttt{N=2u+1} なら
+\texttt{u−r}、\texttt{N=2u} なら \texttt{u+r}。特に禁止値
+\texttt{N=4r+1} では両端がrとなるため、r\textgreater0では不可能である。
+
+臨界値kのα木の葉が低側 \texttt{k−r} または高側 \texttt{k+1+r}
+にあるとする。m頂点をその先へ追加する際、旧低ラベルを固定し、旧高ラベルへmを加え、新頂点を順に
+
+\[
+k+m-A(m,r)\quad\text{または}\quad k+1+A(m,r)
+\]
+
+でラベル付けする。新ラベルは \texttt{{[}k+1,k+m{]}}、旧差は
+\texttt{{[}m+1,m+n{]}}、結合差はm、道内部差は
+\texttt{{[}1,m-1{]}}。終点公式から新葉の距離もrである。旧hub0は固定される。同じ式は長さ0の第三腕、すなわち次数2のhubから新しい第三腕を作る場合にも成立する。
+
+従ってr=3の第三長zの種は
+
+\texttt{E(z)=\{z\}∪{[}z+7,z+12{]}∪{[}z+14,∞)}
+
+を供給する。二つの種z,z+1があれば \texttt{{[}z+7,∞)} を全て供給する。
+
+\subsection{2.
+グリッドと五つの端子}\label{ux30b0ux30eaux30c3ux30c9ux3068ux4e94ux3064ux306eux7aefux5b50}
+
+行0,\ldots,K、列0,\ldots,H−1に対し、辺をセル \texttt{(i,j)}
+とする。n本のセルの和が0,\ldots,n−1を一度ずつ取り、行0がhubで接続関係が所望のspiderなら、行のラベルi、列のラベルn−jがhub0
+α-labelingを与える。
+
+frameを \texttt{(R,C,flip)}
+と書き、R,Cは\textbf{元のグリッドの物理的な最大行・最大列}とする。局所セル
+\texttt{(x,y)} は、flipなしなら物理セル \texttt{(R+x,C+y)}、flipありなら
+\texttt{(R+y,C+x)} を意味する。未完成の五道の端子を、この局所座標で
+
+\texttt{P0=row(−1),\ P1=row0,\ P2=col(−2),\ P3=col(−1),\ P4=col0}
+
+とする。長さ0の道も許し、孤立葉、またはhubの未使用の第三接続口を表す。
+
+\textbf{五辺則B.} 局所セル
+
+\[
+B=((1,-2),(-1,1),(2,-1),(0,2),(3,0))
+\]
+
+を加える。和は \texttt{−1,0,1,2,3}。P0,\ldots,P4は順に新しい
+\texttt{col1,col2,row1,row2,row3} へ一辺伸びる。物理frameの更新は
+
+\texttt{(R,C,false)\ →\ (R+3,C+2,true)}、
+
+\texttt{(R,C,true)\ →\ (R+2,C+3,false)}
+
+である。この局所軸の交換によって、端子番号は元の順序へ完全に戻る。よってBをq回付けると各一端子道はq伸び、二端子を結ぶ道は2q伸びる。\texttt{B\_j}
+はBの最初jセルを意味する。j=2,4では物理的な両側の最大値をj/2増やし、flipは変えない。
+
+\textbf{戻り道N.}
+
+\[
+N=((0,-1),(2,-2),(-1,2),(1,1)).
+\]
+
+和は
+\texttt{−1,0,1,2}。P1--P3を一辺で閉じ、P2とP0をそれぞれ一辺伸ばし、新しい中立道を一辺作る。両側の最大値を2増すと、新P0--新P3が中立道、新P1が旧P2の延長、新P2が旧P4、新P4が旧P0の延長になる。
+
+これらの操作は旧座標を動かさず、新しい行・列をそれぞれ次の連続区間から使う。従って和の連続性、頂点の全使用、接続の追跡は局所の表示だけで保証される。
+
+連続するセル和の接続位置も明示しておく。未完成の森林では、辺数nと物理frameは
+\textbf{\texttt{n=R+C−1}}
+を満たす。§3の三初期森林で直接成立し、B、N、B2、B4はnとR+Cを同量ずつ増すので保存される。局所和−1の最初の新セルは物理和
+\texttt{R+C−1=n} を持つ。従って旧和 \texttt{0,…,n−1}
+の直後から新和が始まる。§4の0版はframeを各側で4,3増して9辺、1版は4,4増して10辺、Fは1,1増して4辺を加えるため、終端後は
+\texttt{n=R+C+1}、すなわち使用頂点数が正確にn+1となる。flipは二つの増分を交換するだけである。
+
+\subsection{3.
+三つの初期森林と全前部}\label{ux4e09ux3064ux306eux521dux671fux68eeux6797ux3068ux5168ux524dux90e8}
+
+E,D,Oの三森林を次で定義する。frameは宣言する最大行・列、flipは局所行列を交換するかを表す。まだ辺を持たない指定葉も頂点に含める。
+
+\begin{center}
+\begin{tabular}{@{}llll@{}}
+\toprule\noalign{}
+森林 & セル & frame(R,C),flip & 指定葉 \\
+\midrule\noalign{}
+E1 & \texttt{(0,0),(0,1)} & (2,1),交換 & row1,row2 \\
+D1 & \texttt{(0,0),(0,1)} & (1,2),交換しない & row1,col2 \\
+O1 & \texttt{(0,0),(1,0),(0,2),(2,1)} & (2,3),交換 & col1,col3 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\Needspace{175pt}
+\texttt{E\_t,D\_t,O\_t} は各初期森林へBを \texttt{t−1}
+回付けたものとする。Hはhub、Lはrow1葉、Gはcol2葉を表す。各ポートの道長は次の通りである。
+
+\begin{center}
+\begin{tabular}{@{}llllll@{}}
+\toprule\noalign{}
+前部 & P0 & P1 & P2 & P3 & P4 \\
+\midrule\noalign{}
+Et & H(t) & H(t) & H(t−1) & row1葉(t−1) & row2葉(t−1) \\
+Ot & H(t) & col3葉(t−1) & H(t−1) & H(t+1) & col1葉(t) \\
+Dt & H(t−1) & L(t−1) & H(t) & H(t) & G(t−1) \\
+Dt+B2 & L(t−1) & H(t+1) & H(t) & G(t−1) & H(t) \\
+Dt+B4 & H(t+1) & H(t+1) & G(t−1) & H(t) & L(t) \\
+D(t−1)+B4,t≥2 & H(t) & H(t) & G(t−2) & H(t−1) & L(t−1) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+初期の三行は2,2,4セルを辿れば成立し、Bの端子対応が全tへの帰納を与える。下三行はBの最初2または4セルを代入しただけである。従ってこの表は有限種の存在仮定ではなく、明示的な森林の全整数不変量である。
+
+\subsection{4. 終端の局所式}\label{ux7d42ux7aefux306eux5c40ux6240ux5f0f}
+
+四つのルータR,S,T,Uを用いる。0版の和は \texttt{−1,…,7}、1版は
+\texttt{−1,…,8}。0版は新行1〜4、新列1〜3を使って行1で終わり、1版は新行・新列1〜4を使って列1で終わる。従ってどちらも最後の葉の境界距離は3である。
+
+\[
+\begin{aligned}
+R_0={}&((-1,0),(2,-2),(2,-1),(1,1),(0,3),(3,1),(3,2),(4,2),(4,3)),\\
+R_1={}&((-1,0),(2,-2),(2,-1),(0,2),(1,2),(1,3),(4,1),(3,3),(3,4),(4,4)),\\
+S_0={}&((0,-1),(-1,1),(3,-2),(2,0),(1,2),(2,2),(4,1),(3,3),(4,3)),\\
+S_1={}&((0,-1),(2,-2),(1,0),(-1,3),(1,2),(3,1),(3,2),(2,4),(4,3),(4,4)),\\
+T_0={}&((-1,0),(2,-2),(0,1),(3,-1),(2,1),(1,3),(3,2),(4,2),(4,3)),\\
+T_1={}&((-1,0),(1,-1),(3,-2),(0,2),(2,1),(1,3),(3,2),(2,4),(4,3),(4,4)),\\
+U_0={}&((0,-1),(-1,1),(3,-2),(2,0),(1,2),(3,1),(2,3),(4,2),(4,3)),\\
+U_1={}&((0,-1),(2,-2),(-1,2),(1,1),(3,0),(2,2),(1,4),(3,3),(4,3),(4,4)).
+\end{aligned}
+\]
+
+各列の和を加算し、各頂点を辿ると次の接続を得る。新しい非末端頂点の次数は2で、列挙した各道は頂点素である。
+
+\begin{center}
+\begin{tabular}{@{}llll@{}}
+\toprule\noalign{}
+ルータ & 第1接続の長さ & 第2接続の長さ & 最後の道 \\
+\midrule\noalign{}
+Rε & P0--P4:1 & P2--P3:2 & P1から6+ε \\
+Sε & P0--P2:5 & P1--P3:1 & P4から3+ε \\
+Tε & P0--P4:1 & P1--P2:3 & P3から5+ε \\
+Uε & P0--P2:3 & P1--P3:1 & P4から5+ε \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+四セル \texttt{F=((0,−1),(−1,1),(1,0),(1,1))} は和
+\texttt{−1,…,2}、接続P1--P3:1、P0--P4:3を持ち、P2を葉として残す。その距離も3。行列交換したセル式
+\texttt{F\ensuremath{^{\mathsf{T}}}} は接続P0--P4:1、P1--P3:3を持ち、同じP2を残す。
+
+以上は全て、任意の整数原点への移動および局所行列交換に対して成り立つ。
+
+\Needspace{365pt}
+\subsection{5.
+全二腕に種を与える一表}\label{ux5168ux4e8cux8155ux306bux7a2eux3092ux4e0eux3048ux308bux4e00ux8868}
+
+以下では \texttt{ε∈\{0,1\}}、\texttt{q≥0}。\texttt{NB\^{}qX}
+は前部へN、Bをq回、終端Xの順に付ける意味である。表の接続は必ずhub道と指定葉道をつなぎ、root同士の閉路や葉同士の独立成分を作らない。長さは§3と§4の加算で得る。
+
+\begin{center}
+\begin{tabular}{@{}lllr@{}}
+\toprule\noalign{}
+二腕(a,b) & 前部 & 続く操作 & 第三長z \\
+\midrule\noalign{}
+(2t,2t) & Et & Rε & t+6+ε \\
+(2t,2t+2) & Et & F & t−1 \\
+(2t,2t+4+4q) & Et & NB\^{}qRε & t+6+q+ε \\
+(2t,2t+6+4q) & Et & NB\^{}qSε & t+4+q+ε \\
+(2t+1,2t+1) & Ot & Tε & t+6+ε \\
+(2t+1,2t+3) & Ot & F\ensuremath{^{\mathsf{T}}} & t−1 \\
+(2t+1,2t+5+4q) & Ot & NB\^{}qRε & t+6+q+ε \\
+(2t+1,2t+7+4q) & Ot & NB\^{}qSε & t+4+q+ε \\
+(2t,2t+1),t≥2 & D(t−1)+B4 & Tε & t+4+ε \\
+(2t,2t+3+4q) & Dt & NB\^{}qRε & t+7+q+ε \\
+(2t,2t+5+4q) & Dt & NB\^{}qUε & t+5+q+ε \\
+(2t+1,2t+2) & Dt+B4 & Rε & t+7+ε \\
+(2t+1,2t+4+4q) & Dt+B2 & NB\^{}qRε & t+7+q+ε \\
+(2t+1,2t+6+4q) & Dt+B2 & NB\^{}qF & t+q \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+常にt≥1。第三長0の場合は次数2のhubの距離が3であり、§1により第三腕を付加できる。全ての非零第三葉も距離3である。
+
+唯一の欠けた二腕は(2,3)。\texttt{A(6,1)}
+の通常接頭部から0は位置2にある。そこで左右へ分けると臨界値2のhub0二腕α道となる。そのhubに新腕
+\texttt{2+c−A(c,2)} を付ける式が \texttt{c≥5,c≠9}
+で使えるから、全てのc≥25を覆う。
+
+\subsection{6.
+境界25を閉じる整数計算}\label{ux5883ux754c25ux3092ux9589ux3058ux308bux6574ux6570ux8a08ux7b97}
+
+二版の種の短い方をzとすれば、cの失敗は \texttt{c≤z+6}。一版では高々
+\texttt{c≤z+13}。\texttt{c≥b}
+と組み合わせると、§5の各族で失敗するcの上界は次となる。
+
+14欄の計算は一つの式にまとめられる。\texttt{b=2t+4q+C}、\texttt{z=t+q+F}
+と書き、二版ならL=6、一版ならL=13とする。固定差の場合はq=0である。失敗するなら
+
+\[
+\begin{aligned}
+2t+4q+C\le c\le t+q+F+L
+&\quad\Longrightarrow\quad t+3q\le F+L-C\\
+&\quad\Longrightarrow\quad c\le2(F+L)-C-2q\le2(F+L)-C.
+\end{aligned}
+\]
+
+下表は§5のC,Fをこの最終式へ代入した値であり、有限範囲からの外挿ではない。
+
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule\noalign{}
+偶奇 & 腕長差の順 & 上界 \\
+\midrule\noalign{}
+EE & 0,2,4+4q,6+4q & 24,22,20,14 \\
+OO & 0,2,4+4q,6+4q & 23,21,19,13 \\
+EO & 1,3+4q,5+4q & 19,23,17 \\
+OE & 1,3+4q,5+4q & 24,22,20 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+例えばEE同長なら \texttt{2t≤c≤t+12} より \texttt{c≤24}。EOの差3+4qなら
+\texttt{2t+3+4q≤c≤t+13+q} より \texttt{t+3q≤10}、従って
+\texttt{c≤23−2q≤23}。OEの差5+4qなら \texttt{2t+6+4q≤c≤t+q+13} より
+\texttt{t+3q≤7}、従って
+\texttt{c≤20−2q≤20}。他の欄も表のb,zを代入する同じ計算である。全上界が25未満なので、a≥2の場合が全て閉じる。
+
+\Needspace{90pt}
+\subsection{7.
+第一腕1の全域（c≥7）}\label{ux7b2cux4e00ux81551ux306eux5168ux57dfc7}
+
+\texttt{m=1+b+c}。次の四場合で直接構成する。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{b偶数、c\textgreater b。}
+  \texttt{P=A(b+c+1,b/2)}。通常・特別のどちらの接頭部も0が添字bにある。そこでPを左右に分けて二腕とし、単葉mを追加する。
+\item
+  \textbf{b=c=2t。} c≥7よりt≥4。\texttt{P=A(4t+1,t+1)}
+  を使う。そのsmall分岐は
+  \texttt{C\_\{4t+1\}(A(4t+1,t−1))}。内側の通常接頭部の後は
+  \texttt{3t+1−A(2t+2,t−1)} で、後者のsmall分岐は
+  \texttt{C\_\{2t+2\}(A(2t+2,1))}。\texttt{A(2t+2,1)} の最初二項が
+  \texttt{(1,2t+1)}
+  なので、Pの添字2tは0となる。そこで二分し、単葉mを追加する。
+\item
+  \textbf{b=2r+1、c≠2b−1。} 単葉m、長さbの腕
+  \texttt{(m−1,1,m−2,2,…,m−r−1)}、長さcの腕 \texttt{r+c−A(c,r)}
+  を使う。r=0なら短腕は一項m−1である。三部分のラベル区間は分割され、辺差は順に
+  \texttt{\{m\}}、\texttt{{[}c+1,m−1{]}}、\texttt{{[}1,c{]}}。
+\item
+  \textbf{b=2r+1、c=2b−1。}
+  \texttt{P=(b+c)−A(b+c+1,r+1)}。c≥7よりr≥2で、通常接頭部の最大ラベルが添字
+  \texttt{2(r+1)−1=b}
+  にあるから、Pの同じ位置は0。そこで二分し、単葉mを加える。全補変換は二部集合を交換するが、両腕が奇数なので必要な低側の大きさに一致する。
+\end{enumerate}
+
+二分した道に最大ラベルmの単葉を足す場合は、旧差1,\ldots,m−1に差mが加わり、α条件とhub0は保たれる。これでa=1の全域と、a≥2,c≥25の無限領域が閉じる。
+
+\subsection{8.
+三辺交換による有限データの共有}\label{ux4e09ux8fbaux4ea4ux63dbux306bux3088ux308bux6709ux9650ux30c7ux30fcux30bfux306eux5171ux6709}
+
+αラベリングのセル集合Xに対し、整数
+\texttt{i,j≥0}、\texttt{d,e\textgreater{}0} を選び、
+
+\[
+\begin{aligned}
+A&=\{(i,j+d),(i+d,j+d+e),(i+d+e,j)\},\\
+B&=\{(i,j+d+e),(i+d,j),(i+d+e,j+d)\}
+\end{aligned}
+\]
+
+と置く。\texttt{A⊆X} であり、\texttt{Y=(X\textbackslash{}A)∪B}
+が連結なら、Yも同じn、hub0、頂点ラベル区間、辺差区間を持つ三腕αラベリングとなる。逆向きも同様である。
+
+\textbf{証明。}
+AとBは同じ三行・三列を各一回使うので全頂点次数を保つ。両者のセル和はともに
+
+\[
+\{i+j+d,\ i+j+d+e,\ i+j+2d+e\}.
+\]
+
+これらは相異なり、\texttt{A∩B=∅}。元の和は重複しないため \texttt{B∩X=∅}
+も従う。従って辺数と全差を保存する。頂点集合と二部集合は変わらず、n+1頂点n辺の連結グラフは木である。hubだけが次数3、他の頂点は次数1または2なので、三腕spiderとなる。行0とα分離も保存される。□
+
+連結性は必要条件であり、全ての交換に自動で成立するとは仮定しない。各有限手順の各段階で、連結性・次数・全ラベル・全差を検査する。交換後の腕順は、hubに隣接する列座標の昇順で固定する。続く葉延長は、この順序の腕番号0,1,2を用いる。交換により腕長が変わってよいが、最終的な三腕長は対象と一致する必要がある。
+
+\subsection{9.
+有限領域の完全な閉包}\label{ux6709ux9650ux9818ux57dfux306eux5b8cux5168ux306aux9589ux5305}
+
+\[
+\sum_{c=7}^{24}\sum_{b=1}^{c}\sum_{a=1}^{b}1
+=\sum_{c=7}^{24}\frac{c(c+1)}2=2544.
+\]
+
+この全三つ組について、まず§7を適用し、次に第三腕の三つの選び方
+\texttt{(a,b;c)}、\texttt{(a,c;b)}、\texttt{(b,c;a)}
+を順に試す。§5の種の第三長zと対象の第三長の差が \texttt{0} または
+\texttt{m≥7,m≠13} なら§1で延長する。(2,3)の特別式の許容範囲は
+\texttt{c≥5,c≠9}。これらを満たすものが一般式による被覆である。
+
+\begin{center}
+\begin{tabular}{@{}lr@{}}
+\toprule\noalign{}
+有限領域の経路 & 三つ組数 \\
+\midrule\noalign{}
+第一腕1の直接構成 & 279 \\
+全偶奇のルータと第三腕の選択 & 1,940 \\
+記録された有限手順 & 306 \\
+直接のラベル配列 & 19 \\
+合計 & \textbf{2,544} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+一般式で供給されない三つ組は正確に325個である。有限証書は37個の実物配列を保存する。そのうち19個は最終行の直接配列、18個は他の対象に再利用する元の配列である。306本の有限手順のうち35本は保存配列から、271本は§5の式（(2,3)の直接式を含む）から生成した配列を始点に使う。後者の異なる式の指定は147個（種124、長さcまで構成したもの23）。全手順を合わせて三辺交換532回、葉延長167回、計699回を記録し、一つの手順の長さは最大7である。
+
+各保存配列はhubの次の頂点から葉までの三列である。独立checkerは、全配列についてhub0を加えたラベルが
+\texttt{0,…,n} の順列、辺差が \texttt{1,…,n}
+の順列、各腕の奇数深さが共通cutoffより上、偶数深さがcutoff以下であることを直接検査する。式からの出発点はchecker自身の端点道・グリッド構成で再生成する。全306本の操作列を別実装で再実行し、各交換の前提と接続を検査してから対象の腕長と比較する。最後に、325個の不足集合と306本の手順・19個の直接配列の対象集合が一致することを全件検査する。
+
+\Needspace{190pt}
+有限データの符号化は次の通りである。具体的な全数値は添付JSONに存在し、発見用探索器を必要としない。
+
+\begin{center}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.30\linewidth}>{\raggedright\arraybackslash}p{.65\linewidth}@{}}
+\toprule\noalign{}
+項目 & 意味 \\
+\midrule\noalign{}
+実物 & \texttt{{[}name,\ {[}arm0,\ arm1,\ arm2{]}{]}} \\
+式の指定 & \texttt{{[}0,a,b,variant{]}} は§5の種、\texttt{{[}1,a,b,c{]}}
+は§5の長さcの構成（(2,3)も含む） \\
+直接対象 & \texttt{{[}a,b,c,witnessIndex{]}} \\
+有限手順 & \texttt{{[}a,b,c,sourceRef,operations{]}} \\
+\texttt{sourceRef≥0} & 実物の添字 \\
+\texttt{sourceRef\textless{}0} & 式の指定の添字 \texttt{−1−sourceRef} \\
+操作 \texttt{{[}0,i,j,d,e,direction{]}} &
+§8の交換。direction=0はA→B、1はB→A \\
+操作 \texttt{{[}1,arm,m{]}} & §1の葉延長 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\texttt{compact\_codec.py}
+はこの表示を名前付きJSONへ可逆変換する。独立checkerは同モジュールをimportせずに解読する。20,376-byte版と67,193-byte版は数理内容が完全に同一である。圧縮によって有限手順が数学的に消えたとは数えない。
+
+これで、§1--7により全 \texttt{c≥25} が、全件検証された有限証書により全
+\texttt{7≤c≤24}
+が覆われる。全構成はhub0、全頂点・全差の一意性、α分離、指定された三腕長を保つ。したがって主定理が成立する。□
+
+\subsection{再現と判定}\label{ux518dux73feux3068ux5224ux5b9a}
+
+結果ディレクトリで \texttt{python3\ -B\ VERIFY\_RESULT.py}
+を実行する。個別には\\
+\texttt{03\_CERTIFICATE\_AND\_CHECKS/independent\_check.py}
+が構成器をimportせずに数値証明を再構成し、\\
+\texttt{check\_outputs.py}
+が公開構成器の実出力をラベリングの定義から検査する。大きな例の検査は実装の検査であり、§6の全整数論証の代用ではない。
+
+全域の有限依存は37実物と306手順であり、最小性は主張しない。証書不要の範囲は
+\texttt{c≥25} および \texttt{a=1,c≥7}。全域 \texttt{c≥7}
+の証書不要化、1ページ化、先行研究上の新規性、外部査読、Lean形式化は未達・未確認である。二ページの別証明
+\texttt{01\_SHORTEST\_COMPLETE\_PROOF.pdf}
+は239実物を使う独立した構成であり、本稿の37実物版とそれぞれのコストを区別して計測する。
+
+\end{document}

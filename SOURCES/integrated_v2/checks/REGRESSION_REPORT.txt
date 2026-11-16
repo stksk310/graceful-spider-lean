@@ -1,0 +1,11 @@
+test_seven_fixed_branch_returns_actual_labels (test_runtime.RuntimeTests.test_seven_fixed_branch_returns_actual_labels) ... ok
+test_six_direct_returns_actual_labels (test_runtime.RuntimeTests.test_six_direct_returns_actual_labels) ... ok
+test_standalone_constructor_exists (test_runtime.RuntimeTests.test_standalone_constructor_exists) ... ok
+test_v2_largest_repeated_length_avoids_deleted_routes (test_runtime.RuntimeTests.test_v2_largest_repeated_length_avoids_deleted_routes) ... ok
+test_v2_reduced_literal_certificate_keys (test_runtime.RuntimeTests.test_v2_reduced_literal_certificate_keys) ... ok
+test_v2_serial_cores_are_constructed (test_runtime.RuntimeTests.test_v2_serial_cores_are_constructed) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.146s
+
+OK

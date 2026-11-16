@@ -1,0 +1,337 @@
+ℹ [714/724] Replayed Ariadne.AInfinity.Finite.C07
+info: Ariadne/AInfinity/Finite/C07.lean:449:0: 'Ariadne.AInfinity.box_1_1_7_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/Finite/C07.lean:450:0: 'Ariadne.AInfinity.box_7_7_7_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [715/724] Replayed Ariadne.AInfinity.Finite.C08
+info: Ariadne/AInfinity/Finite/C08.lean:567:0: 'Ariadne.AInfinity.box_1_1_8_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/Finite/C08.lean:568:0: 'Ariadne.AInfinity.box_8_8_8_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [716/724] Replayed Ariadne.AInfinity.Finite.C09
+info: Ariadne/AInfinity/Finite/C09.lean:699:0: 'Ariadne.AInfinity.box_1_1_9_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/Finite/C09.lean:700:0: 'Ariadne.AInfinity.box_9_9_9_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [717/724] Replayed Ariadne.AInfinity.Finite.C10
+info: Ariadne/AInfinity/Finite/C10.lean:845:0: 'Ariadne.AInfinity.box_1_1_10_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/Finite/C10.lean:846:0: 'Ariadne.AInfinity.box_10_10_10_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [718/724] Replayed Ariadne.AInfinity.Finite.C11
+info: Ariadne/AInfinity/Finite/C11.lean:1005:0: 'Ariadne.AInfinity.box_1_1_11_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/Finite/C11.lean:1006:0: 'Ariadne.AInfinity.box_11_11_11_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [719/724] Replayed Ariadne.AInfinity.Finite.C12
+info: Ariadne/AInfinity/Finite/C12.lean:1179:0: 'Ariadne.AInfinity.box_1_1_12_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/Finite/C12.lean:1180:0: 'Ariadne.AInfinity.box_12_12_12_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [720/724] Replayed Ariadne.AInfinity.Finite.C13
+info: Ariadne/AInfinity/Finite/C13.lean:1367:0: 'Ariadne.AInfinity.box_1_1_13_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/Finite/C13.lean:1368:0: 'Ariadne.AInfinity.box_13_13_13_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [721/724] Replayed Ariadne.AInfinity.Finite.C14
+info: Ariadne/AInfinity/Finite/C14.lean:1569:0: 'Ariadne.AInfinity.box_1_1_14_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/Finite/C14.lean:1570:0: 'Ariadne.AInfinity.box_14_14_14_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [722/724] Replayed Ariadne.AInfinity.Finite.C15
+info: Ariadne/AInfinity/Finite/C15.lean:1785:0: 'Ariadne.AInfinity.box_1_1_15_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/Finite/C15.lean:1786:0: 'Ariadne.AInfinity.box_15_15_15_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [723/724] Replayed Ariadne.AInfinity.Finite.C16
+info: Ariadne/AInfinity/Finite/C16.lean:2015:0: 'Ariadne.AInfinity.box_1_1_16_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/Finite/C16.lean:2016:0: 'Ariadne.AInfinity.box_16_16_16_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [724/861] Replayed Ariadne.AInfinity.Finite.C17
+info: Ariadne/AInfinity/Finite/C17.lean:2259:0: 'Ariadne.AInfinity.box_1_1_17_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/Finite/C17.lean:2260:0: 'Ariadne.AInfinity.box_17_17_17_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [725/861] Replayed Ariadne.AInfinity.Finite.C18
+info: Ariadne/AInfinity/Finite/C18.lean:2517:0: 'Ariadne.AInfinity.box_1_1_18_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/Finite/C18.lean:2518:0: 'Ariadne.AInfinity.box_18_18_18_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [726/861] Replayed Ariadne.AInfinity.Finite.C19
+info: Ariadne/AInfinity/Finite/C19.lean:2789:0: 'Ariadne.AInfinity.box_1_1_19_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/Finite/C19.lean:2790:0: 'Ariadne.AInfinity.box_19_19_19_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [727/861] Replayed Ariadne.AInfinity.Finite.C20
+info: Ariadne/AInfinity/Finite/C20.lean:3075:0: 'Ariadne.AInfinity.box_1_1_20_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/Finite/C20.lean:3076:0: 'Ariadne.AInfinity.box_20_20_20_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [728/861] Replayed Ariadne.AInfinity.Finite.C21
+info: Ariadne/AInfinity/Finite/C21.lean:3375:0: 'Ariadne.AInfinity.box_1_1_21_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/Finite/C21.lean:3376:0: 'Ariadne.AInfinity.box_21_21_21_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [729/861] Replayed Ariadne.AInfinity.Finite.C22
+info: Ariadne/AInfinity/Finite/C22.lean:3689:0: 'Ariadne.AInfinity.box_1_1_22_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/Finite/C22.lean:3690:0: 'Ariadne.AInfinity.box_22_22_22_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [730/861] Replayed Ariadne.Cert.FiniteInverse
+info: Ariadne/Cert/FiniteInverse.lean:38:0: 'Ariadne.ExactRange.of_right_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [731/861] Replayed Ariadne.AInfinity.Finite.C23
+info: Ariadne/AInfinity/Finite/C23.lean:4017:0: 'Ariadne.AInfinity.box_1_1_23_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/Finite/C23.lean:4018:0: 'Ariadne.AInfinity.box_23_23_23_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [732/861] Replayed Ariadne.AInfinity.Finite.C24
+info: Ariadne/AInfinity/Finite/C24.lean:4359:0: 'Ariadne.AInfinity.box_1_1_24_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/Finite/C24.lean:4360:0: 'Ariadne.AInfinity.box_24_24_24_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [733/861] Replayed Ariadne.AInfinity.Finite
+info: Ariadne/AInfinity/Finite.lean:45:0: 'Ariadne.AInfinity.ainf_bounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [735/861] Replayed Ariadne.AInfinity.Threshold
+info: Ariadne/AInfinity/Threshold.lean:119:0: 'Ariadne.AInfinity.failed_threshold_bound' depends on axioms: [propext, Quot.sound]
+info: Ariadne/AInfinity/Threshold.lean:120:0: 'Ariadne.AInfinity.threshold_reached' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/Threshold.lean:121:0: 'Ariadne.AInfinity.two_seed_cover' depends on axioms: [propext, Quot.sound]
+info: Ariadne/AInfinity/Threshold.lean:122:0: 'Ariadne.AInfinity.pair_classification' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [736/861] Replayed Ariadne.AInfinity.FamilySpec
+info: Ariadne/AInfinity/FamilySpec.lean:62:0: 'Ariadne.AInfinity.router_extension_decomposition' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [739/861] Replayed Ariadne.Core.Zigzag
+info: Ariadne/Core/Zigzag.lean:47:0: 'Ariadne.zigzag_bounds' depends on axioms: [propext, Quot.sound]
+info: Ariadne/Core/Zigzag.lean:48:0: 'Ariadne.zigzag_injective' depends on axioms: [propext, Quot.sound]
+info: Ariadne/Core/Zigzag.lean:49:0: 'Ariadne.zigzag_surjective' depends on axioms: [propext, Quot.sound]
+info: Ariadne/Core/Zigzag.lean:50:0: 'Ariadne.zigzag_edge' depends on axioms: [propext, Quot.sound]
+⚠ [740/861] Replayed Ariadne.Core.EndpointPaths
+warning: Ariadne/Core/EndpointPaths.lean:140:58: unused variable `hn`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ariadne/Core/EndpointPaths.lean:165:5: unused variable `hp`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ariadne/Core/EndpointPaths.lean:172:40: unused variable `hb`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ariadne/Core/EndpointPaths.lean:172:53: unused variable `hn`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ariadne/Core/EndpointPaths.lean:173:5: unused variable `hp`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ariadne/Core/EndpointPaths.lean:181:41: unused variable `hb`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ariadne/Core/EndpointPaths.lean:181:54: unused variable `hn`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ariadne/Core/EndpointPaths.lean:182:5: unused variable `hp`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Ariadne/Core/EndpointPaths.lean:399:13: This simp argument is unused:
+  Fin.val_mk
+
+Hint: Omit it from the simp argument list.
+  simp only ̵[̵F̵i̵n̵.̵v̵a̵l̵_̵m̵k̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Ariadne/Core/EndpointPaths.lean:409:13: This simp argument is unused:
+  Fin.val_mk
+
+Hint: Omit it from the simp argument list.
+  simp only ̵[̵F̵i̵n̵.̵v̵a̵l̵_̵m̵k̵]̵
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: Ariadne/Core/EndpointPaths.lean:512:0: 'Ariadne.endpoint_alpha_path_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/Core/EndpointPaths.lean:513:0: 'Ariadne.endpointAlphaPath_equal_even_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [741/861] Replayed Ariadne.AInfinity.LargeAssembly
+warning: Ariadne/AInfinity/LargeAssembly.lean:46:54: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+info: Ariadne/AInfinity/LargeAssembly.lean:50:0: 'Ariadne.AInfinity.RouterSeed.close_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/LargeAssembly.lean:51:0: 'Ariadne.AInfinity.ainf_large_from_router_supply' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/LargeAssembly.lean:52:0: 'Ariadne.AInfinity.ainf_23' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [742/861] Replayed Ariadne.Core.Reindex
+info: Ariadne/Core/Reindex.lean:90:0: 'Ariadne.AlphaCutoff.reindex' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [743/861] Replayed Ariadne.AInfinity.Router
+info: Ariadne/AInfinity/Router.lean:220:0: 'Ariadne.AInfinity.terminal_paths' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/Router.lean:221:0: 'Ariadne.AInfinity.terminal_sums' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/Router.lean:222:0: 'Ariadne.AInfinity.placeVertex_injective' depends on axioms: [propext]
+info: Ariadne/AInfinity/Router.lean:223:0: 'Ariadne.AInfinity.next_sum' depends on axioms: [propext, Quot.sound]
+info: Ariadne/AInfinity/Router.lean:224:0: 'Ariadne.AInfinity.B_new_ports' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/Router.lean:225:0: 'Ariadne.AInfinity.initial_paths' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [744/861] Replayed Ariadne.Core.Grid
+info: Ariadne/Core/Grid.lean:61:0: 'Ariadne.graceful_of_cell_sums' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [745/861] Replayed Ariadne.AInfinity.GridBridge
+info: Ariadne/AInfinity/GridBridge.lean:400:0: 'Ariadne.AInfinity.alpha_of_arm_walks' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/GridBridge.lean:401:0: 'Ariadne.AInfinity.GridEmbedding.alphaHZ3' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [746/861] Replayed Ariadne.AInfinity.GridSums
+info: Ariadne/AInfinity/GridSums.lean:123:0: 'Ariadne.AInfinity.HasGridSums.append_placed' depends on axioms: [propext, Quot.sound]
+info: Ariadne/AInfinity/GridSums.lean:124:0: 'Ariadne.AInfinity.GridSumForest.iterateB_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [747/861] Replayed Ariadne.AInfinity.FamilyForests
+warning: Ariadne/AInfinity/FamilyForests.lean:49:2: 'congr 1' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ariadne/AInfinity/FamilyForests.lean:102:65: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ariadne/AInfinity/FamilyForests.lean:102:65: 'omega' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ariadne/AInfinity/FamilyForests.lean:165:62: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ariadne/AInfinity/FamilyForests.lean:165:62: 'rfl' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ariadne/AInfinity/FamilyForests.lean:208:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+info: Ariadne/AInfinity/FamilyForests.lean:368:0: 'Ariadne.AInfinity.familyIter_forest' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/FamilyForests.lean:369:0: 'Ariadne.AInfinity.familyIter_lengths' depends on axioms: [propext, Quot.sound]
+info: Ariadne/AInfinity/FamilyForests.lean:370:0: 'Ariadne.AInfinity.familyIter_edges' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [749/861] Replayed Ariadne.AInfinity.GridTerminalR
+warning: Ariadne/AInfinity/GridTerminalR.lean:34:43: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Ariadne/AInfinity/GridTerminalR.lean:78:70: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ariadne/AInfinity/GridTerminalR.lean:78:70: 'omega' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ariadne/AInfinity/GridTerminalR.lean:121:4: Try `simp at hv` instead of `simpa using hv`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+info: Ariadne/AInfinity/GridTerminalR.lean:218:0: 'Ariadne.AInfinity.gridRArms_vertices_perm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/GridTerminalR.lean:219:0: 'Ariadne.AInfinity.gridRArms_edges' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [750/861] Replayed Ariadne.AInfinity.GridTerminalRAlt
+warning: Ariadne/AInfinity/GridTerminalRAlt.lean:25:43: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Ariadne/AInfinity/GridTerminalRAlt.lean:82:4: Try `simp at hv` instead of `simpa using hv`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+info: Ariadne/AInfinity/GridTerminalRAlt.lean:127:0: 'Ariadne.AInfinity.gridRArmsAlt_edges' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [751/861] Replayed Ariadne.AInfinity.FamilyPartial
+warning: Ariadne/AInfinity/FamilyPartial.lean:72:53: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ariadne/AInfinity/FamilyPartial.lean:72:53: 'omega' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ariadne/AInfinity/FamilyPartial.lean:78:53: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ariadne/AInfinity/FamilyPartial.lean:78:53: 'omega' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+info: Ariadne/AInfinity/FamilyPartial.lean:252:0: 'Ariadne.AInfinity.FamilyForest.extendB2' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/FamilyPartial.lean:253:0: 'Ariadne.AInfinity.FamilyForest.extendB4' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/FamilyPartial.lean:254:0: 'Ariadne.AInfinity.familyB2_edges' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/FamilyPartial.lean:255:0: 'Ariadne.AInfinity.familyB4_edges' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [752/861] Replayed Ariadne.AInfinity.GridTerminalTF
+warning: Ariadne/AInfinity/GridTerminalTF.lean:41:43: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Ariadne/AInfinity/GridTerminalTF.lean:81:59: This simp argument is unused:
+  List.count_cons
+
+Hint: Omit it from the simp argument list.
+  simp [gridTArms, gridTNewVertices, gridTHub, gridTLeaf, List.ofFn_succ,
+  ̲  ̲ ̲ ̲List.count_append, L̵i̵s̵t̵.̵c̵o̵u̵n̵t̵_̵r̵e̵v̵e̵r̵s̵e̵,̵ ̵L̵i̵s̵t̵.̵c̵o̵u̵n̵t̵_̵c̵o̵n̵s̵]̵L̲i̲s̲t̲.̲c̲o̲u̲n̲t̲_̲r̲e̲v̲e̲r̲s̲e̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Ariadne/AInfinity/GridTerminalTF.lean:116:4: Try `simp at hv` instead of `simpa using hv`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Ariadne/AInfinity/GridTerminalTF.lean:174:4: Try `simp at hv` instead of `simpa using hv`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Ariadne/AInfinity/GridTerminalTF.lean:234:24: This simp argument is unused:
+  hqr
+
+Hint: Omit it from the simp argument list.
+  simp [̵h̵q̵r̵,̵ ̵h̵h̵]̵[̲h̲h̲]̲
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Ariadne/AInfinity/GridTerminalTF.lean:237:68: This simp argument is unused:
+  List.singleton_append
+
+Hint: Omit it from the simp argument list.
+  simp only [List.cons_append, List.tail_cons, List.append_assoc, L̵i̵s̵t̵.̵s̵i̵n̵g̵l̵e̵t̵o̵n̵_̵a̵p̵p̵e̵n̵d̵,̵ ̵List.nil_append]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Ariadne/AInfinity/GridTerminalTF.lean:261:47: This simp argument is unused:
+  List.map_singleton
+
+Hint: Omit it from the simp argument list.
+  simp only [List.map_cons, List.map_append, L̵i̵s̵t̵.̵m̵a̵p̵_̵s̵i̵n̵g̵l̵e̵t̵o̵n̵,̵ ̵List.map_nil]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: Ariadne/AInfinity/GridTerminalTF.lean:346:0: 'Ariadne.AInfinity.gridTArms_edges' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/GridTerminalTF.lean:347:0: 'Ariadne.AInfinity.gridFArms_edges' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [857/861] Replayed Ariadne.AInfinity.RouterFamilies
+warning: Ariadne/AInfinity/RouterFamilies.lean:89:65: This simp argument is unused:
+  Frame.rowMax
+
+Hint: Omit it from the simp argument list.
+  simp_all only [gridRFrame, Bool.false_eq_true, ↓reduceIte, F̵r̵a̵m̵e̵.̵r̵o̵w̵M̵a̵x̵,̵ ̵Frame.colMax, placeVertex,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲gridLabel]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Ariadne/AInfinity/RouterFamilies.lean:89:79: This simp argument is unused:
+  Frame.colMax
+
+Hint: Omit it from the simp argument list.
+  simp_all only [gridRFrame, Bool.false_eq_true, ↓reduceIte, Frame.rowMax, F̵r̵a̵m̵e̵.̵c̵o̵l̵M̵a̵x̵,̵placeVertex,
+          gridLabel]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: Ariadne/AInfinity/RouterFamilies.lean:540:0: 'Ariadne.AInfinity.routerSeed_EE_gap_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/RouterFamilies.lean:541:0: 'Ariadne.AInfinity.routerSeed_OO_gap_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/RouterFamilies.lean:544:0: 'Ariadne.AInfinity.routerSeed_OE_adjacent' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/RouterFamilies.lean:547:0: 'Ariadne.AInfinity.routerSeed_EE_equal' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [860/872] Replayed Ariadne.AInfinity.FamilyReturn
+warning: Ariadne/AInfinity/FamilyReturn.lean:28:68: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ariadne/AInfinity/FamilyReturn.lean:28:68: 'omega' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ariadne/AInfinity/FamilyReturn.lean:56:105: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ariadne/AInfinity/FamilyReturn.lean:61:105: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Ariadne/AInfinity/FamilyReturn.lean:56:105: 'omega' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Ariadne/AInfinity/FamilyReturn.lean:61:105: 'omega' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+info: Ariadne/AInfinity/FamilyReturn.lean:146:0: 'Ariadne.AInfinity.FamilyForest.returnN' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/FamilyReturn.lean:147:0: 'Ariadne.AInfinity.return_edges_perm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/FamilyReturn.lean:148:0: 'Ariadne.AInfinity.return_sums' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [862/872] Replayed Ariadne.AInfinity.GridReturnR
+warning: Ariadne/AInfinity/GridReturnR.lean:98:4: Try `simp at hv` instead of `simpa using hv`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+info: Ariadne/AInfinity/GridReturnR.lean:144:0: 'Ariadne.AInfinity.gridReturnRArms_edges' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/GridReturnR.lean:145:0: 'Ariadne.AInfinity.gridReturnRArms_nodup' depends on axioms: [propext, Classical.choice, Quot.sound]
+warning: Ariadne/AInfinity/GridReturnR.lean:209:13: This simp argument is unused:
+  Fin.val_mk
+
+Hint: Omit it from the simp argument list.
+  simp only [̵F̵i̵n̵.̵v̵a̵l̵_̵m̵k̵]̵ ̵at hi
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ℹ [865/872] Built Ariadne.AInfinity.GridReturnF (7.9s)
+info: Ariadne/AInfinity/GridReturnF.lean:205:0: 'Ariadne.AInfinity.gridReturnFArms_edges' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [866/872] Built Ariadne.AInfinity.FamilySeedsT (10s)
+info: Ariadne/AInfinity/FamilySeedsT.lean:174:0: 'Ariadne.AInfinity.routerSeed_OO_equal' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/FamilySeedsT.lean:175:0: 'Ariadne.AInfinity.routerSeed_EO_adjacent' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [867/872] Built Ariadne.Core.PathSplit (13s)
+ℹ [868/872] Built Ariadne.AInfinity.FamilySeedsF (5.0s)
+info: Ariadne/AInfinity/FamilySeedsF.lean:306:0: 'Ariadne.AInfinity.routerSeed_OE_far_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [869/872] Built Ariadne.AInfinity.OneShortArm (4.3s)
+info: Ariadne/AInfinity/OneShortArm.lean:108:0: 'Ariadne.AInfinity.oneShortArm' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [870/872] Built Ariadne.AInfinity.FamilySeedsR (23s)
+warning: Ariadne/AInfinity/FamilySeedsR.lean:89:62: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Ariadne/AInfinity/FamilySeedsR.lean:270:70: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Ariadne/AInfinity/FamilySeedsR.lean:274:70: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Ariadne/AInfinity/FamilySeedsR.lean:284:36: This simp argument is unused:
+  Fin.val_mk
+
+Hint: Omit it from the simp argument list.
+  simp only [̵F̵i̵n̵.̵v̵a̵l̵_̵m̵k̵]̵ ̵at hi
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Ariadne/AInfinity/FamilySeedsR.lean:408:4: 'change
+  boundaryDistance (gridRFrame (returnRFrame kind n q) one).rowMax.toNat
+      (gridLabel _ (vertexOfArms arms hlen (armLeaf _ 2))) =
+    3' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+info: Ariadne/AInfinity/FamilySeedsR.lean:449:0: 'Ariadne.AInfinity.routerSeed_EE_returnR' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/FamilySeedsR.lean:450:0: 'Ariadne.AInfinity.routerSeed_OO_returnR' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/FamilySeedsR.lean:451:0: 'Ariadne.AInfinity.routerSeed_EO_returnR' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/FamilySeedsR.lean:452:0: 'Ariadne.AInfinity.routerSeed_OE_returnR' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [871/872] Built Ariadne.AInfinity.SeedSupply (5.0s)
+info: Ariadne/AInfinity/SeedSupply.lean:71:0: 'Ariadne.AInfinity.routerSeedSupply' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [872/872] Built Ariadne.AInfinity.Main (4.1s)
+info: Ariadne/AInfinity/Main.lean:29:0: 'Ariadne.AInfinity.ainf_large' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Ariadne/AInfinity/Main.lean:30:0: 'Ariadne.AInfinity.ainf' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (872 jobs).

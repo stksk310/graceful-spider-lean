@@ -1,0 +1,47 @@
+V2 target regressions, first observed before runtime changes; reproduced against an isolated unchanged v1 snapshot.
+test_seven_fixed_branch_returns_actual_labels (test_runtime.RuntimeTests.test_seven_fixed_branch_returns_actual_labels) ... ok
+test_six_direct_returns_actual_labels (test_runtime.RuntimeTests.test_six_direct_returns_actual_labels) ... ok
+test_standalone_constructor_exists (test_runtime.RuntimeTests.test_standalone_constructor_exists) ... ok
+test_v2_largest_repeated_length_avoids_deleted_routes (test_runtime.RuntimeTests.test_v2_largest_repeated_length_avoids_deleted_routes) ... FAIL
+test_v2_reduced_literal_certificate_keys (test_runtime.RuntimeTests.test_v2_reduced_literal_certificate_keys) ... FAIL
+test_v2_serial_cores_are_constructed (test_runtime.RuntimeTests.test_v2_serial_cores_are_constructed) ... FAIL
+
+======================================================================
+FAIL: test_v2_largest_repeated_length_avoids_deleted_routes (test_runtime.RuntimeTests.test_v2_largest_repeated_length_avoids_deleted_routes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/ariadne_v2_regression_before_xgdwhncc/src/test_runtime.py", line 10, in test_v2_largest_repeated_length_avoids_deleted_routes
+    self.assertEqual(p['route'],'bridge')
+AssertionError: 'three_pendants' != 'bridge'
+- three_pendants
++ bridge
+
+
+======================================================================
+FAIL: test_v2_reduced_literal_certificate_keys (test_runtime.RuntimeTests.test_v2_reduced_literal_certificate_keys)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/ariadne_v2_regression_before_xgdwhncc/src/test_runtime.py", line 14, in test_v2_reduced_literal_certificate_keys
+    self.assertEqual(D['schema'],'ARIADNE_SIX_SEVEN_COMPACT_V2')
+AssertionError: 'ARIADNE_SIX_SEVEN_COMPACT_V1' != 'ARIADNE_SIX_SEVEN_COMPACT_V2'
+- ARIADNE_SIX_SEVEN_COMPACT_V1
+?                            ^
++ ARIADNE_SIX_SEVEN_COMPACT_V2
+?                            ^
+
+
+======================================================================
+FAIL: test_v2_serial_cores_are_constructed (test_runtime.RuntimeTests.test_v2_serial_cores_are_constructed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/ariadne_v2_regression_before_xgdwhncc/src/test_runtime.py", line 26, in test_v2_serial_cores_are_constructed
+    self.assertEqual(route,'serial')
+AssertionError: 'literal' != 'serial'
+- literal
++ serial
+
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.168s
+
+FAILED (failures=3)

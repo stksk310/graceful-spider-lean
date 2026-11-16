@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "full": true,
+  "core_sha256": "433c784118dd1a394fae65902d01eb98e27f7dfb900ac014faad257a2534e95b",
+  "role_record_counts": {
+    "alpha_small": 44,
+    "six_hz": 7,
+    "six_direct": 18,
+    "offset": 22,
+    "seven_direct": 20,
+    "fixed_offset": 0
+  },
+  "finite164_routes": {
+    "alpha": 72,
+    "peeled": 43,
+    "equal": 15,
+    "top_double_band": 10,
+    "literal": 22,
+    "serial": 2
+  },
+  "alpha72_supply": {
+    "small": 44,
+    "ainf": 28
+  },
+  "six_representatives": 924,
+  "six_direct_complement": 18,
+  "seven_base_le7": 1716,
+  "D_n_classification_audit": {
+    "3": 12,
+    "4": 14,
+    "5": 16,
+    "6": 18,
+    "7": 20,
+    "8": 22,
+    "9": 24
+  },
+  "old_direct43": 43,
+  "old_direct43_bridge_reconstructed": 23,
+  "seven_direct_complement": 20,
+  "constructed_counts": {
+    "sorted_6_max12": 12376,
+    "sorted_7_max12": 31824,
+    "targeted": 49,
+    "random_general": 300,
+    "random_balanced": 300,
+    "random_equal": 200,
+    "large_300000_edges": 3
+  },
+  "global_route_counts": {
+    "six_split": 12500,
+    "six_direct18": 18,
+    "finite_base8": 3432,
+    "three_equal": 13412,
+    "four_short": 9987,
+    "long_largest": 4924,
+    "exceptional_short_triple": 406,
+    "balanced_outer_pair": 373
+  },
+  "subroute_counts": {
+    "bridge": 25492,
+    "long_arm": 6649,
+    "literal20": 20
+  },
+  "bridge_kind_counts": {
+    "finite_164": 13279,
+    "equal": 11124,
+    "top_double_band": 1089
+  },
+  "balanced_case_counts": {
+    "ordinary": 363,
+    "right_resonance_escape": 6,
+    "left_resonance_escape": 4
+  },
+  "negative_tests": 17,
+  "largest_edge_count": 300000,
+  "seed": 20261116,
+  "elapsed_seconds": 10.949,
+  "scope": "Concrete label/edge checks and finite coverage only. All-integer proofs remain mathematical, not machine formalized."
+}

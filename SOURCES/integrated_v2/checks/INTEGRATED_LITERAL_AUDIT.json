@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "source": "references/ainf37/01B_FORMULA_SMALL_KERNEL_PROOF.md",
+  "integrated": "proofs/02_A_INFINITY_JA.md",
+  "exact_router_lists": [
+    "R_0",
+    "R_1",
+    "S_0",
+    "S_1",
+    "T_0",
+    "T_1",
+    "U_0",
+    "U_1"
+  ],
+  "scope": "Literal-coordinate transcription check; general proof independently reviewed."
+}

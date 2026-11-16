@@ -1,0 +1,33 @@
+{
+  "prepared_on": "2026-11-16",
+  "intended_repository": "stksk310/graceful-spider-lean",
+  "github_repository_created": false,
+  "source_repository": "stksk310/graceful-spider",
+  "source_ref": "lean-complete-v1.0.0",
+  "source_commit": "569553a6daf64a82bd8171fed2f3c3329f7ea00c",
+  "source_file_count": 243,
+  "unchanged_source_file_count": 242,
+  "modified_source_paths": [
+    "README.md"
+  ],
+  "original_readme_preserved_at": "docs/ORIGINAL_README_JA.md",
+  "lean_proof_files_unchanged": true,
+  "all_original_files_retained": true,
+  "publication_checks": {
+    "python_unit_tests": {
+      "command": "python3 -B -m unittest discover -s tests -v",
+      "result": "PASS",
+      "tests": 6
+    },
+    "source_inventory_and_frozen_hash_audit": {
+      "result": "PASS",
+      "finite_domain_size": 2544,
+      "axiom_input": "Original artifacts/axioms.log; not a new Lean execution"
+    },
+    "all_lean_hashes_match_original_audit": true,
+    "local_readme_links": "PASS",
+    "symlink_check": "PASS",
+    "lean_rebuild_performed": false,
+    "lean_rebuild_limitation": "Lean/lake are not installed in the publication workspace. Existing build and axiom logs are preserved historical evidence."
+  }
+}

@@ -1,0 +1,3 @@
+'Ariadne.Bench.large_graceful' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+elapsed_seconds=17.504716988999917

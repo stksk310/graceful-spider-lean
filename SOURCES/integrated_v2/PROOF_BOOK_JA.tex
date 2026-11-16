@@ -1,0 +1,1873 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  10pt,
+  a4paper,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{Noto Serif CJK JP}
+  \setsansfont[]{Noto Sans CJK JP}
+  \setmonofont[]{Noto Sans Mono CJK JP}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=22mm]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{\textbf{#1}}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{japanese}
+\ifPDFTeX
+\else
+\babelfont{rm}[]{Noto Serif CJK JP}
+\fi
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\XeTeXlinebreaklocale "ja"
+\XeTeXlinebreakskip=0pt plus 1pt
+\setlength{\emergencystretch}{2em}
+\allowdisplaybreaks
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={三腕のα供給と六腕七腕の graceful ラベリング},
+  pdflang={ja},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{三腕のα供給と六腕七腕の graceful ラベリング}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{共通の区間挿入から全整数構成まで}
+\author{}
+\date{2026年11月16日}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+正整数の三腕長 \(a\le b\le c\)、\(c\ge7\) に対するハブ0の \(\alpha\)
+供給 \(A_\infty\) と、任意の正整数腕長を持つ六腕・七腕スパイダーの
+graceful 性を証明する。
+必要な初等補題を最初にまとめ、三腕部品を作る存在定理と、部品を接合するFusionの役割を区別する。
+
+共通の区間挿入は「旧低ラベルを固定し、旧高ラベルをずらし、空いた区間へ核を置く」操作である。
+これを葉に使えばA∞の腕延長、ハブに使えば六腕・七腕の接合になる。
+第1章の道と挿入、第2章の三腕供給、第3章の六腕、第4章の七腕、第5章の有限証書の順に読み進められる。
+元の独立版A∞も参照資料として保持するが、全整数証明はこの一冊の中に収めた。
+
+\section{共通の初等構成}\label{ux5171ux901aux306eux521dux7b49ux69cbux6210}
+
+端点道、区間挿入、葉延長を共通化する。部品の存在は後続章で供給し、三腕の全域存在は仮定しない。整数区間
+\([a,b]\) は両端を含み、\(a>b\) なら空集合とする。
+
+\subsection{F1　記号と定義}\label{f1-ux8a18ux53f7ux3068ux5b9aux7fa9}
+
+\(S(l_1,\ldots,l_t)\) はハブから長さ \(l_i\ge1\)
+の道を伸ばしたスパイダーである。\textbf{腕長は辺数}で、全辺数は
+\(q=\sum_i l_i\)。腕の列はハブの隣から葉へ記す。\textbf{\(P_n\) の \(n\)
+は頂点数}で辺数は \(n-1\)。一腕 \(U_w=S(w)\) はハブを含めて \(w+1\)
+頂点を持ち、ハブを除くと \(P_w\) となる。
+
+\(q\) 辺の木の \textbf{graceful labeling} は頂点ラベル
+\([0,q]\)、辺の絶対差 \([1,q]\) を各一度使う。全辺がある境界 \(\lambda\)
+の低側 \([0,\lambda]\) と高側 \([\lambda+1,q]\) を結ぶものを
+\textbf{\(\alpha\)-labeling} という。
+
+根付き木 \(T\) について、根以外の偶数距離頂点数を \(\kappa(T)\)
+とする。スパイダーでは
+
+\[
+\kappa(S)=\sum_i\left\lfloor\frac{l_i}{2}\right\rfloor.
+\]
+
+スパイダーでは必要なら補変換 \(x\mapsto q-x\)
+によりハブを低側に置く。この側はハブと偶数距離頂点なので境界は
+\(\kappa(S)\)。ハブラベル \(h\) に対する \textbf{階数}を
+\(r=\kappa(S)-h\) とし、このラベリングを備えたスパイダーを
+\textbf{\(\alpha\)殻}という。
+
+\(p\) 辺の根付き木 \(T\) と \(c\ge0\) に対する \textbf{オフセット核}
+\(O(T,c)\) は、根0、非根ラベル \([c+1,c+p]\)、辺差 \([1,p]\)
+を各一度使う。偶数距離の非根頂点が \([c+1,c+\kappa(T)]\)、奇数距離頂点が
+\([c+\kappa(T)+1,c+p]\) を使うものを \textbf{\(\alpha\)核}
+\(\alpha O(T,c)\) という。全辺は境界 \(c+\kappa(T)\) を横切る。
+
+\(c>0\) の像は通常の graceful labeling と異なり、核だけでは
+\(\alpha\)性を保証しない。\(c=0\) ではそれぞれ根0の graceful
+labeling、\(\alpha\)-labeling となる。
+
+\subsection{\texorpdfstring{F2　\(\alpha\)反転}{F2　\textbackslash alpha反転}}\label{f2-alphaux53cdux8ee2}
+
+境界 \(\lambda\) の \(q\) 辺の \(\alpha\)-labeling \(f\) に対して
+
+\[
+I_f(v)=
+\begin{cases}
+\lambda-f(v),&f(v)\le\lambda,\\
+q+\lambda+1-f(v),&f(v)>\lambda
+\end{cases}
+\]
+
+と置く。両区間内の反転なので全単射である。低値 \(x\) と高値 \(y\)
+を結ぶ辺の新差は
+
+\[
+(q+\lambda+1-y)-(\lambda-x)=q+1-(y-x).
+\]
+
+従って差 \([1,q]\) を逆順に使い、\(\alpha\)性を保つ。ハブ \(h\) は
+\(\kappa-h=r\)、新階数は \(\kappa-r\) となり、ハブ0の
+\(\alpha\)-labeling と階数0の \(\alpha\)殻は互いに得られる。□
+
+\subsection{F3　端点道と一腕部品}\label{f3-ux7aefux70b9ux9053ux3068ux4e00ux8155ux90e8ux54c1}
+
+\subsubsection{\texorpdfstring{F3.1　低側端点を指定した
+\(\alpha\)道}{F3.1　低側端点を指定した \textbackslash alpha道}}\label{f3.1-ux4f4eux5074ux7aefux70b9ux3092ux6307ux5b9aux3057ux305f-alphaux9053}
+
+\(n\ge1\)、\(r\ge0\) が
+
+\[
+n\ge2r+1,\qquad r=0\ \text{または}\ n\ne4r+1
+\tag{F3.1}
+\]
+
+なら、境界 \(\lambda_n=\lfloor(n-1)/2\rfloor\)、先頭値 \(r\) の
+\(\alpha\)道 \(A(n,r)\) を構成する。
+
+道の反転（F2）を \(C_n\) と書く。
+
+\[
+C_n(x)=
+\begin{cases}
+\lambda_n-x,&x\le\lambda_n,\\
+n+\lambda_n-x,&x>\lambda_n.
+\end{cases}
+\]
+
+以下、\(\Vert\) は列連結、列の変換は各項に施す。\(r=0\) では
+
+\[
+A(n,0)=(0,n-1,1,n-2,2,n-3,\ldots)
+\]
+
+を使う。ラベル \([0,n-1]\)、差 \(n-1,\ldots,1\)
+を一度ずつ使い、低高は交互になる。\(n=1\) は \((0)\) である。
+
+以下 \(r\ge1\) とし、\((r,n)\) の辞書式順序で帰納する。
+
+\textbf{\(n\le4r\)（\(2r>\lambda_n\)）。} \(r'=\lambda_n-r\) と置くと
+\(0\le r'<r\) かつ \(n\ge2r'+1\)。\(r'>0\) で \(n=4r'+1\) なら
+\(\lambda_n=2r'\) から \(r=r'\) となって矛盾する。従って帰納法とF2により
+\(A(n,r)=C_n(A(n,r'))\) を得る。先頭は \(\lambda_n-r'=r\) である。
+
+\textbf{\(n\ge4r+2,n\ne6r+2\)。} \(m=n-2r-1\) は \(m\ge2r+1,m\ne4r+1\)
+を満たす。帰納法の \(A(m,r)=(a_i)\) を用い、
+
+\[
+P=(r,n-r,r-1,n-r+1,\ldots,1,n-1,0)
+\]
+
+として \(A(n,r)=P\Vert(m+r-a_i)\) とする。
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+部分 & ラベル集合 & 辺差 \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(P\)（\(2r+1\) 頂点） & \([0,r]\cup[n-r,n-1]\) & \([m+1,n-1]\) \\
+後続列 & \([r+1,n-r-1]\) & 内部 \([1,m-1]\) \\
+接続辺 & \(0\) と \(m\) & \(\{m\}\) \\
+\end{longtable}
+
+前置差は対内・対間を交互に \(n-2r,\ldots,n-1\)
+と進む。従って表は全ラベルと全差を分割する。後続列の元の高値の像の最大は
+\(m+r-\lambda_m-1=\lambda_n\)
+で、元の低値の像はそれより上となり、低高が逆転する。前置列は低側から0で終わり、後続列は高側から始まるので、全体も
+\(\alpha\)道である。
+
+\textbf{\(n=6r+2\)。} \(m'=4r\ge2r+1\) と置き、帰納法の
+\(A(m',r)=(a_i)\) を用い、
+
+\[
+P=(r,n-1-r,r-1,n-r,\ldots,0,n-1)
+\]
+
+として \(A(n,r)=P\Vert(a_i+r+1)\) と定める。
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+部分 & ラベル集合 & 辺差 \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(P\)（\(2r+2\) 頂点） & \([0,r]\cup[n-1-r,n-1]\) & \([m'+1,n-1]\) \\
+後続列 & \([r+1,n-r-2]\) & 内部 \([1,m'-1]\) \\
+接続辺 & \(n-1\) と \(2r+1\) & \(\{m'\}\) \\
+\end{longtable}
+
+表は再び全ラベルと全差を分割する。\(\lambda_{m'}+r+1=3r=\lambda_n\)
+なので後続列は低高を保つ。前置列は高側 \(n-1\)
+で終わり、後続列は低側から始まるので \(\alpha\)性も保たれる。
+
+第一分岐は \(r\)、他の分岐は \(n\)
+を減らし、再帰条件も満たすので、構成は停止して(F3.1)の全域を覆う。□
+
+\subsubsection{F3.2　他端の公式}\label{f3.2-ux4ed6ux7aefux306eux516cux5f0f}
+
+低側 \(r\) から始まる \(\alpha\)道 \(P_n\) の他端を \(b\)
+とする。辺差を高値引く低値として足すと、内部頂点は二回、端点は一回現れる。
+
+\(n=2u+1\ge3\) では両端が低側で、低集合 \(L=[0,u]\)、高集合
+\(H=[u+1,2u]\) だから
+
+\[
+2u^2+u=\sum_{d=1}^{2u}d
+=2\sum_{y\in H}y-2\sum_{x\in L}x+r+b
+=2u^2+r+b.
+\]
+
+\(n=2u\) では他端は高側で、\(L=[0,u-1]\)、\(H=[u,2u-1]\) だから
+
+\[
+2u^2-u=\sum_{d=1}^{2u-1}d
+=2\sum_{y\in H}y-2\sum_{x\in L}x+r-b
+=2u^2+r-b.
+\]
+
+従って
+
+\[
+\operatorname{end} A(2u+1,r)=u-r,\qquad
+\operatorname{end} A(2u,r)=u+r.
+\tag{F3.2}
+\]
+
+\(n=1\) も \(u=r=b=0\) として成り立つ。□
+
+\subsubsection{F3.3　任意の端点と固定例外列}\label{f3.3-ux4efbux610fux306eux7aefux70b9ux3068ux56faux5b9aux4f8bux5916ux5217}
+
+任意の \(n\ge1,0\le c\le n-1\) に対し、先頭 \(c\) の graceful 道 \(P_n\)
+が存在する。補変換 \(x\mapsto n-1-x\) により \(c\le(n-1)/2\)
+に帰着でき、F3.1の条件内ならその道を使う。
+
+残る \(c\ge1,n=4c+1\)
+では、奇数等長修復にも使う\textbf{固定列}を選ぶ。対は添字の昇順につなぐ。
+
+\[
+p_c=
+\bigl(c-j,\ 3c+1+j\bigr)_{j=0}^{c-1}
+\quad\Vert\quad(0)\quad\Vert\quad
+\bigl(2c-j,\ 2c+1+j\bigr)_{j=0}^{c-1}.
+\tag{F3.3}
+\]
+
+0までの前半のラベルは \([0,c]\cup[3c+1,4c]\)、内部差は
+\([2c+1,4c]\)。後半のラベルは \([c+1,3c]\)、内部差は
+\([1,2c-1]\)。両者の接続差は \(|0-2c|=2c\)。よって全ラベル \([0,4c]\)
+と全差 \([1,4c]\) を一度ずつ使い、先頭は \(c\) である。
+
+前半は \([0,c]\) と \([3c+1,4c]\)、後半は \([c+1,2c]\) と \([2c+1,3c]\)
+を交互に結ぶ。従って境界 \(2c\) を横切らない内部辺は \(0\)--\(2c\)
+一辺だけで、その差は \(2c\)。この列に \(\alpha\)性は要求しない。□
+
+\subsubsection{F3.4　一腕の核と殻}\label{f3.4-ux4e00ux8155ux306eux6838ux3068ux6bbb}
+
+\(w\ge1,0\le c\le w-1\) とし、F3.3の先頭 \(c\) の graceful 道
+\(P_w=(a_i)\) を使い、ハブ0に続けて
+
+\[
+g_i=w+c-a_i
+\tag{F3.4}
+\]
+
+と置く。非ハブ値は \([c+1,c+w]\)、先頭 \(w\) で根差 \(w\)、内部差
+\([1,w-1]\) なので \(O(U_w,c)\) となる。
+
+さらに
+
+\[
+w\ge2c+1,\qquad c=0\ \text{または}\ w\ne4c+1
+\tag{F3.5}
+\]
+
+なら \(A(w,c)\) を使える。元の低値 \([0,\lceil w/2\rceil-1]\)
+は新しい高値 \([c+\lfloor w/2\rfloor+1,c+w]\) に、元の高値は新しい低値
+\([c+1,c+\lfloor w/2\rfloor]\) に写る。先頭 \(w\)
+は高側で、ハブ0は低側だから、これは \(\alpha O(U_w,c)\) となる。
+
+また \(P_{w+1}\) のハブ0のジグザグをF2で反転すれば、全 \(w\ge1\)
+の階数0の一腕 \(\alpha\)殻を得る。□
+
+\subsection{F4　任意の低側接合点における区間挿入}\label{f4-ux4efbux610fux306eux4f4eux5074ux63a5ux5408ux70b9ux306bux304aux3051ux308bux533aux9593ux633fux5165}
+
+\(q\) 辺の根付き木 \(R\) の整数ラベル \(f\) は単射で、辺差 \([1,q]\)
+を一度ずつ使い、全辺が境界 \(\lambda\) を横切るとする。像を
+\(X\)、その低側・高側を \(X_{\rm low},X_{\rm high}\)、根の値を
+\(h\le\lambda\) とする。\(p\) 辺の核 \(O(T,\lambda-h)\)
+を根だけで接合し、そのラベルを \(g\) として
+
+\[
+F(v)=
+\begin{cases}
+f(v),&v\in R,\ f(v)\le\lambda,\\
+f(v)+p,&v\in R,\ f(v)>\lambda,\\
+h+g(v),&v\in T\setminus\{\text{根}\}
+\end{cases}
+\tag{F4.1}
+\]
+
+と置く。合成も木で、新ラベル像は正確に
+
+\[
+X_{\rm low}\ \cup\ [\lambda+1,\lambda+p]\ \cup\ (X_{\rm high}+p).
+\tag{F4.2}
+\]
+
+実際、新非根値は
+\(h+[\lambda-h+1,\lambda-h+p]=[\lambda+1,\lambda+p]\)。旧低値は
+\(\lambda\) 以下、旧高値の新像は \(\lambda+p+1\)
+以上なので三集合は互いに素で、全体も単射である。旧辺の低値 \(x\) と高値
+\(y\) の差は \(y-x\) から \(y+p-x\) に増え、\([p+1,p+q]\)
+を使う。新部品は平行移動で差を保ち、根辺も \(|(h+g(v))-h|=|g(v)|\)
+だから、差 \([1,p]\) を使う。従って全差は \([1,p+q]\) を一度ずつ使う。
+
+新部品が \(\alpha O(T,\lambda-h)\) なら、その新しい偶数距離非根値は
+\([\lambda+1,\lambda+\kappa(T)]\)。旧低値はこれより下、旧高値の新像は
+\(\lambda+p\) より上なので、合成の全辺も境界 \(\lambda+\kappa(T)\)
+を横切る。□
+
+\(\kappa_S=\kappa(S)\)、\(\kappa_T=\kappa(T)\) とする。\(S\)
+がそれぞれ階数 \(r\) の \(\alpha\)殻、\(\alpha O(S,c)\)
+であるとき、(F4.2)への代入から次の二系を得る。
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+旧像 \(X\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+境界 \(\lambda\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+根 \(h\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+接合する核
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+結果
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\([0,q]\) & \(\kappa_S\) & \(\kappa_S-r\) & \(O(T,r)\) & graceful な
+\(S\cup T\) \\
+\(\{0\}\cup[c+1,c+q]\) & \(c+\kappa_S\) & \(0\) & \(O(T,c+\kappa_S)\) &
+\(O(S\cup T,c)\) \\
+\end{longtable}
+
+入力核も \(\alpha\)なら、上段は根 \(h\) を保つ階数 \(r+\kappa_T\) の
+\(\alpha\)殻、下段は \(\alpha O(S\cup T,c)\) となる。中間結果を次の
+\(\alpha\)部品として使うにはこの仮定が必要で、最終核には不要である。部品の存在自体は別に供給する。オフセット像はそのまま使い、非根値から
+\(c\) を引く正規化は行っていない。
+
+\subsection{\texorpdfstring{F5　\(A_\infty\)で使う葉延長}{F5　A\_\textbackslash inftyで使う葉延長}}\label{f5-a_inftyux3067ux4f7fux3046ux8449ux5ef6ux9577}
+
+\(q\) 辺の木の \(\alpha\)-labeling \(f\) の境界を \(k\) とし、葉の値が
+\(k-r\) または \(k+1+r\) にあるとき \(r\ge0\)
+を\textbf{境界距離}という。\(m\ge1\) が
+
+\[
+m\ge2r+1,\qquad r=0\ \text{または}\ m\ne4r+1
+\tag{F5.1}
+\]
+
+を満たせば、\(A(m,r)=(a_i)\) を使って葉の先に \(m\)
+辺を追加できる。旧低値を固定し、旧高値に \(m\)
+を加え、新頂点を外向きに次の列で置く。
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+旧葉 & 新頂点の列 & 新境界 \(K\) \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+低側 \(k-r\) & \((k+m-a_i)\) & \(k+\lfloor m/2\rfloor\) \\
+高側 \(k+1+r\) & \((k+1+a_i)\) & \(k+\lceil m/2\rceil\) \\
+\end{longtable}
+
+低葉ではF3.4の一腕 \(\alpha\)核 \(g_i=m+r-a_i\)
+をF4で接合すればよく、\((k-r)+g_i=k+m-a_i\)
+で表の上段を得る。高葉ではまず旧全体を \(q-f\) に補変換すると、境界
+\(k^*=q-k-1\)、指定葉は \(k^*-r\) となる。この低葉へ接合してから全体を
+\(q+m\) に関して補変換すると、新列は
+\((q+m)-(k^*+m-a_i)=k+1+a_i\)、境界は
+\((q+m)-(k^*+\lfloor m/2\rfloor)-1=k+\lceil m/2\rceil\)
+となり、旧低値固定・旧高値 \(+m\) に戻る。
+
+両場合とも新値は \([k+1,k+m]\)、旧差は \([m+1,m+q]\)、結合差は
+\(m\)、新道内部差は \([1,m-1]\)
+で、\(\alpha\)性を保ち、旧ハブ0も固定する。F3.2により \(m=2u+1\)
+なら他端は \(u-r\) なので、新葉は低葉延長で \(K+1+r\)、高葉延長で
+\(K-r\)。\(m=2u\) なら他端 \(u+r\) からそれぞれ \(K-r\)、\(K+1+r\)
+となり、境界距離はいずれも \(r\) である。
+
+F4は任意の接合点に使えるので、次数2のハブ0を長さ0の第三腕（境界距離
+\(r=k\)）として、新しい第三腕を付けてもよい。特に境界距離3の第三長 \(z\)
+の種は、延長なし、または \(m\ge7,m\ne13\) の延長により
+
+\[
+\mathcal E(z)=\{z\}\cup[z+7,z+12]\cup[z+14,\infty)
+\tag{F5.4}
+\]
+
+を供給する。二つの種 \(z,z+1\) があれば \([z+7,\infty)\)
+の全長を供給する。□
+
+\subsection{F6　十二三つ組と全三位置条件の分類}\label{f6-ux5341ux4e8cux4e09ux3064ux7d44ux3068ux5168ux4e09ux4f4dux7f6eux6761ux4ef6ux306eux5206ux985e}
+
+昇順の三つ組の集合を
+
+\[
+\begin{aligned}
+E=E_{12}=\{&(1,2,2),(2,2,2),(2,2,3),(2,2,4),\\
+&(2,2,6),(2,3,3),(2,4,4),(3,3,3),\\
+&(3,4,4),(4,4,4),(4,4,5),(4,4,6)\}
+\end{aligned}
+\tag{F6.1}
+\]
+
+とする。\(E\) 内の非存在や \(E\) 外の部品供給はここでは仮定しない。
+
+\(n\ge3\) に対し、任意の三つの異なる位置の三つ組が \(E\)
+に入る正整数の非減少 \(n\) 列を \(D_n\)
+とする。同じ値の重複選択も含む。\(a^s\) を値 \(a\) の \(s\)
+回の反復とすると、\(D_n\) は次の七形に等しい。
+
+\[
+\begin{gathered}
+\text{全成分が }2\text{ または }3,\qquad
+\text{全成分が }2\text{ または }4,\\
+(1,2^{n-1}),\quad(2^{n-1},6),\quad(3,4^{n-1}),\quad
+(4^{n-1},5),\quad(4^{n-1},6).
+\end{gathered}
+\tag{F6.2}
+\]
+
+\textbf{証明。} 各成分は他の二位置と組にできるので値は \([1,6]\)
+に限る。1を含む元は122だけ、5を含む元は445だけなので、残りはそれぞれ全て2、全て4となる。6を含む元は226と446だけだから、他の任意の二位置は22か44で、残りは全て2または全て4となる。従って1・5・6の各値は一個に限られ、対応する四形を得る。残る値2、3、4の三つ組で禁止されるのは234と334だけ。4がなければ2/3の形、3がなければ2/4の形となり、3と4が共存すれば234により2はなく、334により3は一個だけとなる。
+
+逆に、最初の二形の三つ組はそれぞれ
+\(\{222,223,233,333\}\)、\(\{222,224,244,444\}\)
+に入り、残る五形では122、226、344、445、446と反復値だけの222または444しか生じない。全て
+\(E\) に入る。最初の二形は各 \(n+1\) 個、重複は \(2^n\)
+一個で、残る五形は全て異なるから
+
+\[
+|D_n|=2(n+1)-1+5=2n+6,\qquad |D_6|=18,\quad |D_7|=20.
+\tag{F6.3}
+\]
+
+□
+
+\section{A∞：全整数の直接構成と37実物による完全証明}\label{aux5168ux6574ux6570ux306eux76f4ux63a5ux69cbux6210ux306837ux5b9fux7269ux306bux3088ux308bux5b8cux5168ux8a3cux660e}
+
+\textbf{定理A∞.} 整数 \(1\le a\le b\le c\)、\(c\ge7\) に対し、三腕spider
+\(S(a,b,c)\) はhub \(0\) のαラベリングを持つ。腕長は辺数である。
+
+\(n=a+b+c\)、\(k=\lfloor a/2\rfloor+\lfloor b/2\rfloor+\lfloor c/2\rfloor\)
+と置く。全頂点ラベル \(0,\ldots,n\)、全辺差 \(1,\ldots,n\)
+を一度ずつ用い、各辺を \([0,k]\) と \([k+1,n]\) の間に置く。A1--A7で
+\(c\ge25\) および \(a=1,c\ge7\) の全整数を直接構成し、A8--A9で残る
+\(7\le c\le24\) を37実物と306手順で閉じる。
+
+\subsection{A1.
+道と葉の挿入}\label{a1.-ux9053ux3068ux8449ux306eux633fux5165}
+
+共通補題F3の \(N\) 頂点・始点 \(r\) のα道 \(A(N,r)\) と反転
+\(C_N\)、F3.1の三分岐を用いる。F5の葉延長は旧hub \(0\) と境界距離 \(r\)
+を保ち、長さ \(0\) の第三腕（次数2のhub）にも適用できる。特に距離
+\(3\)、第三長 \(z\) の種が供給する第三長は式(F5.4)の
+
+\[
+E(z)=\{z\}\cup[z+7,z+12]\cup[z+14,\infty).
+\]
+
+二つの隣接種 \(z,z+1\) があれば \([z+7,\infty)\) の全長を供給する。
+
+\subsection{A2.
+グリッドと五つの端子}\label{a2.-ux30b0ux30eaux30c3ux30c9ux3068ux4e94ux3064ux306eux7aefux5b50}
+
+行 \(0,\ldots,K\)、列 \(0,\ldots,H-1\)、\(K+H=n\)
+の二部グラフで、辺をセル \((i,j)\) とする。\(n\) セルの和 \(i+j\) が
+\(0,\ldots,n-1\) を一度ずつ取り、全頂点を用いる接続が行 \(0\)
+をhubとする所望のspiderなら、行ラベル \(i\)、列ラベル \(n-j\) がhub
+\(0\) のαラベリングを与える。
+
+frame \((R,C,f)\) の \(R,C\)
+は、孤立した指定頂点も含む\textbf{物理的な最大行・最大列}である。局所セル
+\((x,y)\) は \(f=0\) なら \((R+x,C+y)\)、\(f=1\) なら \((R+y,C+x)\)
+を意味する。未完成の五道の端子を局所座標で
+
+\[
+P_0=\operatorname{row}(-1),\quad P_1=\operatorname{row}(0),\quad
+P_2=\operatorname{col}(-2),\quad P_3=\operatorname{col}(-1),\quad P_4=\operatorname{col}(0)
+\]
+
+とする。長さ \(0\) の道は孤立葉、またはhubの未使用の第三接続口を表す。
+
+\textbf{五辺則 \(B\).} 次の局所セルを加える。
+
+\[
+B=((1,-2),(-1,1),(2,-1),(0,2),(3,0)).
+\]
+
+和は \(-1,0,1,2,3\)。\(P_0,\ldots,P_4\) は順に新しい
+\(\operatorname{col}(1),\operatorname{col}(2),\operatorname{row}(1),\operatorname{row}(2),\operatorname{row}(3)\)
+へ一辺伸びる。物理frameは
+
+\[
+(R,C,0)\longrightarrow(R+3,C+2,1),\qquad
+(R,C,1)\longrightarrow(R+2,C+3,0)
+\]
+
+と更新する。軸交換によって端子番号は元の順に戻るので、\(B\) を \(q\)
+回付ければ各一端子道は \(q\)、二端子を結ぶ道は \(2q\) 伸びる。\(B_j\)
+は最初の \(j\) セルを表し、\(j=2,4\) では両側の最大値を \(j/2\)
+増し、\(f\) は変えない。
+
+\textbf{戻り道 \(N\).}
+
+\[
+N=((0,-1),(2,-2),(-1,2),(1,1)).
+\]
+
+和は \(-1,0,1,2\)。\(P_1\)--\(P_3\) を一辺で閉じ、\(P_2,P_0\)
+を各一辺伸ばし、新しい中立道を一辺作る。両側の最大値を \(2\) 増すと、新
+\(P_0\)--新 \(P_3\) が中立道、新 \(P_1\) が旧 \(P_2\) の延長、新 \(P_2\)
+が旧 \(P_4\)、新 \(P_4\) が旧 \(P_0\) の延長となる。
+
+これらの操作は旧座標を動かさず、新しい行・列を次の連続区間から用いる。未完成の森林の辺数とframeは
+
+\[
+n=R+C-1
+\]
+
+を満たす。これはA3の三初期森林で直接成立し、\(B,N,B_2,B_4\) が \(n\) と
+\(R+C\) を同量増すので保存される。従って最初の新セルの局所和 \(-1\)
+は物理和 \(R+C-1=n\)
+となり、旧和の直後に新和が続く。A4の0版はframeを各側で \(4,3\)
+増して9辺、1版は \(4,4\) 増して10辺、\(F\) は \(1,1\)
+増して4辺を加える。終端後は \(n=R+C+1\)、すなわち頂点数は正確に \(n+1\)
+である。\(f=1\) は二つの増分を交換するだけである。
+
+\subsection{A3.
+三つの初期森林と全前部}\label{a3.-ux4e09ux3064ux306eux521dux671fux68eeux6797ux3068ux5168ux524dux90e8}
+
+\(E,D,O\) の三森林を次で定める。指定した孤立葉も頂点に含める。
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.4000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.3000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+森林
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+セル
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+frame \((R,C,f)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+指定葉
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(E_1\) & \((0,0),(0,1)\) & \((2,1,1)\) &
+\(\operatorname{row}(1)\)、\(\operatorname{row}(2)\) \\
+\(D_1\) & \((0,0),(0,1)\) & \((1,2,0)\) &
+\(\operatorname{row}(1)\)、\(\operatorname{col}(2)\) \\
+\(O_1\) & \((0,0),(1,0)\)、\((0,2),(2,1)\) & \((2,3,1)\) &
+\(\operatorname{col}(1)\)、\(\operatorname{col}(3)\) \\
+\end{longtable}
+
+\(E_t,D_t,O_t\) はそれぞれに \(B\) を \(t-1\) 回付けたものとする。\(H\)
+はhub、\(L\) は \(\operatorname{row}(1)\) 葉、\(G\) は
+\(\operatorname{col}(2)\) 葉であり、\(H(s)\)
+等はその頂点から端子までの長さ \(s\) を表す。
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+前部
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(P_0\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(P_1\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(P_2\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(P_3\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\(P_4\)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(E_t\) & \(H(t)\) & \(H(t)\) & \(H(t-1)\) & \(\operatorname{row}(1)\)
+葉 \((t-1)\) & \(\operatorname{row}(2)\) 葉 \((t-1)\) \\
+\(O_t\) & \(H(t)\) & \(\operatorname{col}(3)\) 葉 \((t-1)\) & \(H(t-1)\)
+& \(H(t+1)\) & \(\operatorname{col}(1)\) 葉 \((t)\) \\
+\(D_t\) & \(H(t-1)\) & \(L(t-1)\) & \(H(t)\) & \(H(t)\) & \(G(t-1)\) \\
+\(D_t+B_2\) & \(L(t-1)\) & \(H(t+1)\) & \(H(t)\) & \(G(t-1)\) &
+\(H(t)\) \\
+\(D_t+B_4\) & \(H(t+1)\) & \(H(t+1)\) & \(G(t-1)\) & \(H(t)\) &
+\(L(t)\) \\
+\(D_{t-1}+B_4\), \(t\ge2\) & \(H(t)\) & \(H(t)\) & \(G(t-2)\) &
+\(H(t-1)\) & \(L(t-1)\) \\
+\end{longtable}
+
+最初の三行は初期森林の \(2,2,4\) セルと \(B\)
+の端子対応による帰納、下三行は \(B_2,B_4\) の代入で得られる。従って全
+\(t\) に対する明示的な森林の不変量である。
+
+\subsection{A4.
+終端の局所式}\label{a4.-ux7d42ux7aefux306eux5c40ux6240ux5f0f}
+
+四つのルータ \(R,S,T,U\) を用いる。0版の和は \(-1,\ldots,7\)、1版は
+\(-1,\ldots,8\)。0版は新行 \(1,\ldots,4\)・新列 \(1,\ldots,3\)
+を用いて行 \(1\) で終わり、1版は新行・新列 \(1,\ldots,4\) を用いて列
+\(1\) で終わる。どちらも最後の葉の境界距離は \(3\) である。
+
+\[
+\begin{aligned}
+R_0={}&((-1,0),(2,-2),(2,-1),(1,1),(0,3),(3,1),(3,2),(4,2),(4,3)),\\
+R_1={}&((-1,0),(2,-2),(2,-1),(0,2),(1,2),(1,3),(4,1),(3,3),(3,4),(4,4)),\\
+S_0={}&((0,-1),(-1,1),(3,-2),(2,0),(1,2),(2,2),(4,1),(3,3),(4,3)),\\
+S_1={}&((0,-1),(2,-2),(1,0),(-1,3),(1,2),(3,1),(3,2),(2,4),(4,3),(4,4)),\\
+T_0={}&((-1,0),(2,-2),(0,1),(3,-1),(2,1),(1,3),(3,2),(4,2),(4,3)),\\
+T_1={}&((-1,0),(1,-1),(3,-2),(0,2),(2,1),(1,3),(3,2),(2,4),(4,3),(4,4)),\\
+U_0={}&((0,-1),(-1,1),(3,-2),(2,0),(1,2),(3,1),(2,3),(4,2),(4,3)),\\
+U_1={}&((0,-1),(2,-2),(-1,2),(1,1),(3,0),(2,2),(1,4),(3,3),(4,3),(4,4)).
+\end{aligned}
+\]
+
+セル和の加算と各頂点の追跡により次の接続を得る。新しい非末端頂点の次数は
+\(2\) で、各道は頂点素である。
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+ルータ
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+第1接続の長さ
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+第2接続の長さ
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+最後の道
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(R_\varepsilon\) & \(P_0\)--\(P_4\): \(1\) & \(P_2\)--\(P_3\): \(2\) &
+\(P_1\) から \(6+\varepsilon\) \\
+\(S_\varepsilon\) & \(P_0\)--\(P_2\): \(5\) & \(P_1\)--\(P_3\): \(1\) &
+\(P_4\) から \(3+\varepsilon\) \\
+\(T_\varepsilon\) & \(P_0\)--\(P_4\): \(1\) & \(P_1\)--\(P_2\): \(3\) &
+\(P_3\) から \(5+\varepsilon\) \\
+\(U_\varepsilon\) & \(P_0\)--\(P_2\): \(3\) & \(P_1\)--\(P_3\): \(1\) &
+\(P_4\) から \(5+\varepsilon\) \\
+\end{longtable}
+
+四セル
+
+\[
+F=((0,-1),(-1,1),(1,0),(1,1))
+\]
+
+は和 \(-1,\ldots,2\)、接続 \(P_1\)--\(P_3\): \(1\)、\(P_0\)--\(P_4\):
+\(3\) を持ち、\(P_2\) を距離 \(3\) の葉として残す。行列交換した式
+\(F^{\mathsf T}\) は接続 \(P_0\)--\(P_4\): \(1\)、\(P_1\)--\(P_3\):
+\(3\) を持ち、同じ \(P_2\)
+を残す。全ての式は整数原点への移動と局所行列交換に対して成り立つ。
+
+\subsection{A5.
+全二腕に種を与える一表}\label{a5.-ux5168ux4e8cux8155ux306bux7a2eux3092ux4e0eux3048ux308bux4e00ux8868}
+
+\(\varepsilon\in\{0,1\}\)、\(q\ge0\) とする。\(NB^qX\) は前部へ
+\(N\)、\(B\) を \(q\) 回、終端 \(X\)
+の順に付ける意味である。A3--A4の接続は必ずhub道と指定葉道を結び、hub同士の閉路や葉同士の独立成分を作らない。長さを加えると次表となる。
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2308}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2308}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2308}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.3077}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+二腕 \((a,b)\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+前部
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+続く操作
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+第三長 \(z\)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\((2t,2t)\) & \(E_t\) & \(R_\varepsilon\) & \(t+6+\varepsilon\) \\
+\((2t,2t+2)\) & \(E_t\) & \(F\) & \(t-1\) \\
+\((2t,2t+4+4q)\) & \(E_t\) & \(NB^qR_\varepsilon\) &
+\(t+6+q+\varepsilon\) \\
+\((2t,2t+6+4q)\) & \(E_t\) & \(NB^qS_\varepsilon\) &
+\(t+4+q+\varepsilon\) \\
+\((2t+1,2t+1)\) & \(O_t\) & \(T_\varepsilon\) & \(t+6+\varepsilon\) \\
+\((2t+1,2t+3)\) & \(O_t\) & \(F^{\mathsf T}\) & \(t-1\) \\
+\((2t+1,2t+5+4q)\) & \(O_t\) & \(NB^qR_\varepsilon\) &
+\(t+6+q+\varepsilon\) \\
+\((2t+1,2t+7+4q)\) & \(O_t\) & \(NB^qS_\varepsilon\) &
+\(t+4+q+\varepsilon\) \\
+\((2t,2t+1)\), \(t\ge2\) & \(D_{t-1}+B_4\) & \(T_\varepsilon\) &
+\(t+4+\varepsilon\) \\
+\((2t,2t+3+4q)\) & \(D_t\) & \(NB^qR_\varepsilon\) &
+\(t+7+q+\varepsilon\) \\
+\((2t,2t+5+4q)\) & \(D_t\) & \(NB^qU_\varepsilon\) &
+\(t+5+q+\varepsilon\) \\
+\((2t+1,2t+2)\) & \(D_t+B_4\) & \(R_\varepsilon\) &
+\(t+7+\varepsilon\) \\
+\((2t+1,2t+4+4q)\) & \(D_t+B_2\) & \(NB^qR_\varepsilon\) &
+\(t+7+q+\varepsilon\) \\
+\((2t+1,2t+6+4q)\) & \(D_t+B_2\) & \(NB^qF\) & \(t+q\) \\
+\end{longtable}
+
+常に \(t\ge1\)。非零の第三葉は全て距離 \(3\) であり、第三長 \(0\)
+なら次数2のhubの距離が \(3\) なので、いずれもA1で延長できる。
+
+唯一欠ける二腕は \((2,3)\)。F3の通常接頭部で \(A(6,1)\) の \(0\) は添字
+\(2\) にある。そこで左右へ分けると臨界値 \(2\) のhub \(0\)
+二腕α道となる。F5によりhubに新腕
+
+\[
+2+c-A(c,2)
+\]
+
+を付ける式は \(c\ge5,c\ne9\) で使え、全 \(c\ge25\) を覆う。
+
+\subsection{A6.
+境界25を閉じる整数計算}\label{a6.-ux5883ux754c25ux3092ux9589ux3058ux308bux6574ux6570ux8a08ux7b97}
+
+二版の種の短い方を \(z\) とすれば、A1による \(c\) の失敗は
+\(c\le z+6\)、一版では高々 \(c\le z+13\)
+である。\(b=2t+4q+C\)、\(z=t+q+F\) と書き、二版なら \(L=6\)、一版なら
+\(L=13\) とする。固定差では \(q=0\)。\(c\ge b\)
+と合わせれば、失敗する場合
+
+\[
+\begin{aligned}
+2t+4q+C\le c\le t+q+F+L
+&\ \Longrightarrow\ t+3q\le F+L-C\\
+&\ \Longrightarrow\ c\le2(F+L)-C-2q\le2(F+L)-C.
+\end{aligned}
+\]
+
+A5の各 \(C,F\) を代入した14族の上界は次の通りである。\(E,O\)
+はそれぞれ偶数、奇数を表す。
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+偶奇 & 腕長差の順 & 失敗する \(c\) の上界 \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(EE\) & \(0,2,4+4q,6+4q\) & \(24,22,20,14\) \\
+\(OO\) & \(0,2,4+4q,6+4q\) & \(23,21,19,13\) \\
+\(EO\) & \(1,3+4q,5+4q\) & \(19,23,17\) \\
+\(OE\) & \(1,3+4q,5+4q\) & \(24,22,20\) \\
+\end{longtable}
+
+例えば \(EE\) 同長では \(2t\le c\le t+12\) より \(c\le24\)。\(EO\) の差
+\(3+4q\) では \(2t+3+4q\le c\le t+13+q\) より \(t+3q\le10\)、従って
+\(c\le23-2q\le23\)。\(OE\) の差 \(5+4q\) では \(2t+6+4q\le c\le t+q+13\)
+より \(t+3q\le7\)、従って \(c\le20-2q\le20\)。全上界が \(25\)
+未満なので、\(a\ge2,c\ge25\) の全整数が閉じる。
+
+\subsection{A7.
+第一腕1の全域}\label{a7.-ux7b2cux4e00ux81551ux306eux5168ux57df}
+
+\(m=1+b+c\)、\(c\ge7\) とする。次の四場合で直接構成する。道の添字は
+\(0\) 始まりとする。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{\(b\) 偶数、\(c>b\).} \(P=A(b+c+1,b/2)\)
+  の通常・特別のどちらの接頭部でも \(0\) は添字 \(b\)
+  にある。そこで左右へ分けて二腕とし、単葉 \(m\) を追加する。
+\item
+  \textbf{\(b=c=2t\).} \(t\ge4\) である。\(P=A(4t+1,t+1)\)
+  の小範囲分岐は \(C_{4t+1}(A(4t+1,t-1))\)。内側の通常接頭部の後は
+  \(3t+1-A(2t+2,t-1)\) で、後者の小範囲分岐は
+  \(C_{2t+2}(A(2t+2,1))\)。\(A(2t+2,1)\) の最初の二項が \((1,2t+1)\)
+  なので、\(P\) の添字 \(2t\) は \(0\) となる。そこで二分し、単葉 \(m\)
+  を追加する。
+\item
+  \textbf{\(b=2r+1\)、\(c\ne2b-1\).} 単葉 \(m\)、長さ \(b\) の腕
+  \((m-1,1,m-2,2,\ldots,m-r-1)\)、長さ \(c\) の腕 \(r+c-A(c,r)\)
+  を使う。\(r=0\) なら短腕は一項
+  \(m-1\)。三部分のラベル区間は分割され、辺差は順に
+  \(\{m\}\)、\([c+1,m-1]\)、\([1,c]\) となる。深さの偶奇も臨界値
+  \(r+\lfloor c/2\rfloor\) で交互になる。
+\item
+  \textbf{\(b=2r+1\)、\(c=2b-1\).} \(P=(b+c)-A(b+c+1,r+1)\)
+  とする。\(r\ge2\) であり、通常接頭部の最大ラベルは添字 \(2(r+1)-1=b\)
+  にあるので、\(P\) の同じ位置は \(0\)。そこで二分し、単葉 \(m\)
+  を加える。全補変換は二部集合を交換するが、両腕が奇数なので必要な低側の大きさに一致する。
+\end{enumerate}
+
+二分した道に最大ラベル \(m\) の単葉を足す場合、旧差 \(1,\ldots,m-1\)
+に差 \(m\) が加わり、α条件とhub \(0\) は保たれる。これで \(a=1,c\ge7\)
+の全域が閉じる。
+
+\subsection{A8.
+三辺交換による有限データの共有}\label{a8.-ux4e09ux8fbaux4ea4ux63dbux306bux3088ux308bux6709ux9650ux30c7ux30fcux30bfux306eux5171ux6709}
+
+αラベリングのセル集合 \(X\) に対し、整数 \(i,j\ge0\)、\(d,e>0\) を選び、
+
+\[
+\begin{aligned}
+A&=\{(i,j+d),(i+d,j+d+e),(i+d+e,j)\},\\
+B&=\{(i,j+d+e),(i+d,j),(i+d+e,j+d)\}
+\end{aligned}
+\]
+
+と置く。\(A\subseteq X\) であり、\(Y=(X\setminus A)\cup B\)
+が連結なら、\(Y\) も同じ \(n\)、hub
+\(0\)、頂点ラベル区間、辺差区間を持つ三腕αラベリングとなる。逆向きも同様である。
+
+\textbf{証明.} \(A,B\)
+は同じ三行・三列を各一回用いるので全頂点次数を保ち、両者のセル和はともに
+
+\[
+\{i+j+d,\ i+j+d+e,\ i+j+2d+e\}
+\]
+
+である。これらは相異なり、\(A\cap B=\varnothing\)。元の和に重複がないので
+\(B\cap X=\varnothing\)
+も従い、辺数と全差を保存する。頂点集合と二部集合は変わらず、\(n+1\) 頂点
+\(n\) 辺の連結グラフは木である。hubだけが次数 \(3\)、他は \(1\) または
+\(2\) なので三腕spiderとなる。行 \(0\) とα分離も保存される。□
+
+連結性は各交換に必要であり、自動ではない。有限手順の各段階で連結性・次数・全ラベル・全差を検査する。交換後の腕順はhubに隣接する列座標の昇順とし、続くF5の葉延長はこの腕番号
+\(0,1,2\)
+を用いる。交換による腕長変更は許すが、最終腕長は対象と一致させる。
+
+\subsection{A9.
+有限領域の完全な閉包}\label{a9.-ux6709ux9650ux9818ux57dfux306eux5b8cux5168ux306aux9589ux5305}
+
+\[
+\sum_{c=7}^{24}\sum_{b=1}^{c}\sum_{a=1}^{b}1
+=\sum_{c=7}^{24}\frac{c(c+1)}2=2544.
+\]
+
+全三つ組についてまずA7、次に第三腕の三つの選択
+\((a,b;c)\)、\((a,c;b)\)、\((b,c;a)\) を順に試す。A5の種の第三長 \(z\)
+と対象第三長の差が \(0\) または \(m\ge7,m\ne13\)
+ならA1で延長する。\((2,3)\) の特別式は第三長 \(c\ge5,c\ne9\)
+で使う。これによる一般式の被覆と残部は次の通りである。
+
+\begin{longtable}[]{@{}lr@{}}
+\toprule\noalign{}
+有限領域の経路 & 三つ組数 \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+第一腕1の直接構成 & 279 \\
+全偶奇ルータと第三腕の選択 & 1,940 \\
+記録した有限手順 & 306 \\
+直接のラベル配列 & 19 \\
+合計 & \textbf{2,544} \\
+\end{longtable}
+
+一般式で供給されないのは正確に325三つ組。証書の37実物配列のうち19個は直接対象、18個は他の対象に再利用する出発配列である。306手順のうち35本は保存配列から、271本はA5の式（\((2,3)\)
+の直接式を含む）から出発する。後者の異なる式指定は147個（種124、第三長まで構成したもの23）。操作は三辺交換532回、葉延長167回、計699回、一手順の長さは最大7である。
+
+各実物はhubの次の頂点から葉までの三配列である。独立検査器はhub \(0\)
+を加えた頂点ラベルが \(0,\ldots,n\) の順列、全辺差が \(1,\ldots,n\)
+の順列、各腕の奇数深さが共通臨界値より上、偶数深さが以下であることを直接検査する。式の出発点は検査器自身の端点道・グリッド構成で再生成する。全306操作列を別実装で実行し、各交換の前提と接続、各延長のF5の前提を確かめて最終腕長を比較する。最後に325個の不足集合が306手順と19直接対象の集合に一致することを全件検査する。
+
+証書は実物配列（witnesses）、A5の種・第三長までの式指定（formulas）、直接対象（direct）、出発点・対象・操作列（recipes）を保持する。交換はA8の
+\((i,j,d,e)\) と方向、延長は腕番号と追加長を指定し、全数値を保存する。
+
+実行時の \texttt{vendor/ainf37/certificate\_core.json}（20,376
+bytes）と、名前付きの
+\texttt{references/ainf37/certificate\_named.json}（67,193
+bytes）は同じ数理内容を持ち、\texttt{compact\_codec.py}
+で可逆変換できる。独立検査器は構成器とcodecをimportせず解読・再構成し、配布ルートで
+\texttt{python3\ -B\ vendor/ainf37/independent\_check.py}
+により再現できる。
+
+A1--A7が全 \(c\ge25\) を、同じ37実物と全件検証した有限手順が全
+\(7\le c\le24\) を覆う。全構成はhub
+\(0\)、全頂点・全差の一意性、α分離、指定三腕長を保つ。従って定理A∞が成立する。□
+
+\section{六腕スパイダーの graceful
+性}\label{ux516dux8155ux30b9ux30d1ux30a4ux30c0ux30fcux306e-graceful-ux6027}
+
+六腕を三本ずつの \(\alpha\) 殻とハブ0の graceful 核に分け、F4
+で接合する。 残る18型には直接現物を与える。記号は F1
+に従い、腕長は正整数、組は昇順とする。 本章は六腕の graceful 性を示す。
+
+\subsection{S0　三腕の正の供給}\label{s0-ux4e09ux8155ux306eux6b63ux306eux4f9bux7d66}
+
+\(E\) は共通補題 F6
+の12三つ組の集合とする。第2章と有限証書から、次の二段階で三腕を供給する。
+
+\begin{itemize}
+\tightlist
+\item
+  最長腕が7以上なら、第2章で証明した \(A_\infty\) によりハブ0の
+  \(\alpha\) ラベリングを構成できる。
+\item
+  最長腕が6以下かつ \(E\) 外なら、\texttt{alpha\_small}
+  の44個の現物を使える。個数は \(\binom{8}{3}-12=44\) である。
+\end{itemize}
+
+したがって、任意の正整数三つ組 \(t\) について
+
+\[
+t\notin E\quad\Longrightarrow\quad
+S(t)\text{ はハブ0の }\alpha\text{ ラベリングを持つ。} \tag{S6.1}
+\]
+
+これは正の供給だけの主張であり、\(E\)
+内の非存在は使わない。第2章と44現物の検証は六腕・七腕定理から独立である。
+
+核として別に残すのは
+
+\[
+K_7=\{(2,2,2),(2,2,3),(2,2,4),(2,4,4),
+(3,3,3),(3,4,4),(4,4,4)\}\subset E
+\]
+
+の7個である。\texttt{six\_hz} はそれぞれのハブ0 graceful
+ラベリングを収める。これらに \(\alpha\) 性は要求しない。\(E\) 外の核には
+(S6.1) のラベリングをそのまま使える。
+
+\subsection{S1　分け方の有限検査}\label{s1-ux5206ux3051ux65b9ux306eux6709ux9650ux691cux67fb}
+
+六つ組 \(s=(s_1,\ldots,s_6)\) と三要素の添字集合
+\(I\subset\{1,\ldots,6\}\) に対し、\(s_I\)
+は選んだ三本を昇順に並べた組とする。分解可能性を表す述語を
+
+\[
+P(s)\iff\exists I,\ |I|=3:\quad
+s_I\notin E\ \land\ (s_{I^c}\notin E\ \lor\ s_{I^c}\in K_7) \tag{S6.2}
+\]
+
+と定める。左側が殻、右側が核である。添字を選ぶので、同じ長さの腕が重複してもよい。
+
+直接処理する集合を F6 の \(D=D_6\) とする。F6 により
+\(|D|=2\cdot6+6=18\) であり、最長腕は6以下である。
+
+\textbf{有限補題 S6-F.} \(1\le s_1\le\cdots\le s_6\le7\) の
+\(\binom{12}{6}=924\) 組について、\(\neg P(s)\) と \(s\in D\)
+は同値である。
+
+独立検査器で全924組と各三添字集合について (S6.2)
+を直接評価し、失敗集合が \(D\)
+と一致することを確認する。列挙と検査手順は第5章に記す。
+
+検査結果は分解可能906組、直接処理18組である。\texttt{six\_direct}・\texttt{six\_hz}・\texttt{alpha\_small}
+の現物は第5章の定義照合で確認する。直接例のハブラベルは0に限定しない。
+
+\subsection{S2　任意の腕長への持ち上げと定理}\label{s2-ux4efbux610fux306eux8155ux9577ux3078ux306eux6301ux3061ux4e0aux3052ux3068ux5b9aux7406}
+
+\textbf{定理 S6.} 任意の正整数 \(l_1,\ldots,l_6\) に対し、六腕スパイダー
+\(S(l_1,\ldots,l_6)\) は graceful である。
+
+\textbf{証明.} 腕を昇順に並べ、\(s_i=\min(l_i,7)\) とする。\(E\)
+の全要素の最長腕は6以下なので、任意の三本について
+
+\[
+s_I\in E\iff l_I\in E.
+\]
+
+実際、\(s_I\) に7があれば両方とも \(E\)
+外であり、7がなければ選んだ三本の長さは元のままである。同様に
+\(s_I\in K_7\) なら \(l_I=s_I\in K_7\) である。
+
+\(s\notin D\) なら有限補題により (S6.2) の添字集合 \(I\)
+を選べる。これを\textbf{同じ添字の実際の腕}に戻す。(S6.1) により
+\(S(l_I)\) はハブ0の \(\alpha\) ラベリングを持つ。補集合は \(E\) 外なら
+(S6.1)、\(K_7\) 内なら \texttt{six\_hz} によりハブ0 graceful
+ラベリングを持つ。F2 の \(\alpha\) 反転で殻のハブを臨界ラベルに移し、F4
+の階数0の殻と核の接合を行えば全六腕の graceful ラベリングが得られる。
+
+\(s\in D\) なら、\(D\)
+の最長腕は6以下なので切り詰めは起きておらず、\(l=s\in D\)
+である。\texttt{six\_direct}
+の対応する現物を使う。以上ですべての場合を尽くす。\(\square\)
+
+7は「7以上」の\textbf{所属判定用の代表}である。元の腕の構成には S0
+を使い、長さ7のラベル列を流用しない。全整数性は S0
+と上の持ち上げにより、有限検査は S6-F と現物の正しさを担う。
+
+有限現物は \texttt{certificates/core.json} の
+\texttt{alpha\_small}44、\texttt{six\_hz}7、\texttt{six\_direct}18、計69個である。本章はその定義照合と
+S6-F を含む計算機援用証明である。
+
+\section{七腕スパイダーの全整数構成}\label{ux4e03ux8155ux30b9ux30d1ux30a4ux30c0ux30fcux306eux5168ux6574ux6570ux69cbux6210}
+
+\textbf{定理 S7.} 任意の正整数 \(l_1,\ldots,l_7\) に対し、七腕スパイダー
+\(S(l_1,\ldots,l_7)\) は graceful labeling
+を持つ。以下の構成は各入力で停止し、実際のラベル列を返す。
+
+記号は F1、例外集合 \(E\) は F6 に従う。同じ長さの腕も添字で区別する。
+三腕の正の供給には六腕章 S0
+を使う。以下の核と場合分けは七腕定理から独立に証明する。
+
+\subsection{1.
+七腕を作る二つの接合}\label{ux4e03ux8155ux3092ux4f5cux308bux4e8cux3064ux306eux63a5ux5408}
+
+\textbf{接合 B.} 三腕 \(A\)、一腕 \(w\)、三腕 \(T\) に七腕を分ける。
+
+\[
+A\notin E,\qquad O\bigl(T,\lfloor w/2\rfloor\bigr)
+\quad\Longrightarrow\quad S(A\cup\{w\}\cup T)\text{ は graceful}.
+\]
+
+実際、S0 のハブ0の \(\alpha\)-labeling に F2 の反転を施すと、\(A\)
+は階数0の殻になる。 F3 の \(\alpha O(U_w,0)\) を貼ると階数は
+\(\lfloor w/2\rfloor\) に増える。 そこで指定された
+\(O(T,\lfloor w/2\rfloor)\) を最後に貼る。 F4 により全体は graceful
+となる。最後の核に \(\alpha\) 性は不要である。
+
+\textbf{接合 L.} 同じ分割について、
+
+\[
+A,T\notin E,\qquad w\ge\kappa(T)+1
+\quad\Longrightarrow\quad S(A\cup T\cup\{w\})\text{ は graceful}.
+\]
+
+階数0の殻 \(A\) に \(\alpha O(T,0)\) を貼れば、階数は \(\kappa(T)\)
+になる。 仮定 \(0\le\kappa(T)\le w-1\) の下で、F3 は
+\(O(U_w,\kappa(T))\) を与える。これを最後に貼ればよい。 接合順は
+\(3+3+1\) である。
+
+\subsection{2.
+接合に必要な核の全整数公式}\label{ux63a5ux5408ux306bux5fc5ux8981ux306aux6838ux306eux5168ux6574ux6570ux516cux5f0f}
+
+\subsubsection{K1　外側区間による二腕核（OP）}\label{k1-ux5916ux5074ux533aux9593ux306bux3088ux308bux4e8cux8155ux6838op}
+
+\(u,v\ge1\)、\(s\ge0\) とし、
+
+\[
+k=\left\lceil\frac u2\right\rceil,\qquad
+r=v-s-1,\qquad
+t=v+\left\lfloor\frac u2\right\rfloor-s-1
+\]
+
+と置く。条件
+
+\[
+r\ge0,\quad u\ge2r+1,\quad
+(r=0\ \text{または}\ u\ne4r+1),\quad 0\le t\le v-1
+\]
+
+の下で \(O((u,v),s)\) が存在する。実際、F3 の端点 \(r\) のα道 \(P_u\)
+のラベル \(x\) を
+
+\[
+x\longmapsto\begin{cases}
+s+1+x,&x<k,\\
+s+1+x+v,&x\ge k
+\end{cases}
+\]
+
+に移す。低値は \([0,k-1]\) なので、この腕のラベルは
+
+\[
+[s+1,s+k]\ \cup\ [s+k+v+1,s+u+v].
+\]
+
+根差は \(s+1+r=v\)、内部差は高側だけが \(v\) 増えるため
+\([v+1,u+v-1]\)。残る区間 \([s+k+1,s+k+v]\) には、F3 の端点 \(t\) の
+graceful \(P_v\) を平行移動して置く。その根差は
+
+\[
+s+k+1+t=u+v,
+\]
+
+内部差は \([1,v-1]\) である。二区間と中間区間が非ハブラベル
+\([s+1,s+u+v]\) を、二つの内部差区間と根差 \(v,u+v\) が \([1,u+v]\)
+を、それぞれ重複なく覆う。□
+
+上の算術条件は
+
+\[
+\max\left(\left\lfloor\frac u2\right\rfloor,
+v-\left\lceil\frac u2\right\rceil\right)\le s\le v-1
+\]
+
+と端点例外の除外で表せる。特に \(s+1\le v\le u\le2s\)
+なら、\(r\ge0\)、\(2r+1=2v-2s-1\le v-1\le u\)、\(0\le t\le v-1\)
+である。従ってこの帯では、\(r\ge1\) かつ \(u=4(v-s-1)+1\)
+だけを避ければよい。
+
+\subsubsection{K2　偶数境界の二等長帯}\label{k2-ux5076ux6570ux5883ux754cux306eux4e8cux7b49ux9577ux5e2f}
+
+すべての整数 \(c\ge1\) と \(2c\le b\le4c\) に対し
+
+\[
+O((2c,b,2c),c)
+\]
+
+が存在する。\(q=b+4c\)、\(N=b+2c\) と置き、第一腕を
+
+\[
+A=\bigl(2c-j,\ q+1+j\bigr)_{j=0}^{c-1}
+\]
+
+とする。第二腕 \(B\) は、区間 \([2c+1,q]\) の両端を交互に取る列
+
+\[
+q,2c+1,q-1,2c+2,q-2,2c+3,\ldots
+\]
+
+の最初の \(b\) 頂点とする。\(A\) は \([c+1,2c]\cup[q+1,q+c]\)
+を使う。\(B\) は下端から \(\lfloor b/2\rfloor\) 個、上端から
+\(\lceil b/2\rceil\) 個を使うので、残るのは
+
+\[
+I=[L,L+2c-1],\qquad L=2c+\lfloor b/2\rfloor+1.
+\]
+
+第三腕 \(C\) を、端点 \(t=N-L=\lceil b/2\rceil-1\) の graceful
+\(P_{2c}\) に \(L\) を足した列とする。仮定より \(c-1\le t\le2c-1\)
+なので、F3 を適用できる。これで全ラベルは \([c+1,c+q]\)
+を一度ずつ使い、\(C\) の根は \(N\) となる。
+
+\(A\) の対内差は \(N+1+2j\)、対間差は \(N+2+2j\)（後者は
+\(0\le j\le c-2\)）なので、内部差は \([N+1,q-1]\)、根差は \(2c\)。\(B\)
+の内部差は \(N-1,N-2,\ldots,2c+1\)、根差は \(q\)。\(C\) の内部差は
+\([1,2c-1]\)、根差は \(N\) である。従って全差は
+
+\[
+[1,2c-1],\ \{2c\},\ [2c+1,N-1],\ \{N\},\ [N+1,q-1],\ \{q\}
+\]
+
+に分かれ、\([1,q]\) を一度ずつ覆う。各列長は \(2c,b,2c\)
+なので証明が完了する。\(b=2c\) は偶数等長三腕の境界を含む。□
+
+\subsubsection{K3　奇数等長の例外修復}\label{k3-ux5947ux6570ux7b49ux9577ux306eux4f8bux5916ux4feeux5fa9}
+
+すべての \(c\ge1\) に対し \(O((4c+1,4c+1,4c+1),c)\)
+が存在する。この節ではF3 で固定した明示列 \(p_c\) を使う。
+
+\[
+d=4c+1,\qquad M=8c+2,\qquad q=12c+3=3d
+\]
+
+と置き、まず次の三列を作る。
+
+\begin{itemize}
+\tightlist
+\item
+  \(A\)：\(p_c\) の値 \(a\) を \(x=5c+1-a\) に反転し、\(x>3c\)
+  の値だけに \(M\) を加える。
+\item
+  \(B\)：\(p_c\) の値 \(a\le2c\) を \(3c+1+a\) に、\(a>2c\) を
+  \(3c+1+a+d\) に移す。
+\item
+  \(C\)：F3 の端点 \(3c\) の graceful \(P_d\) に \(5c+2\)
+  を加える。\(0\le3c\le d-1\) なのでこの道は存在する。
+\end{itemize}
+
+これらのラベル集合は
+
+\[
+\begin{array}{c|l}
+A&[c+1,3c]\cup[11c+3,13c+3]\\
+B&[3c+1,5c+1]\cup[9c+3,11c+2]\\
+C&[5c+2,9c+2]
+\end{array}
+\]
+
+で、すでに \([c+1,c+q]\) を重複なく覆う。\(p_c\) では差 \(2c\) の辺
+\(0\)--\(2c\) だけが、境界 \(2c\)
+を横切らない。他のすべての内部辺は低値と高値を結ぶ。従って \(A\)
+の内部差は、\([1,4c]\) のうち \(2c\) 以外に \(M\) を加えたものと \(2c\)
+である。根は \(q\) なので、\(A\) 全体の差は
+
+\[
+\bigl([M+1,q]\setminus\{M+2c\}\bigr)\cup\{2c\}.
+\]
+
+同様に \(B\) の根は \(d\) で、その全差は
+
+\[
+\bigl([d,d+4c]\setminus\{d+2c\}\bigr)\cup\{2c\}.
+\]
+
+\(C\) の根は \(M\)、内部差は \([1,d-1]\)。したがって三列の全差は、正しい
+\([1,q]\) から \(10c+2\) と \(6c+1\) を一個ずつ除き、\(2c\)
+を二個余分に加えた多重集合である。
+
+そこで \(A\) の先頭 \(2c+1\) 頂点を \(A_p\)、残りを \(A_t\)、\(B\)
+の先頭 \(2c+1\) 頂点を \(B_p\)、残りを \(B_t\)
+とし、次の三腕に組み替える。
+
+\[
+\begin{aligned}
+A'&=A_p\Vert\operatorname{rev}(B_p\text{ の先頭を除いた列}),\\
+B'&=(B_p\text{ の先頭})\Vert\operatorname{rev}(B_t)\Vert A_t,\\
+C'&=C.
+\end{aligned}
+\]
+
+頂点の重複も欠落もなく、三つの根も変わらない。\(A_p,B_p\) は長さ
+\(2c+1\)、\(A_t,B_t\) は長さ \(2c\) なので、新腕長はすべて \(d\)
+である。必要な端点を \(p_c\) の式から読み出すと
+
+\[
+\begin{array}{c|r}
+\text{端点}&\text{値}\\
+\hline
+A_p\text{ の末}&13c+3\\
+A_t\text{ の先}&11c+3\\
+B_p\text{ の先}&4c+1\\
+B_p\text{ の第2}&10c+3\\
+B_p\text{ の末}&3c+1\\
+B_t\text{ の先}&5c+1\\
+B_t\text{ の末}&10c+2
+\end{array}
+\]
+
+である。切断するのは \(A_p\)--\(A_t\)、\(B_p\)--\(B_t\)、\(B_p\)
+の第一辺で、その差は順に \(2c,2c,6c+2\)。新しい接続辺の差は
+
+\[
+\begin{aligned}
+|(13c+3)-(3c+1)|&=10c+2,\\
+|(4c+1)-(10c+2)|&=6c+1,\\
+|(5c+1)-(11c+3)|&=6c+2.
+\end{aligned}
+\]
+
+列の反転は他の絶対差を保つ。よって余分な二つの \(2c\)
+が二つの欠差に置き換わり、\(6c+2\) は復元される。全差は正確に
+\([1,q]\)、全ラベルは指定区間のままなので、求める核が得られた。□
+
+\subsubsection{K4　等長三腕核と二等長上端帯}\label{k4-ux7b49ux9577ux4e09ux8155ux6838ux3068ux4e8cux7b49ux9577ux4e0aux7aefux5e2f}
+
+\paragraph{K4.1　等長三腕核（equal\_core）}\label{k4.1-ux7b49ux9577ux4e09ux8155ux6838equal_core}
+
+すべての \(m\ge1\)、\(0\le c\le\lfloor m/2\rfloor\) について
+
+\[
+O((m,m,m),c)
+\]
+
+が存在する。\(k=\lfloor m/2\rfloor\) とする。まず \(m=2c\) なら
+\(c\ge1\) であり、K2 の \(b=2c\) を使う。\(m=4c+1,c\ge1\) ならK3
+を使う。残る場合はF3 で \(\alpha O(U_m,c)\) が得られる。
+
+後ろの二腕にはK1 を \((u,v,s)=(m,m,c+k)\) で使う。このとき
+
+\[
+r=\lceil m/2\rceil-c-1,\qquad t=m-c-1.
+\]
+
+除外済みの偶数境界以外では \(r\ge0\)
+であり、\(0\le t\le m-1\)、\(m\ge2r+1\) も成立する。残るα道の例外
+\(r\ge1\) かつ \(m=4r+1\) は \(m\) が奇数の場合だけ起こる。\(m=2k+1\)
+と書けば \(r=k-c\) なので、\(m=4r+1\) は \(k=2c\)、すなわち \(m=4c+1\)
+と同値である。この例外も除外済みで、\(c=0,m=1\) は \(r=0\)
+として許される。
+
+従って \(O((m,m),c+k)\) があり、F4
+で最初のα核と接合すればよい。以上で全域を尽くした。□
+
+\paragraph{K4.2　二等長上端帯（top\_band）}\label{k4.2-ux4e8cux7b49ux9577ux4e0aux7aefux5e2ftop_band}
+
+\(n\ge1\)、\(n\le b\le2n-1\) に対し
+
+\[
+O((n,b,n),\lfloor n/2\rfloor)
+\]
+
+が存在する。\(n=2c\) が偶数ならK2 であり、さらに \(b=2n\)
+まで同じ構成が使える。
+
+\(n=2k+1\) が奇数なら、F3 で \(\alpha O(U_n,k)\) がある。実際 \(n=2k+1\)
+で、\(k\ge1\) のとき \(n\ne4k+1\)、\(k=0\)
+では端点0である。その後のオフセットは \(k+\kappa(U_n)=2k=n-1\)。K1 を
+
+\[
+(u,v,s)=(b,n,n-1)
+\]
+
+に適用すると \(r=0\)、\(t=\lfloor b/2\rfloor\in[0,n-1]\)
+なので、\(O((b,n),n-1)\) が得られる。F4 で貼れば結論となる。□
+
+腕の置換はラベル列ごと行う。
+
+\subsection{3.
+有限核と小さい七腕の基底}\label{ux6709ux9650ux6838ux3068ux5c0fux3055ux3044ux4e03ux8155ux306eux57faux5e95}
+
+\subsubsection{3.1　164核を22個の offset
+証書から再構成する}\label{ux6838ux309222ux500bux306e-offset-ux8a3cux66f8ux304bux3089ux518dux69cbux6210ux3059ux308b}
+
+\textbf{有限核補題.} \(1\le t_1\le t_2\le t_3\le7\)、
+\(0\le c\le\lfloor t_1/2\rfloor\) の全てについて \(O((t_1,t_2,t_3),c)\)
+が得られる。 対象は重複を除いて
+
+\[
+\sum_{1\le t_1\le t_2\le t_3\le7}
+\bigl(\lfloor t_1/2\rfloor+1\bigr)=164
+\]
+
+個であり、次の優先順で作る。
+
+\begin{longtable}[]{@{}llr@{}}
+\toprule\noalign{}
+順序 & 使用する構成 & この段で初めて扱う個数 \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & \(c=0\)、\(T\notin E\)：S0 のハブ0 \(\alpha\) 供給 & 72 \\
+2 & 全等長核：K4.1 & 15 \\
+3 & 二等長の上端帯：K4.2 & 10 \\
+4 & 一腕 \(\alpha\) 核と OP の接合 & 43 \\
+5 & 一腕 \(\alpha\) 核を二段続けて接合 & 2 \\
+6 & 残余の offset 現物 & 22 \\
+\end{longtable}
+
+第3段は、腕の置換後に \(T=(n,n,b)\)、\(c=\lfloor n/2\rfloor\) であり、
+\(n\le b\le2n\)（\(n\) 偶数）、または \(n\le b\le2n-1\)（\(n\)
+奇数）となる場合である。
+
+判定式を明記するため
+
+\[
+\operatorname{alpha\_ok}(a,c)\iff
+ a\ge2c+1\quad\land\quad(c=0\ \text{または}\ a\ne4c+1)
+\]
+
+と書く。\(a\ge1,c\ge0\) の下で、この条件なら F3 が \(\alpha O(U_a,c)\)
+を与える。 第4段では三腕の全ての役割置換 \((a,u,v)\) について
+
+\[
+\begin{gathered}
+\operatorname{alpha\_ok}(a,c),\\
+s=c+\lfloor a/2\rfloor,\qquad r=v-s-1,\qquad
+ t=v+\lfloor u/2\rfloor-s-1,\\
+r\ge0,\qquad u\ge2r+1,\qquad
+(r=0\ \text{または}\ u\ne4r+1),\qquad 0\le t\le v-1
+\end{gathered}
+\]
+
+を調べる。K1 が \(O((u,v),s)\) を与え、F4 の offset 核接合で
+\(O((a,u,v),c)\) が得られる。
+
+これで処理できないものに限り、第5段で役割置換 \((a,b,d)\) に対して
+
+\[
+\operatorname{alpha\_ok}(a,c),\qquad
+\operatorname{alpha\_ok}(b,c+\lfloor a/2\rfloor),\qquad
+c+\lfloor a/2\rfloor+\lfloor b/2\rfloor\le d-1
+\]
+
+を調べる。最初の二腕は F3 の \(\alpha\) 核であり、最後の一腕は F3 の
+\(O(U_d,c+\lfloor a/2\rfloor+\lfloor b/2\rfloor)\) である。 F4
+を二回用いれば目的の三腕核を得る。この段に新しく入る二つは
+
+\[
+\begin{array}{c|c|c|c}
+T&c&(a,b,d)&\text{二つの後続 offset}\\ \hline
+(2,4,4)&0&(2,4,4)&1,3\\
+(3,7,7)&1&(3,7,7)&2,5
+\end{array}
+\]
+
+である。OP を先に判定するので、第4・5段の計45個に重複はない。
+
+最後の22個は \texttt{certificates/core.json} の \texttt{offset}
+に格納する。索引は次の通りである。
+
+\begin{longtable}[]{@{}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.0909}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.9091}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedleft
+\(c\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+三つ組 \(T\)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+0 & \((2,2,4),(2,2,6)\) \\
+1 &
+\((2,2,b)\)、\(5\le b\le7\)；\((2,3,b)\)、\(4\le b\le7\)；\((2,4,b)\)、\(5\le b\le7\) \\
+1 & \((2,5,5),(2,6,6),(2,6,7),(2,7,7)\) \\
+1 & \((3,3,6),(3,3,7),(3,4,6),(3,4,7),(4,5,5)\) \\
+2 & \((4,5,7)\) \\
+\end{longtable}
+
+\textbf{有限部分の証明.} 指定範囲の \(T,c\)
+を全て列挙し、上の優先順で整数条件を判定すると、
+各段の個数は表の通りとなり、最後の索引は上記22個に一致する。
+各現物を核の定義と照合すれば有限核補題を得る。第5章に全数判定と現物の検査手順を記す。
+
+\subsubsection{3.2
+七腕の直接証書は20個で足りる}\label{ux4e03ux8155ux306eux76f4ux63a5ux8a3cux66f8ux306f20ux500bux3067ux8db3ux308aux308b}
+
+\textbf{小基底補題 B8.} 全腕長が8以下の七腕スパイダーは graceful
+である。
+
+まず全腕長7以下を考える。\(E\) 外の三腕があれば、それを\textbf{先に}殻
+\(A\) として選ぶ。 残る四本の最短を \(w\)、残り三本を \(T\)
+とする。すると
+
+\[
+A\notin E,\qquad w\le\min(T),\qquad
+\lfloor w/2\rfloor\le\lfloor\min(T)/2\rfloor
+\]
+
+なので、有限核補題と接合 B が使える。
+従ってこの選択ができないことと、七本から選ぶ全ての三腕が \(E\)
+に入ることは同値である。 F6 の全整数分類を \(n=7\)
+に適用すると、その集合は \(D_7\) であり、
+\(|D_7|=2\cdot7+6=20\)。全て最大腕6以下なので、\texttt{seven\_direct}
+の20現物を 第5章の定義照合で確認して使う。
+
+次に最大腕が8の場合を扱う。長さ8の腕が1本から3本なら、最短腕を \(w\)
+とし、 全ての8を含む三本を \(A\) に選ぶ。足りない本数は他の腕で補う。
+\(w<8\)、\(A\notin E\) で、残る \(T\) は全腕7以下、\(w\le\min(T)\)
+である。 よって有限核補題と B が使える。
+
+長さ8の腕が4本以上なら、その三本を \(T=(8,8,8)\) とする。
+残る四本の最短を \(w\)、他の三本を \(A\) とする。 \(w<8\)
+なら残る8は全て \(A\) に入り、\(w=8\) なら残る四本は全て8である。 従って
+\(A\) は必ず8を含み \(E\) 外である。 \(w\le8\) なので K4.1 の全等長核
+\(O((8,8,8),\lfloor w/2\rfloor)\) と B を使う。 これで B8
+が証明された。□
+
+\subsection{4.
+同じ長さの腕が三本ある場合}\label{ux540cux3058ux9577ux3055ux306eux8155ux304cux4e09ux672cux3042ux308bux5834ux5408}
+
+\textbf{補題 EQ3.} 同じ長さの腕が三本以上ある七腕スパイダーは graceful
+である。
+
+長さが三回以上現れる値のうち\textbf{最大のもの}を \(n\)
+とし、その三本を除いた四本を \(a\le b\le d\le e\) と書く。最大腕8以下は
+B8 で済むので、全体の最大腕は9以上とする。 この最大性により、\(n\)
+より大きい長さが三本現れることはない。
+
+\textbf{場合 I：\(a\le n\).} \((b,d,e)\notin E\) なら
+
+\[
+A=(b,d,e),\qquad w=a,\qquad T=(n,n,n)
+\]
+
+とする。\(\lfloor a/2\rfloor\le\lfloor n/2\rfloor\) より、K4.1 と接合 B
+を使える。 一方 \((b,d,e)\in E\) なら \(a,b,d,e\le6\) なので \(n\ge9\)。
+\(E\) の各三つ組には \(k\in\{2,3,4\}\) が少なくとも二度現れる。 四本
+\(a,b,d,e\) からその二本を取り、残る二本を \(u,v\) とする。
+
+\[
+T=(n,k,k),\qquad A=(n,u,v),\qquad w=n
+\]
+
+は七本を重複なく分け、\(A,T\) は9以上の腕を含むので共に \(E\)
+外である。また
+
+\[
+\kappa(T)+1=\lfloor n/2\rfloor+2\lfloor k/2\rfloor+1
+\le\lfloor n/2\rfloor+5\le n
+\]
+
+だから接合 L が使える。
+
+\textbf{場合 II：\(a>n\).} \(B_n=2n\)（\(n\) 偶数）、\(B_n=2n-1\)（\(n\)
+奇数）と置く。 \(a\le B_n\) なら
+
+\[
+w=n,\qquad T=(n,n,a),\qquad A=(b,d,e)
+\]
+
+とする。K4.2 が \(O(T,\lfloor n/2\rfloor)\) を与える。
+この場合の最大腕は \(e\ge9\) なので \(A\notin E\) であり、B が使える。
+
+残る \(a>B_n\) では、まず
+
+\[
+T=(n,n,a),\qquad A=(n,b,d),\qquad w=e
+\]
+
+を考える。\(n\) 偶数なら \(a\ge2n+1\) より
+\(\kappa(T)+1=n+\lfloor a/2\rfloor+1\le a\)。 \(n\) 奇数なら \(a\ge2n\)
+より \(\kappa(T)+1=n-1+\lfloor a/2\rfloor+1\le a\)。 従って
+\(A,T\notin E\) なら \(\kappa(T)+1\le a\le e\) により L で完了する。
+
+ここで \(A\in E\) は起こらない。実際 \(b\ge a>B_n\ge n\) と F6
+の12要素を照合すると、 \(A\in E\) となるのは \(n=1\)、\(a=b=d=2\)
+の場合だけである。 これは \(n\)
+より大きい長さ2が三本あることになり、\(n\) の選び方に反する。
+
+同じ12要素を \(T=(n,n,a)\)、\(a>B_n\) と照合すると、\(T\in E\)
+となるのは \(n=2,a=6\) だけである。このとき \(d=6\) なら \(a=b=d=6\)
+となり、再び最大性に反する。 従って \(d\ge7\) であり、
+
+\[
+T'=(2,2,d),\qquad A'=(2,6,b),\qquad w=e
+\]
+
+に替える。\(T'\) は7以上の腕を含み、\(A'\) の第二成分は6以上なので共に
+\(E\) 外である。 さらに
+
+\[
+\kappa(T')+1=3+\lfloor d/2\rfloor\le d\le e
+\]
+
+より L が使える。これで全ての場合を尽くした。
+証明は共通補題、S0、K4、有限核補題と B8
+だけを用い、七腕全域定理には依存しない。□
+
+\subsection{5.
+均衡域で使う核を選ぶ}\label{ux5747ux8861ux57dfux3067ux4f7fux3046ux6838ux3092ux9078ux3076}
+
+\subsubsection{5.1
+三候補から道の端点例外を避ける}\label{ux4e09ux5019ux88dcux304bux3089ux9053ux306eux7aefux70b9ux4f8bux5916ux3092ux907fux3051ux308b}
+
+K1 により、帯 \(s+1\le v\le u\le2s\) で OP を使う際に残る禁止条件は
+\(r=v-s-1\ge1\) かつ \(u=4v-4s-3\) だけである。
+
+\textbf{補題 GP.} \(s+1\le x\le y\le z\le2s\)
+とし、三値が全て同じではないとする。
+三つの添字対のうち少なくとも一対には、上の禁止条件がなく、K1
+が適用できる。
+
+証明。全対が禁止されると仮定し、単射 \(F_s(v)=4v-4s-3\) を置く。
+三対から \(y=F_s(x)\)、\(z=F_s(x)\)、\(z=F_s(y)\) が従う。 まず
+\(y=z\)、次に \(F_s(x)=F_s(y)\) と単射性から \(x=y\)
+となり、仮定に反する。 \(r=0\)
+の対は初めから禁止されないので、この背理法に例外はない。□
+
+\subsubsection{5.2
+一腕と二腕の接合による均衡核}\label{ux4e00ux8155ux3068ux4e8cux8155ux306eux63a5ux5408ux306bux3088ux308bux5747ux8861ux6838}
+
+\textbf{補題 BS.} \(l_1\le\cdots\le l_7=U\)
+とし、同じ値の腕は高々二本とする。
+
+\[
+w=l_1,\qquad c=\lfloor w/2\rfloor,\qquad
+K=c+\lfloor l_2/2\rfloor+\lfloor l_3/2\rfloor
+\]
+
+と置く。\(U\le K\) なら、\(w\) 以外の三本 \(T\) を選んで \(O(T,c)\)
+を構成できる。
+
+まず一腕 \(a\) を次の三場合で選び、\(s=c+\lfloor a/2\rfloor\) とする。
+二腕核の候補は全ての場合で同じ三本 \(l_5,l_6,l_7\) とする。
+
+\textbf{I. \(c=0\) または \(l_3\ne4c+1\).} \(a=l_3\) とする。
+三重反復がないので \(l_3>l_1\)、従って \(a\ge w+1\ge2c+1\)。
+禁止値も除かれているので F3 の \(\alpha O(U_a,c)\) が存在する。また
+
+\[
+U\le K\le c+2\lfloor a/2\rfloor\le2s.
+\]
+
+\textbf{II. \(c\ge1\)、\(l_3=4c+1\)、\(l_2<4c+1\).} \(a=l_2\) とする。
+\(a\ge w\ge2c\) だが、\(a=2c\) なら \(K=4c<l_3\le U\) となって矛盾する。
+従って \(a\ge2c+1\) で、\(a<4c+1\) より F3 の禁止値も避ける。さらに
+
+\[
+U\le K=3c+\lfloor a/2\rfloor
+\le2c+2\lfloor a/2\rfloor=2s.
+\]
+
+\textbf{III. \(c\ge1\)、\(l_2=l_3=4c+1\).} \(a=l_4\) とする。
+三重反復がないので \(a\ge4c+2\)。従って \(a\ge2c+1\)、\(a\ne4c+1\)
+であり、 再び F3 が使える。\(K=5c\)、\(2s\ge6c+2\) より \(U\le2s\)
+である。
+
+どの場合も \(a\ge2c+1\) から
+
+\[
+a-s=\lceil a/2\rceil-c\ge1
+\]
+
+となる。よって三候補 \(l_5,l_6,l_7\) は全て \([s+1,2s]\) に入る。
+この三本は全同値ではないので GP により良い二本 \(u\ge v\) を選べる。 K1
+が \(O((u,v),s)\) を与え、F4 の核同士の接合から
+
+\[
+\alpha O(U_a,c)+O((u,v),c+\lfloor a/2\rfloor)
+\quad\Longrightarrow\quad O((a,u,v),c)
+\]
+
+を得る。\(a\) は添字2、3、4のいずれか、\(u,v\)
+は添字5、6、7から選んでいるので、 一腕 \(w\)
+と核の三腕は全て異なる添字を持つ。これで BS が証明された。□
+
+\subsection{6.
+全七腕の網羅的場合分け}\label{ux5168ux4e03ux8155ux306eux7db2ux7f85ux7684ux5834ux5408ux5206ux3051}
+
+定理 S7 を証明する。腕長を \(l_1\le\cdots\le l_7=U\) と並べる。
+
+\textbf{1. \(U\le8\).} 小基底補題 B8 を使う。
+
+以下 \(U\ge9\) とする。
+
+\textbf{2. \(l_4\le7\)：短い腕が四本ある場合.}
+
+\[
+w=l_1,\qquad T=(l_2,l_3,l_4),\qquad A=(l_5,l_6,l_7)
+\]
+
+とする。\(A\) は9以上の腕を含み \(E\) 外である。 \(T\)
+は全腕7以下で、\(\lfloor w/2\rfloor\le\lfloor\min(T)/2\rfloor\)。
+従って有限核補題と接合 B で構成できる。
+
+以下 \(l_4\ge8\) とする。
+
+\textbf{3. 同じ長さの腕が三本以上ある場合.} EQ3 を使う。 その証明は既に
+B8 と局所構成だけから完了しており、ここに循環はない。
+
+\textbf{4. 同じ値は高々二本の場合.} \(T_0=(l_1,l_2,l_3)\) と置く。
+
+\textbf{4a. \(T_0\in E\).} 分割を
+
+\[
+T'=(l_1,l_2,l_4),\qquad A'=(l_3,l_5,l_6),\qquad w=U
+\]
+
+に替える。両三つ組は8以上の腕を含むため \(E\) 外である。 \(E\)
+の最初の二成分は4以下だから
+
+\[
+\kappa(T')+1\le\lfloor l_4/2\rfloor+5.
+\]
+
+\(l_4=8\) では右辺は9であり、\(U\ge9\) が条件を満たす。 特に境界
+\(l_4=8,U=9\) もここに含まれる。 \(l_4\ge9\) なら
+\(\lfloor l_4/2\rfloor+5\le l_4\le U\) である。 従って接合 L が使える。
+
+\textbf{4b. \(T_0\notin E\)、\(U\ge\kappa(T_0)+1\).}
+\(T=T_0\)、\(A=(l_4,l_5,l_6)\)、\(w=U\) とする。 \(A\) は全腕8以上なので
+\(E\) 外であり、接合 L の全条件を満たす。
+
+\textbf{4c. \(T_0\notin E\)、\(U\le\kappa(T_0)\).} これは BS の
+\(U\le K\) そのものである。\(w=l_1\) を除いた六本から BS で三腕核
+\(O(T,\lfloor w/2\rfloor)\) を選び、残る三本を \(A\) とする。 この \(A\)
+が \(E\) 外であることも保証される。 実際、\(l_4\ge8\)
+より8以上の腕が少なくとも四本ある。 \(w\ge8\)
+なら全ての腕が8以上である。 \(w\le7\) なら、\(w\)
+を除いた六本に8以上の腕が四本残り、三本の核 \(T\) では全てを使えない。
+いずれも \(A\) に8以上の腕が残る。従って B が使える。
+
+以上は全ての正整数入力を尽くす。よって定理 S7 が成立する。□
+
+\subsection{7.
+有限証書と停止性}\label{ux6709ux9650ux8a3cux66f8ux3068ux505cux6b62ux6027}
+
+本章の有限現物は
+\texttt{alpha\_small}44、\texttt{offset}22、\texttt{seven\_direct}20、計86個である。
+現物の定義照合と164核の有限分割は証明の一部であり、1716型の実行試験は構成器の検証に用いる。
+小基底の被覆は F6 と殻を先に選ぶ論証から従う。
+
+全ての選択は有限個の比較と所属判定で決まり、BS は三対を調べればよい。 F3
+の道の帰納と第2章の構成も停止するため、各入力でラベル列を返す。
+腕の置換を元に戻せば、与えられた順序の七腕のラベリングを得る。
+
+\section{有限証書と検証}\label{ux6709ux9650ux8a3cux66f8ux3068ux691cux8a3c}
+
+有限現物は \texttt{certificates/core.json}、A∞用の証書は
+\texttt{vendor/ainf37/certificate\_core.json} に収める。各レコードは腕長
+\texttt{lengths}、ハブラベル \texttt{hub}、ハブ直後から葉への列
+\texttt{arms}、offset核なら \texttt{c} を持つ。\texttt{provenance}
+は原資料の位置とSHA-256を示す。
+
+\subsection{V1
+証明に必要な有限命題}\label{v1-ux8a3cux660eux306bux5fc5ux8981ux306aux6709ux9650ux547dux984c}
+
+六腕章の \(K_7,P\) を用い、昇順六つ組 \(1\le s_1\le\cdots\le s_6\le7\)
+の924代表を20通りの三添字集合で調べる。成功は906個、失敗集合は厳密に
+\(D_6\) の18個であり、\texttt{six\_direct}
+のキーと一致する。実際の長さへの持ち上げは六腕章で証明した。
+
+七腕の164核を七腕章の優先条件で分類すると、\(\alpha\)供給72、全等長15、二等長帯10、OP接合43、二つの一腕\(\alpha\)核の逐次接合2、残余22となる。最後のキー集合が
+\texttt{offset}
+と厳密に一致する。72供給の内訳は、直接\(\alpha\)性を確認する小三腕44個と、A∞による最大腕7の28個である。
+
+七腕の小基底の被覆はF6と殻を先に選ぶ論証から従う。1716型の列挙は実装確認として行うが、被覆の証明前提ではない。
+
+\begin{longtable}[]{@{}lrl@{}}
+\toprule\noalign{}
+節 & 件数 & 現物の役割 \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{alpha\_small} & 44 & 最大腕6以下、\(E\)外のハブ0
+\(\alpha\)供給 \\
+\texttt{six\_hz} & 7 & 六腕の例外核 \(K_7\) \\
+\texttt{six\_direct} & 18 & 六腕の直接例 \(D_6\) \\
+\texttt{offset} & 22 & 構成式で残るoffset核 \\
+\texttt{seven\_direct} & 20 & 七腕の直接例 \(D_7\) \\
+\texttt{fixed\_offset} & 0 & 旧形式との互換用の空欄 \\
+\end{longtable}
+
+七腕用の保存現物は \(44+22+20=86\)
+個である。小三腕44個は六腕と共有する。最大の三重反復長を選ぶため、旧版の特殊核
+\(O((2,2,6),7)\) は不要である。
+
+\subsection{V2
+定義照合と再現}\label{v2-ux5b9aux7fa9ux7167ux5408ux3068ux518dux73fe}
+
+独立検査器は構成器の検査関数を使わず、整数型、指定腕長と順序、頂点区間・辺差区間の全単射、根0、必要な\(\alpha\)分離、および指定キー集合との完全一致を確認する。graceful現物は頂点
+\([0,q]\)・差 \([1,q]\)、offset核は非根 \([c+1,c+q]\)・差 \([1,q]\)
+を対象とする。
+
+A∞の証書は原物の37現物版を用いる。A9の19直接プロファイル・306レシピが有限域2544三つ組の残余325組を厳密に閉じる。名前付きの同じ内容は
+\texttt{references/ainf37/certificate\_named.json}
+に置く。元の独立検査器は、構成器を読み込まずに有限前提と全操作を再構成する。
+
+配布フォルダから標準Pythonで実行できる。
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{python {-}B src/verify.py {-}{-}full {-}{-}report checks/verification.json}
+\NormalTok{python {-}B vendor/ainf37/independent\_check.py}
+\end{Highlighting}
+\end{Shaded}
+
+上記の有限命題と現物の正しさは証明の一部である。より広い有限範囲・境界例・大規模例の出力試験は実装の確認であり、全整数性は共通補題、A∞、六腕の持ち上げ、七腕の核構成と網羅的分割による。本書は人間可読の計算機援用証明であり、Lean形式化は未実施である。
+
+\end{document}

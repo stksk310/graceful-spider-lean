@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "whole_proof_in_book": true,
+  "pages": 20,
+  "v2_readme_synchronized": true,
+  "expected_roles": {
+    "alpha_small": 44,
+    "six_hz": 7,
+    "six_direct": 18,
+    "offset": 22,
+    "seven_direct": 20,
+    "fixed_offset": 0
+  },
+  "core_sha256": "433c784118dd1a394fae65902d01eb98e27f7dfb900ac014faad257a2534e95b",
+  "note": "Initial reviewer README v1 warning resolved in final v2 README and change report."
+}

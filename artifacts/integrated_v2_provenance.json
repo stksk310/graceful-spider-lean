@@ -1,0 +1,372 @@
+{
+  "schema": "ARIADNE_INTEGRATED_V2_PROVENANCE_V1",
+  "status": "PASS",
+  "archive": {
+    "name": "ARIADNE_INTEGRATED_V2_20261116.zip",
+    "sha256": "b286f7b1b426219a92aa353f63697c4bd8771abf09594e4e0c62ca05a5ed37bc",
+    "files": 54,
+    "all_bytes_match_frozen_tree": true
+  },
+  "frozen_source": {
+    "path": "SOURCES/integrated_v2",
+    "manifest": "SHA256SUMS",
+    "manifest_sha256": "e359175b8fc7ccc8a28253e3bf4806cece3517e3bdec875e9a0bc3dac6b68600",
+    "manifest_files": 53,
+    "manifest_hashes_verified": true,
+    "file_sha256": {
+      "00_README_JA.md": "48fbcb26c6b4a8ee33592ea0fc8d722edcf4c8e09af590e79f697f01ad191a68",
+      "05_CHANGES_AND_VERIFICATION_JA.md": "47e17f9554c8c81617e39128f6669bc14e4cf908105cf25229509d516eda7202",
+      "PROOF_BOOK_JA.md": "2ff86946336bf253bb17e3394039a67a36ce58bcc68543343c2e012f377c5a2e",
+      "PROOF_BOOK_JA.pdf": "84ba6ef31525211b2999fc24c8610317ff1f7b1a0a80793ec1a3417adf357164",
+      "PROOF_BOOK_JA.tex": "cb4c031b20205056d5d76240997be93fa4865af5eb6c6366d1d52877049ed374",
+      "certificates/core.json": "433c784118dd1a394fae65902d01eb98e27f7dfb900ac014faad257a2534e95b",
+      "certificates/export_core.py": "2fb52390e8d50b492d7425f18f01b28e49c9384b9ab59a899ab2f20228bc8ed6",
+      "certificates/finite164_inventory.json": "2d77d43eead890105b3c7ef3e898da71f79a0bce223792778f80e9259cd39f8b",
+      "certificates/reference_copies.json": "28f93ed32c2f8ecdb500e4421018da5ad289e953cf110fbc95b02dd222e81550",
+      "certificates/source_copies.json": "394f0fbf8ce1c8c348175cbb11b92a41e32f9091c314039c54ff163702f35753",
+      "checks/AINF37_INDEPENDENT_REPORT.json": "33835a8b73e71f1d2e8f8b5c71d9d522ee57e209236c605ea45e225edea9b9db",
+      "checks/CODE_REVIEW_JA.md": "e1074d5a63368d9c2a2cb9c69a8b3db2080964cb15ccd7a361ac8b79c3397a26",
+      "checks/COMPRESSION_METRICS.json": "5335dd37d369b34843d296448b42ea208b38458e156a64d777a5bc97c644704c",
+      "checks/EXPORT_PROVENANCE_AUDIT.json": "c1922ca5cdcec5bfa5b12c27b58c05d06492166e728082824c585ce533b8ff30",
+      "checks/FINAL_DOCUMENT_SYNC.json": "eeae4d508eb2249a37107df298bf5546b69567b68430ad82ecad84b6d06cce4a",
+      "checks/FULL_REPORT.json": "e756e52286ef9e3a068299c1bbb2185ed1afb9cd3d8b5b8ab8d9e2c15815ebf6",
+      "checks/FULL_REPORT.stdout.txt": "e756e52286ef9e3a068299c1bbb2185ed1afb9cd3d8b5b8ab8d9e2c15815ebf6",
+      "checks/INITIAL_EXPECTED_FAILURE.txt": "312fc264f80ce3e5b6744293699f6c6537e792545ff364bb02facaa4a510c546",
+      "checks/INTEGRATED_LITERAL_AUDIT.json": "3cb28cc490999319f1f77e67d72d585cbaa55ad92675c391a2a5db0ad03a700b",
+      "checks/MATH_REVIEW_JA.md": "b6a296fd780816de1137a3e049f50a80efd0209212ef2b65f483a92018d53a72",
+      "checks/OPTIMIZED_MODE_REPORT.json": "e6eda0eae8231ae4f73c1b971602d9607fdc94df03b1e5b11d87b80f327dbce4",
+      "checks/ORIGINALS_UNCHANGED.json": "fa1f77eb794ab7f457faecf61748783ead2a5556e2f637224e3193d55cbc647f",
+      "checks/PDF_LAYOUT.json": "66029b7f68e405389076ebf481cd6bf8a85c241fe207af4a4b34113febf3fdc7",
+      "checks/REGRESSION_REPORT.txt": "acc2c4dfdb98351ffd345690936edf036fdb6013dcf5c7f1d6f90b2838ed0625",
+      "checks/STANDALONE_AUDIT.json": "1407a95dffebae7069ef89c743c7e6cb4df42d9ec3146b2c10b794d0e189efab",
+      "checks/V1_UNCHANGED.json": "2485ea42a44969019269de085535f1f08f5d06ef8ad497858a2f400e7fea21ef",
+      "checks/audit_distribution.py": "36a3c33ac9775661d0f64d1bc1c3f29d8de1e1b0133ec519956b20cc80cc9422",
+      "checks/runtime_quick.json": "ad6f70983032ab5c6bc62d70dd55f2b329b2edb68e99872bbe3df86b4f8a9781",
+      "pdf_header.tex": "f2021a246c35569d5d7fd8b6ceb3782ab471f68fc2bb025bffaf4e4ae0dcce6b",
+      "proofs/01_FOUNDATIONS_JA.md": "cc5a071e884e67ff4f28aa73d2501153f58dbd3097572d7a42a2ae4d9bc3db35",
+      "proofs/02_A_INFINITY_JA.md": "45461501fcdca47829023a95b60cc183787e7269f6d468821656a07fd5d009df",
+      "proofs/03_SIX_ARM_JA.md": "16a917076f7e1329acc0fa883bacb9afe2a9d6ae342b9ef68daf7625098de150",
+      "proofs/04_SEVEN_ARM_JA.md": "09f66fc2b054f966c33188defb934a3b290111569e7c6f5988ff9f6b125ffc78",
+      "proofs/05_CERTIFICATES_JA.md": "535777cd5698bfe31febf0b937efed6851499c832f84bf8f959d16579ae7e71b",
+      "references/ainf37/01B_FORMULA_SMALL_KERNEL_PROOF.md": "ac78b88222fc822030ab32e00b62302de6e98b1addae1f30a52ea17d3e6abc04",
+      "references/ainf37/01B_FORMULA_SMALL_KERNEL_PROOF.pdf": "fa928d73ba057879a77bf2a21fef2dbd3805d450ccbd69e688c7b7a2e094f528",
+      "references/ainf37/01B_FORMULA_SMALL_KERNEL_PROOF.tex": "621898f7e65817b724d232bbcc0da20bffc16367d7ebb9f13314339cb3f355d6",
+      "references/ainf37/certificate_named.json": "582d1ff3fba58d3a0480c716c7663bd960ab716b089a8dfffab56f94c5020dfa",
+      "render.py": "3dd02366c23caeb5690929d973cb1cf46cf187cd83e5b6403b63a3054cca427c",
+      "src/construct.py": "b3502f61e039bbb340936d372651e00bb41705a210184f32f5d6c290e3bd681a",
+      "src/local_cores.py": "b9e65dfc337437a4d8acfe524c96416ceefc5311a155458baa1d3b771a9e7081",
+      "src/local_paths.py": "360b68cbd7a65edb72dbd2fd9c0de2e60e42ed1e21bc0b840eb7527a749b48b2",
+      "src/routing.py": "cab6b47022e119dfe55e24284deb0e197fdfb39f3b5998af11cddef969fc0d04",
+      "src/test_runtime.py": "ed41b053764a48b2e7bb8ef3df67a76fa90be6fafea7f89991c148ecb234f896",
+      "src/verify.py": "8aa0dc310407388d308dd3ee517a9b41516cebad51c6ccb774485c794416425d",
+      "vendor/ainf37/alpha_path_no_bases.py": "9768f032dd2e7172c757eb892b4d8e028c7a1b9a5cf98d46e97c277bad53f6ec",
+      "vendor/ainf37/certificate_core.json": "88e4a298bb41e5e84b8321e16fa0328acf18db73bef2018aaf7315a1631db0ac",
+      "vendor/ainf37/compact_codec.py": "2864013672ca2dd0e26879148d73e7c90ed39e7be92ff8dc920cd6ba73223614",
+      "vendor/ainf37/construct_final.py": "8e439d28d4e2b8e4e28ac91c1e30faae7429074f8e62ed9bac7affc80f8047a9",
+      "vendor/ainf37/even_router.py": "e2f19657d0876045f0680054baef335d4ec5040e2d40d3826248858f44f14e81",
+      "vendor/ainf37/independent_check.py": "16e497beaed40166c552c15b26a4be7b994dafd0dd56ece0e81719d58fcfeaad",
+      "vendor/ainf37/one_short_arm_no_bases.py": "6ac174c9e2f64d51810cfc830351639bbea460d48e4b2f128db61f022e0a4fd8",
+      "vendor/ainf37/parity_router.py": "6c71da6ffde2c14a56db20181115949f476dc7d6fe36e6c221564169da04ef47"
+    }
+  },
+  "existing_ainfinity_lean_complete_commit": "2890dbc3258af97726b80052231fc7a0b7e90da9",
+  "core_sha256": "433c784118dd1a394fae65902d01eb98e27f7dfb900ac014faad257a2534e95b",
+  "role_record_counts": {
+    "alpha_small": 44,
+    "six_hz": 7,
+    "six_direct": 18,
+    "offset": 22,
+    "seven_direct": 20,
+    "fixed_offset": 0
+  },
+  "exact_source_role_records": 111,
+  "distinct_literal_arrays_with_hub_offset": 110,
+  "unchanged_ainfinity_files": [
+    {
+      "path": "vendor/ainf37/construct_final.py",
+      "sha256": "8e439d28d4e2b8e4e28ac91c1e30faae7429074f8e62ed9bac7affc80f8047a9",
+      "exact_against_r02": true
+    },
+    {
+      "path": "vendor/ainf37/parity_router.py",
+      "sha256": "6c71da6ffde2c14a56db20181115949f476dc7d6fe36e6c221564169da04ef47",
+      "exact_against_r02": true
+    },
+    {
+      "path": "vendor/ainf37/even_router.py",
+      "sha256": "e2f19657d0876045f0680054baef335d4ec5040e2d40d3826248858f44f14e81",
+      "exact_against_r02": true
+    },
+    {
+      "path": "vendor/ainf37/one_short_arm_no_bases.py",
+      "sha256": "6ac174c9e2f64d51810cfc830351639bbea460d48e4b2f128db61f022e0a4fd8",
+      "exact_against_r02": true
+    },
+    {
+      "path": "vendor/ainf37/alpha_path_no_bases.py",
+      "sha256": "9768f032dd2e7172c757eb892b4d8e028c7a1b9a5cf98d46e97c277bad53f6ec",
+      "exact_against_r02": true
+    },
+    {
+      "path": "vendor/ainf37/compact_codec.py",
+      "sha256": "2864013672ca2dd0e26879148d73e7c90ed39e7be92ff8dc920cd6ba73223614",
+      "exact_against_r02": true
+    },
+    {
+      "path": "vendor/ainf37/certificate_core.json",
+      "sha256": "88e4a298bb41e5e84b8321e16fa0328acf18db73bef2018aaf7315a1631db0ac",
+      "exact_against_r02": true
+    },
+    {
+      "path": "vendor/ainf37/independent_check.py",
+      "sha256": "16e497beaed40166c552c15b26a4be7b994dafd0dd56ece0e81719d58fcfeaad",
+      "exact_against_r02": true
+    }
+  ],
+  "verification_logs": {
+    "integrated_v2_source_lock.json": {
+      "sha256": "eb72d59b3cc8140f688d637cbddc30ea27753a129c5a8feeb3f60a6628455f47",
+      "report": {
+        "status": "PASS",
+        "archive_sha256": "b286f7b1b426219a92aa353f63697c4bd8771abf09594e4e0c62ca05a5ed37bc",
+        "manifest_files": 53,
+        "unchanged_ainf_files": [
+          "vendor/ainf37/construct_final.py",
+          "vendor/ainf37/parity_router.py",
+          "vendor/ainf37/even_router.py",
+          "vendor/ainf37/one_short_arm_no_bases.py",
+          "vendor/ainf37/alpha_path_no_bases.py",
+          "vendor/ainf37/compact_codec.py",
+          "vendor/ainf37/certificate_core.json",
+          "vendor/ainf37/independent_check.py"
+        ],
+        "certificate_roles": {
+          "alpha_small": 44,
+          "six_hz": 7,
+          "six_direct": 18,
+          "offset": 22,
+          "seven_direct": 20,
+          "fixed_offset": 0
+        }
+      }
+    },
+    "integrated_v2_provenance.log": {
+      "sha256": "fe6b56326faab3925ff0716cfeead4c60eb957cca38c5a27f754c3ad04f73ce9",
+      "report": {
+        "provenance": {
+          "status": "PASS",
+          "core_sha256": "433c784118dd1a394fae65902d01eb98e27f7dfb900ac014faad257a2534e95b",
+          "exact_reexport_bytes": true,
+          "exact_source_role_records": 111,
+          "distinct_literal_arrays_with_hub_offset": 110,
+          "role_counts": {
+            "alpha_small": 44,
+            "six_hz": 7,
+            "six_direct": 18,
+            "offset": 22,
+            "seven_direct": 20,
+            "fixed_offset": 0
+          },
+          "verbatim_ainf_files": 8,
+          "verbatim_source_functions": 14,
+          "new_v2_composition_helpers": [
+            "serial_triple"
+          ],
+          "scope": "Exact JSON source keys, hashes and retained function text; original code is never executed."
+        },
+        "standalone": {
+          "status": "PASS",
+          "relocated": true,
+          "source_reads_prohibited_by_python_audit_hook": true,
+          "audit_hook_denial_probe": true,
+          "original_source_read_attempts_during_construction": 0,
+          "constructed_cases": 7,
+          "serial_cores": 2,
+          "external_runtime_dependencies": "Python standard library only",
+          "package_open_attempts": [
+            "certificates/core.json",
+            "src/__pycache__/construct.cpython-312.pyc",
+            "src/__pycache__/local_cores.cpython-312.pyc",
+            "src/__pycache__/local_paths.cpython-312.pyc",
+            "src/__pycache__/routing.cpython-312.pyc",
+            "src/__pycache__/verify.cpython-312.pyc",
+            "src/construct.py",
+            "src/local_cores.py",
+            "src/local_paths.py",
+            "src/routing.py",
+            "src/verify.py",
+            "vendor/ainf37/__pycache__/alpha_path_no_bases.cpython-312.pyc",
+            "vendor/ainf37/__pycache__/compact_codec.cpython-312.pyc",
+            "vendor/ainf37/__pycache__/construct_final.cpython-312.pyc",
+            "vendor/ainf37/__pycache__/even_router.cpython-312.pyc",
+            "vendor/ainf37/__pycache__/one_short_arm_no_bases.cpython-312.pyc",
+            "vendor/ainf37/__pycache__/parity_router.cpython-312.pyc",
+            "vendor/ainf37/alpha_path_no_bases.py",
+            "vendor/ainf37/certificate_core.json",
+            "vendor/ainf37/compact_codec.py",
+            "vendor/ainf37/construct_final.py",
+            "vendor/ainf37/even_router.py",
+            "vendor/ainf37/one_short_arm_no_bases.py",
+            "vendor/ainf37/parity_router.py"
+          ]
+        }
+      }
+    },
+    "integrated_v2_full.json": {
+      "sha256": "d33c924a02454fb3ce6c76ac0c8a4f98ea37807e23599dd03359f736d63dec94",
+      "report": {
+        "status": "PASS",
+        "full": true,
+        "core_sha256": "433c784118dd1a394fae65902d01eb98e27f7dfb900ac014faad257a2534e95b",
+        "role_record_counts": {
+          "alpha_small": 44,
+          "six_hz": 7,
+          "six_direct": 18,
+          "offset": 22,
+          "seven_direct": 20,
+          "fixed_offset": 0
+        },
+        "finite164_routes": {
+          "alpha": 72,
+          "peeled": 43,
+          "equal": 15,
+          "top_double_band": 10,
+          "literal": 22,
+          "serial": 2
+        },
+        "alpha72_supply": {
+          "small": 44,
+          "ainf": 28
+        },
+        "six_representatives": 924,
+        "six_direct_complement": 18,
+        "seven_base_le7": 1716,
+        "D_n_classification_audit": {
+          "3": 12,
+          "4": 14,
+          "5": 16,
+          "6": 18,
+          "7": 20,
+          "8": 22,
+          "9": 24
+        },
+        "old_direct43": 43,
+        "old_direct43_bridge_reconstructed": 23,
+        "seven_direct_complement": 20,
+        "constructed_counts": {
+          "sorted_6_max12": 12376,
+          "sorted_7_max12": 31824,
+          "targeted": 49,
+          "random_general": 300,
+          "random_balanced": 300,
+          "random_equal": 200,
+          "large_300000_edges": 3
+        },
+        "global_route_counts": {
+          "six_split": 12500,
+          "six_direct18": 18,
+          "finite_base8": 3432,
+          "three_equal": 13412,
+          "four_short": 9987,
+          "long_largest": 4924,
+          "exceptional_short_triple": 406,
+          "balanced_outer_pair": 373
+        },
+        "subroute_counts": {
+          "bridge": 25492,
+          "long_arm": 6649,
+          "literal20": 20
+        },
+        "bridge_kind_counts": {
+          "finite_164": 13279,
+          "equal": 11124,
+          "top_double_band": 1089
+        },
+        "balanced_case_counts": {
+          "ordinary": 363,
+          "right_resonance_escape": 6,
+          "left_resonance_escape": 4
+        },
+        "negative_tests": 17,
+        "largest_edge_count": 300000,
+        "seed": 20261116,
+        "elapsed_seconds": 12.503,
+        "scope": "Concrete label/edge checks and finite coverage only. All-integer proofs remain mathematical, not machine formalized."
+      }
+    },
+    "integrated_v2_ainf37.log": {
+      "sha256": "454b9a18f2bee00b4d7b259a0cfd2657865df39a669a304ea5b2b074a4bd9b6f",
+      "report": {
+        "status": "PASS",
+        "source": "/workspace/ariadne_integrated_v2_20261116/ariadne_integrated_v2/vendor/ainf37/certificate_core.json",
+        "sha256": "88e4a298bb41e5e84b8321e16fa0328acf18db73bef2018aaf7315a1631db0ac",
+        "logical_sha256": "582d1ff3fba58d3a0480c716c7663bd960ab716b089a8dfffab56f94c5020dfa",
+        "input_schema": "ARIADNE_R02_ANALYTIC_COMPACT_V1",
+        "literal_witnesses": 37,
+        "finite_literal_profiles": 19,
+        "finite_recipes": 306,
+        "path_initial_table_size": 0,
+        "infinite_label_witnesses_required": 0,
+        "analytic_bounds": {
+          "EE": {
+            "0": 24,
+            "2": 22,
+            "4+4q": 20,
+            "6+4q": 14
+          },
+          "OO": {
+            "0": 23,
+            "2": 21,
+            "4+4q": 19,
+            "6+4q": 13
+          },
+          "EO": {
+            "1": 19,
+            "3+4q": 23,
+            "5+4q": 17
+          },
+          "OE": {
+            "1": 24,
+            "3+4q": 22,
+            "5+4q": 20
+          }
+        },
+        "finite_box_size": 2544,
+        "finite_box_routes": {
+          "one_short_arm": 279,
+          "parity_router": 1940,
+          "finite_recipe": 306,
+          "finite_literal": 19
+        },
+        "analytic_box_residual": 325,
+        "checks": {
+          "ee_local_router_identities_verified": 6,
+          "additional_local_router_identities_verified": 4,
+          "parity_front_period_states_verified": 10,
+          "validated_spiders": 11104,
+          "validated_endpoint_paths": 5739,
+          "all_integer_router_families_audited": 14,
+          "formula_sources_reconstructed": 271,
+          "trade3_steps_verified": 532,
+          "finite_recipes_reconstructed": 306,
+          "global_boundary_examples_reconstructed": 1279
+        },
+        "all_integer_basis": "Definition-level local connector identities, two parity states of all five front recurrences, all fourteen symbolic failure bounds, general endpoint induction, and the complete a=1 formula.",
+        "limits": "The c>=25 and a=1 domains are certificate-free. The remaining finite-box recipes still depend on the retained explicit label witnesses; numerical examples are not used in place of the all-integer proofs."
+      }
+    }
+  },
+  "lean_certificate_expansion": {
+    "source_role_records": 111,
+    "finite_offset_witnesses": 164,
+    "manifest": "artifacts/compact_certificate_manifest.json",
+    "test_target": "Ariadne.Compact.CertificatesTests",
+    "kernel_checked": true,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "trust_scope": "Python and source verification reports are provenance and untrusted witness-generation evidence. Mathematical claims are discharged by Lean proofs over indexed spider label maps, with no custom assumptions; numerical source checks do not establish unbounded theorems."
+}

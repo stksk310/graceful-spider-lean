@@ -1,0 +1,22 @@
+[
+  {
+    "source": "/workspace/review_ariadne/ARIADNE_LEAN_HANDOFF_20261115/extracted/AINF_R02_RESULT/ARIADNE_AINF_ULTRASHORT_R02_RESULT_20261115/01B_FORMULA_SMALL_KERNEL_PROOF.md",
+    "destination": "references/ainf37/01B_FORMULA_SMALL_KERNEL_PROOF.md",
+    "sha256": "ac78b88222fc822030ab32e00b62302de6e98b1addae1f30a52ea17d3e6abc04"
+  },
+  {
+    "source": "/workspace/review_ariadne/ARIADNE_LEAN_HANDOFF_20261115/extracted/AINF_R02_RESULT/ARIADNE_AINF_ULTRASHORT_R02_RESULT_20261115/01B_FORMULA_SMALL_KERNEL_PROOF.tex",
+    "destination": "references/ainf37/01B_FORMULA_SMALL_KERNEL_PROOF.tex",
+    "sha256": "621898f7e65817b724d232bbcc0da20bffc16367d7ebb9f13314339cb3f355d6"
+  },
+  {
+    "source": "/workspace/review_ariadne/ARIADNE_LEAN_HANDOFF_20261115/extracted/AINF_R02_RESULT/ARIADNE_AINF_ULTRASHORT_R02_RESULT_20261115/01B_FORMULA_SMALL_KERNEL_PROOF.pdf",
+    "destination": "references/ainf37/01B_FORMULA_SMALL_KERNEL_PROOF.pdf",
+    "sha256": "fa928d73ba057879a77bf2a21fef2dbd3805d450ccbd69e688c7b7a2e094f528"
+  },
+  {
+    "source": "/workspace/review_ariadne/ARIADNE_LEAN_HANDOFF_20261115/extracted/AINF_R02_RESULT/ARIADNE_AINF_ULTRASHORT_R02_RESULT_20261115/03_CERTIFICATE_AND_CHECKS/certificate_named.json",
+    "destination": "references/ainf37/certificate_named.json",
+    "sha256": "582d1ff3fba58d3a0480c716c7663bd960ab716b089a8dfffab56f94c5020dfa"
+  }
+]

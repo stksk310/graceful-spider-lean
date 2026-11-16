@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "source": "/workspace/ariadne_integrated_v2/vendor/ainf37/certificate_core.json",
+  "sha256": "88e4a298bb41e5e84b8321e16fa0328acf18db73bef2018aaf7315a1631db0ac",
+  "logical_sha256": "582d1ff3fba58d3a0480c716c7663bd960ab716b089a8dfffab56f94c5020dfa",
+  "input_schema": "ARIADNE_R02_ANALYTIC_COMPACT_V1",
+  "literal_witnesses": 37,
+  "finite_literal_profiles": 19,
+  "finite_recipes": 306,
+  "path_initial_table_size": 0,
+  "infinite_label_witnesses_required": 0,
+  "analytic_bounds": {
+    "EE": {
+      "0": 24,
+      "2": 22,
+      "4+4q": 20,
+      "6+4q": 14
+    },
+    "OO": {
+      "0": 23,
+      "2": 21,
+      "4+4q": 19,
+      "6+4q": 13
+    },
+    "EO": {
+      "1": 19,
+      "3+4q": 23,
+      "5+4q": 17
+    },
+    "OE": {
+      "1": 24,
+      "3+4q": 22,
+      "5+4q": 20
+    }
+  },
+  "finite_box_size": 2544,
+  "finite_box_routes": {
+    "one_short_arm": 279,
+    "parity_router": 1940,
+    "finite_recipe": 306,
+    "finite_literal": 19
+  },
+  "analytic_box_residual": 325,
+  "checks": {
+    "ee_local_router_identities_verified": 6,
+    "additional_local_router_identities_verified": 4,
+    "parity_front_period_states_verified": 10,
+    "validated_spiders": 11104,
+    "validated_endpoint_paths": 5739,
+    "all_integer_router_families_audited": 14,
+    "formula_sources_reconstructed": 271,
+    "trade3_steps_verified": 532,
+    "finite_recipes_reconstructed": 306,
+    "global_boundary_examples_reconstructed": 1279
+  },
+  "all_integer_basis": "Definition-level local connector identities, two parity states of all five front recurrences, all fourteen symbolic failure bounds, general endpoint induction, and the complete a=1 formula.",
+  "limits": "The c>=25 and a=1 domains are certificate-free. The remaining finite-box recipes still depend on the retained explicit label witnesses; numerical examples are not used in place of the all-integer proofs."
+}

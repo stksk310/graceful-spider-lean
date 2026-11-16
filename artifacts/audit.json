@@ -1,0 +1,367 @@
+{
+  "status": "PASS",
+  "finite_domain_size": 2544,
+  "forbidden_marker_files": [],
+  "allowed_standard_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "theorem_axioms": {
+    "Ariadne.exactRange_iff_bijective": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.parent_ne_child": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Ariadne.card_spiderVertex": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.undirected_edge_index_unique": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Ariadne.graceful_of_cell_sums": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.kappa_reindex": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.ExactRange.of_right_inverse": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.AlphaCutoff.reverse": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.AlphaCutoff.reindex": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.pathLabel_alpha": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.AInfinity.ainf_double_leaf": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.AInfinity.terminal_paths": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.AInfinity.B_new_ports": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.AInfinity.initial_paths": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.AInfinity.pair_classification": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.AInfinity.threshold_reached": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.AInfinity.ainf_bounded": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.endpoint_alpha_path_exists": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.leafExtension_exists": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.AInfinity.routerSeedSupply": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.AInfinity.oneShortArm": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.AInfinity.ainf_23": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.AInfinity.ainf_large": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.AInfinity.ainf": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.HasAlphaShell.fuse_offsetCore": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.HasAlphaShell.fuse_alphaCore": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.HasAlphaCore.fuse_offsetCore": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.HasAlphaCore.fuse_alphaCore": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.graceful_endpoint_path_exists": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.oneArmOffsetCore": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.oneArmAlphaCore": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.outerPairCore": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.Compact.alphaSupply": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.Compact.finiteOffsetCore": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.Six.six_graceful": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.Seven.even_double_band": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.Seven.exceptional_equal_core": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.Seven.equal_core": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.Seven.top_band": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.Seven.base_eight": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.Seven.equalThree_large": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.Seven.balanced_graceful": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Ariadne.Seven.seven_graceful": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "source_sha256": {
+    "Ariadne/AInfinity/DoubleLeaf.lean": "b678ffb06a47fbeb2947772eaf95b8027d583c941bd7036af6dfdff5140dcea6",
+    "Ariadne/AInfinity/FamilyForests.lean": "7938a061ddf765878aa00e9808ba2f154c9abd6f223c58de3a7de1673161246f",
+    "Ariadne/AInfinity/FamilyPartial.lean": "0199890fd9f1d3646ec256d685c034f35d465ea4a65b260c631defd231692fce",
+    "Ariadne/AInfinity/FamilyReturn.lean": "0d08b83f9b0efbe621322e7623506a9526923237e2bcf093cf3af372298e3cde",
+    "Ariadne/AInfinity/FamilyReturnPump.lean": "bcc6257e7ed44ca45137afd83eb2e294d49f587dd17ed5591eb10d4e2f78c2c1",
+    "Ariadne/AInfinity/FamilyReturnShape.lean": "6e8924f9ef2988cfe95eabf403d4ce440a0cc405cfabd25565241ecdc8fd521a",
+    "Ariadne/AInfinity/FamilyReturnSpec.lean": "474233c0e34432526c5287c71fa24c339205a0422c31b992a9c1d245da88e8dd",
+    "Ariadne/AInfinity/FamilySeedsF.lean": "4bf2064367608b61055bba2451c658a42b6f8ebc433408bbdd3359dc1da9413d",
+    "Ariadne/AInfinity/FamilySeedsR.lean": "04526f5547218fcc058f5542f39f0dc4636330fb3ed3e1d8fc6956d7415a34f2",
+    "Ariadne/AInfinity/FamilySeedsSU.lean": "099d111579283cfc7be478b8025403c7ba0ae20a2387d3b07552d5f08eb65bc6",
+    "Ariadne/AInfinity/FamilySeedsT.lean": "c81886f386062dd34bd44f6a03a9db95093b8549ccc1fe4682da9d0f188f7c69",
+    "Ariadne/AInfinity/FamilySpec.lean": "c1ec7d42fb29713fc6061aae343458b6f237fb358f92801be84904b509225a72",
+    "Ariadne/AInfinity/FamilyWalk.lean": "325f06c82dbcc634ceed0ff5790b552414893ed2bfd78d9f14f7e52d4bdcc1d5",
+    "Ariadne/AInfinity/Finite/C07.lean": "f7a3819089c017a272af14a09c9ca96addea42af9cbf7fb298712ad7085c405a",
+    "Ariadne/AInfinity/Finite/C08.lean": "8973da1bd54054bbe60da447eb527ed5603e8bdd99db50f0a328515ff1ad7dda",
+    "Ariadne/AInfinity/Finite/C09.lean": "884328f6b527116d29262950ae5ec26477755ae48a35254f109bf81c37e02037",
+    "Ariadne/AInfinity/Finite/C10.lean": "249ca46d522191b15ceb69409377ea4f4db9d90601e66f042a3bdd73cbca9cb5",
+    "Ariadne/AInfinity/Finite/C11.lean": "b7323a31f0830fa209e34ef1c716bf5aed8708fc2b78f341b7f9c2d0ccda5eb7",
+    "Ariadne/AInfinity/Finite/C12.lean": "b66747e7608ece9e37bc15fd30578b4f884ceebe6b30e91b631874216c8878e1",
+    "Ariadne/AInfinity/Finite/C13.lean": "4c1814f19a259501c7c158bfa0c158bb84e837346caca7feccdb582f4832c632",
+    "Ariadne/AInfinity/Finite/C14.lean": "a5b47461df70644bca1edaba524bb03237202b0569883b00e6e5af2c37350e68",
+    "Ariadne/AInfinity/Finite/C15.lean": "6a030f784b36a91546b3f6f41cda0cc75d4f865c09fbd8f4eddb6f33c21acfef",
+    "Ariadne/AInfinity/Finite/C16.lean": "7b9edc68d036d11b8b7d5e111e67f3f1893b092382c49a06dbe94f54b1eb9179",
+    "Ariadne/AInfinity/Finite/C17.lean": "810791d36a196b6f97aa12049ef1f2920a15d2fa29101d70a432df55e13d9aba",
+    "Ariadne/AInfinity/Finite/C18.lean": "28745793a0b868933b699b9210a9564c0d96b85f9427643413a523ed6247c4b6",
+    "Ariadne/AInfinity/Finite/C19.lean": "efbb987f3a0a22b0f4a0ad82faee317d3ed43cc0377cd0d172d87d62903a08a9",
+    "Ariadne/AInfinity/Finite/C20.lean": "27900108e215028ba01f0dcb1b09fbe092f3b494deed78c1b763cd7877c6e671",
+    "Ariadne/AInfinity/Finite/C21.lean": "91d515897d996cb0de4a95a8cee42bcf35c53dfab6a3345b372643cb38bd043b",
+    "Ariadne/AInfinity/Finite/C22.lean": "fac2ee69cce345e83ff11cd34e8e9194374b5a45e329fe7fcbd215202df265dc",
+    "Ariadne/AInfinity/Finite/C23.lean": "f3deb797375e8bd9866730a62af76b04f848c1eea895a57f3febc652e947bfcb",
+    "Ariadne/AInfinity/Finite/C24.lean": "6177fc75b691f482aeca83fc78c4e53983f5c407fcc56e14cfc5d60e0a8e61b7",
+    "Ariadne/AInfinity/Finite.lean": "bd43966db655f6cd7f4f6ce8cddf8704f69525c085a71f24d3ea6b4c0cf62a75",
+    "Ariadne/AInfinity/GridBridge.lean": "034a970fee23625fbff1e9700e37c58889b4090d66cf8e83fa1a936ad1bb385d",
+    "Ariadne/AInfinity/GridCounts.lean": "91b31e56debc35ac8df4d4cbf916952cd5262c47bacefecce369c7e475042e0c",
+    "Ariadne/AInfinity/GridReturnF.lean": "7ac4ae669def255c0dbf234dcdc922900b7f8e0efbae6bde1d0ab7071ef8e0fe",
+    "Ariadne/AInfinity/GridReturnR.lean": "6d31ba82a9f3dbf062deb8296e51616344f39ea4ec0a90b798ce4892bb14b56c",
+    "Ariadne/AInfinity/GridReturnSU.lean": "ab4e05aa27a69a5c4062a876c5a95bbbd192ca1290e04abe9559091fa6bec822",
+    "Ariadne/AInfinity/GridSums.lean": "5ab56c1f467fa65683e055f4a590f6734cbd6957b8840e4964e47a40ab62bdb6",
+    "Ariadne/AInfinity/GridTerminalR.lean": "324e5cc35b9222d6ca446d09fc5add8dcf2909a5c1695b1777a8fb037bf3b8a2",
+    "Ariadne/AInfinity/GridTerminalRAlt.lean": "90c82312828333ea0ff4a046687218366ec68da9f70c42c5b878fdf198a08932",
+    "Ariadne/AInfinity/GridTerminalTF.lean": "3222fc484e242a8e906dda75a2be3d1542d4d822b771ff6e8221903002dcac5d",
+    "Ariadne/AInfinity/LargeAssembly.lean": "91f97dfca4869ca0bd252cc1f30669db2827694a4a3e3b5de74e36f7f5008d31",
+    "Ariadne/AInfinity/Literals/W000.lean": "4af2b75a6d4768e9c562527992e2a852fba66051c57d66cd5ed25685c2048cc4",
+    "Ariadne/AInfinity/Literals/W001.lean": "22f037b3caed652028d1890d62eedd37e6bc05d3572d5f18659d44ee64b3f3c8",
+    "Ariadne/AInfinity/Literals/W002.lean": "67c1d939871132c94d12583f4af9ff1434d09a030c7769d85e13065b6f51d49c",
+    "Ariadne/AInfinity/Literals/W003.lean": "a74e807b04e38356cf2d436a21f3defcedaaa575124b185820b3bcc4c3c8399f",
+    "Ariadne/AInfinity/Literals/W004.lean": "5aec6d306baa5e17cdc4ac24a2700af747b9b6a5f10f86b3868de764beb5cd9f",
+    "Ariadne/AInfinity/Literals/W005.lean": "b4a2bc73dfafbb488db793199779fdb612d5e4d6f95ae1ac3ee1b6d189f74d36",
+    "Ariadne/AInfinity/Literals/W006.lean": "6c1674b6a9228e4b725b063150a95aa168fc1f84d7c1c2a4f213de1a3232d8e9",
+    "Ariadne/AInfinity/Literals/W007.lean": "45f5f7d3e9b8f9a4b02e87c3ec40ef4c2c768400b40a3e5be843ee608e448800",
+    "Ariadne/AInfinity/Literals/W008.lean": "d8fa7402e276e2402b9cab0a4ae2bbddbd4bae09974ebe2b181f91583f9fe2b7",
+    "Ariadne/AInfinity/Literals/W009.lean": "f3e23aeaa9107ed86f7c510f7b13e8c35fef1c5e264a0d05b203b1d0a7436f53",
+    "Ariadne/AInfinity/Literals.lean": "da6e809e09871c232114984cb595b067a4a34fe48af077aedade8be89cf113d7",
+    "Ariadne/AInfinity/Main.lean": "a56fa5d51ca86b8a2121f65345800a081de978743660dd4a0c34773b6e5bbaef",
+    "Ariadne/AInfinity/OneShortArm.lean": "6b9d0eb9597f1c0aaaf862b941c6d1c3b85be54812bc93464507790a407b9e64",
+    "Ariadne/AInfinity/Router.lean": "ae671efb12d75683af1d619ae7e3ad0f0142c6869414f433017bb7abce136d0e",
+    "Ariadne/AInfinity/RouterFamilies.lean": "be3287a25970c7ff45979ddfda7684b32e0153131eb6c65d31ed61202049c972",
+    "Ariadne/AInfinity/SeedCertificate.lean": "e270a17a352c8e45c2288a0a5ccfa1ef3943c3356ef78659feaa2e71e99d3892",
+    "Ariadne/AInfinity/SeedSupply.lean": "e41528da2ed8dd19bde9d23f4edc7a61056d9356c853a85f9734a6e88e7dfabf",
+    "Ariadne/AInfinity/Threshold.lean": "05c461b775317507b67be218e5b2a6ca06ab458701c7f9203ddd0418b12a6e2a",
+    "Ariadne/Cert/Basic.lean": "69907ac942f531bafc517fa31bfc52d8e2a6aa0bfb0039d4b8544ae9aef3157d",
+    "Ariadne/Cert/FiniteInverse.lean": "f8dd0b97341606599d51b79949a9ad85d3b0888539934f21aff31b6769b5850f",
+    "Ariadne/Compact/BadFamilies.lean": "3d212336ffd49eb432bf97c9d004ab18a9249767d76a8cedd792d6b06535b4a4",
+    "Ariadne/Compact/Certificates.lean": "9dcc24acf82ca9668cf55f559d9080db429d821cb42d66f25ac6805e79053154",
+    "Ariadne/Compact/CertificatesAlpha.lean": "789a322c1e63012e1576575ce7936c387a03c60e57ae6762fd8552aa4236873d",
+    "Ariadne/Compact/CertificatesCoverage.lean": "59ca31b9f22a9f6dd839e17e7b3cdfe9a60e8437b58e876944bcc19e6354c6bf",
+    "Ariadne/Compact/CertificatesFinite00.lean": "1e4aac45b6668b2c63d1ec54f083b15a240deca86c08729b298c04a868e62dda",
+    "Ariadne/Compact/CertificatesFinite01.lean": "fb4445d739ecdfd65c83aa51e38f56f04ae36eb5122ef247dc29ed93181f36ec",
+    "Ariadne/Compact/CertificatesFinite02.lean": "1c2c19384bc9369b41b9527724f93d0cc27bc7cbd57beec7d9b7a3c8f7c56f84",
+    "Ariadne/Compact/CertificatesFinite03.lean": "38d38d1480b8d220e71bd93f75193e801a625104c31e3fd2749f601143f27685",
+    "Ariadne/Compact/CertificatesFinite04.lean": "69427bd256a19084c9a2b8f1170ddd17f0e54231728b7119a5a19703cae32b55",
+    "Ariadne/Compact/CertificatesFinite05.lean": "8af3878f443b9e732eae5b2780f034ec44232f37cd63572f265f6cdc9e44a5d2",
+    "Ariadne/Compact/CertificatesFinite06.lean": "137254314bfffe907b062634affca6bac85534685a3b3d10401d6497040a696b",
+    "Ariadne/Compact/CertificatesFinite07.lean": "b61e206ea50eb3bf21a237dc36a511f1be179b7fb79545cae3519bbba9c47e15",
+    "Ariadne/Compact/CertificatesFinite08.lean": "e1d9f2e167de2278a2c6c7fa438e32397c81b432995959c6f78380c7334f0d00",
+    "Ariadne/Compact/CertificatesHub.lean": "6785bcc6232922fcd1a78011610cbc1f251502235b2ddfa11f5c639670e4a9f2",
+    "Ariadne/Compact/CertificatesOffset.lean": "445ad426b1d99f0b45af95da5663dfb6c4206acb22d221ddd290146d657a7298",
+    "Ariadne/Compact/CertificatesSeven.lean": "74d14b801085b76aa39c2fa125fe8b36698ae58805dcbc67628ffeeb40882273",
+    "Ariadne/Compact/CertificatesSix.lean": "02dff0ccc98523fa2fa9c3d840e1d54314c0431d02067819fafcf86c1ff29c3e",
+    "Ariadne/Compact/CertificatesTests.lean": "624d2659340ab02aa2ec8ca3f3b98ea1ebf214d684ba951501bf580fc4ab060d",
+    "Ariadne/Compact/Exceptions.lean": "0ab6ca4b2217d27fff57ebfbd583d08c81a5253a3be38f0828eb3db005316d32",
+    "Ariadne/Compact/Reorder.lean": "6cf1afc024ae3b7a72b09aba4784ec7c1c88f5a47150a7ec32135f724ff2d6c1",
+    "Ariadne/Compact/Supply.lean": "02dd33a9a7426df5a324678eced74ed431bf4cfa5fefb34b8cb850bb0f9e3d25",
+    "Ariadne/Core/CompositionSpec.lean": "f4475ed34b032abf8119cf0e118fbb7d05d3a808e1acab2db0bdc96b2216f3f1",
+    "Ariadne/Core/EndpointPathSpec.lean": "408944e604a96e0d96eb44458114e70b8dc107d4840562e77f69693cf8dccfdf",
+    "Ariadne/Core/EndpointPaths.lean": "1d33e336e8e56994c7e253cedb16079ef117b6a88620d708ce7afdefe4693607",
+    "Ariadne/Core/Fusion/Basic.lean": "82ff20b3531b02ea8104a905b199dd38124be0dc1221be29823aa8ed53621fda",
+    "Ariadne/Core/Fusion/HubZero.lean": "bb3c5ccec5adf4803cfe4a5237d553fe30986138380b462296010b8b9e7616f2",
+    "Ariadne/Core/Fusion/Insertion.lean": "a579626b7e9d702c823d3f2ad778a4e3444f67f5e0088d5d023cf1321cabcf1e",
+    "Ariadne/Core/Fusion/Labels.lean": "030d4b311be361b03d7d7944b06b1dd0dff7629cbe3c2ac0d70ed0139269b034",
+    "Ariadne/Core/Fusion/Reindex.lean": "1232d72c4c09209616922f138aa4e6396ba6227f9f11f98f2e7ca79214dab096",
+    "Ariadne/Core/Fusion.lean": "8b6926f003f9d48b40deaad2973c7e377a1587278efc47b6cc722b71310e7000",
+    "Ariadne/Core/GracefulEndpointPaths.lean": "a932ce6be071575f7224222bef209c7b8d3b793b21aa3f23346eb9ea84477e55",
+    "Ariadne/Core/Grid.lean": "3a905697c38e42c34e7a8a7f15ccd418852d90f822ed7d9d749a0ce37aa9d404",
+    "Ariadne/Core/LabelTransforms.lean": "6b43e6da568a0d553107cbfc3ce8439432bfb93b65682dc1cb11894e97772eac",
+    "Ariadne/Core/LeafExtension.lean": "72f02ad84082914cbfce2a195278bfe626a30945688ea21279d963cc13723a7e",
+    "Ariadne/Core/LeafSpec.lean": "120b4e80b4b9b9f359a03b7776c908221340b41d5764b80087666dea7ea685db",
+    "Ariadne/Core/Path.lean": "1cb8b7f7de977c1734acfcee5487fe68a7f4e29f732cd1351e6c12662920074a",
+    "Ariadne/Core/PathSplit.lean": "48ff9f7acf1b4c8590d014a4fb37a85f9e820d4a69a45e28cba6c7cdaaab64de",
+    "Ariadne/Core/Reindex.lean": "601144d37dbab3e539264562d1a00d3feed1c4118a97c828b6cf5c905d7cfe2e",
+    "Ariadne/Core/Spider.lean": "9fb2c7fe361e783da048d82f5a5fd65afd8199d691fdb08fce204cf313ac41e1",
+    "Ariadne/Core/Topology.lean": "fd09c97487dae8f616d22c45f715a5a94ce95cb2f16030bdb4cf5934f107ce3f",
+    "Ariadne/Core/Zigzag.lean": "b869dc8ac2078da989574bc14fd64e72bfbc564bee3fd721a6fca64a0f7f0ef3",
+    "Ariadne/Seven/BS.lean": "99a1f7a79be1fac0baba5f6edcb6853ed2a68ec0d03b1a643400fe03a0011834",
+    "Ariadne/Seven/BSCore.lean": "45539165604b3ea7acb95036056bdb78ec2f136697726d035f93becf1803f223",
+    "Ariadne/Seven/Base.lean": "81f15b676ad568a676f949db18ba2b9d3d12c2326fbec47a5a683d857cb95126",
+    "Ariadne/Seven/BoundedTuples.lean": "0f9c84f08bdac6196a43224f80d7e333b705e1bc210c48befdd6748c99b814a9",
+    "Ariadne/Seven/EQ3.lean": "4939163fb6cbcf8edfdeb29d1ed5362504f426f21298fafe3f5d68f7b1bb1026",
+    "Ariadne/Seven/EQ3Arithmetic.lean": "ad7ef8067a44598b20b06cb3d758967a01c47f52c082449f40b1fe24e04ad229",
+    "Ariadne/Seven/EqualCore.lean": "2957d9f6a12c3a139750c1cdf2cd50af5061e0956eb42d19cbfd7f2782128bce",
+    "Ariadne/Seven/FiniteBaseSelector.lean": "3a9961d0d194b15edfad672a0abea97b50ee24d3a29e0d48cc6de34b196ee511",
+    "Ariadne/Seven/GP.lean": "408dbc17dcdde5acdbab1efd3d9a573c9e242bb5bb88dc284ee7758251e09506",
+    "Ariadne/Seven/GlobalCases.lean": "3e41d99838899b9d64a7e10c4b1e5971acff24feafd579464bf66b92e55b09d6",
+    "Ariadne/Seven/Joins.lean": "16a8283d653ce7c087e1ed186ec4a17b6de82361cd2def824037d6d4bbc5a6dc",
+    "Ariadne/Seven/Main.lean": "6243c2862ec53509b6e19b50e1fc89e44ba6dbf967d4d0e512569c1ca73da762",
+    "Ariadne/Seven/OneArm.lean": "761c33dfd4e7027f2b9d7bd557163584587f60208227c2e28a87d8b8d58bbf08",
+    "Ariadne/Seven/OuterPath.lean": "ec54f1b9123c987f4812c65ac08061e1452ddba9163c1b7e4d996d12432f58df",
+    "Ariadne/Seven/Repeated.lean": "119de6c6fffdcdefcdce12cb203c305e1c9d4a54b0f6d2cf579f2b9a6f2e4327",
+    "Ariadne/Seven/SpecialCoresBasic.lean": "8be460d4dbceee8afc59c233ec5a7cf439ad7005e0604adad7075fdfd2274f2f",
+    "Ariadne/Seven/SpecialCoresEven.lean": "5d9139653d15b8cba82e754ad7d68cb5303d334073180e0454879b23fcc533df",
+    "Ariadne/Seven/SpecialCoresOdd.lean": "044a0c810321d41ff13d2f0e30feb3865e9f89539ec9378327cefdbd570ab2e7",
+    "Ariadne/Six/Finite.lean": "5812908d50160a32bfb676bdfcc256abfc1f2028709657625b7bb5bd59493382",
+    "Ariadne/Six/Main.lean": "85a2e8b21bba4f825b02a0558df85afd7c2fb4985087d9323cbca4a590eb12d7",
+    "Ariadne/Six/Split.lean": "12a61c47a93f8ffbf46140e9218e30ef3c23d795f96166571924a33c7b89b5d5",
+    "Ariadne/Verify/Axioms.lean": "39ac79f1d212a0c85f8298a96738b35c97e9f91f9e4ab0bdaaa43f88f2962ea6",
+    "Ariadne/Verify/Boundary.lean": "3c4b7249b6a38ffa839047bcdb128d10ac04d59ff01e090d18214db2f0a6a8b9",
+    "Ariadne.lean": "cd62364c45b5a31d267c2a96a3562b7adf68ae28a55f62c2621b7810e2a523e9"
+  },
+  "full_AInfinity_proved": true,
+  "full_six_proved": true,
+  "full_seven_proved": true,
+  "compact_source_role_counts": {
+    "alpha_small": 44,
+    "six_hz": 7,
+    "six_direct": 18,
+    "offset": 22,
+    "seven_direct": 20,
+    "fixed_offset": 0
+  },
+  "compact_expanded_core_count": 164,
+  "scope": "Full A\u221e, all positive six-arm and seven-arm spiders; no eight-arm claim."
+}

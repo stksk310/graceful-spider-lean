@@ -1,0 +1,9 @@
+SOURCE E: 12 triples exactly matched
+FINITE O-MIN CORRIDOR: 164 actual offset cores definition-level PASS (no general proof)
+SEVEN EXCEPTIONAL SPLITS: 43 of 792 checked independently
+ACTUAL GRACEFUL LABELINGS: 37 of 43 definition-level PASS
+REMAINING: 6, not proof of nongracefulness
+ALL SEVEN BRIDGE FINITE CHECKS PASSED
+INHERITED FABLE SHA256 / CRC PASS: 84 literal source files
+SEVEN R01 MANIFEST PASS: 11 own files
+ALL SEVEN R01 INPUT CHECKS PASSED

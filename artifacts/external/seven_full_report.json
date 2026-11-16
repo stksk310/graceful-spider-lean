@@ -1,0 +1,271 @@
+{
+  "status": "PASS_FINAL_DISTRIBUTION_INDEPENDENT_DEFINITION_CHECKS",
+  "started_utc": "2026-11-16T00:20:41.988006+00:00",
+  "full": true,
+  "checker_uses_assertions": false,
+  "scope": "Independent definition checks of finite certificates and concrete constructor outputs; all-integer proof is in the proof documents.",
+  "code_sha256": {
+    "CODE/FIXED_TWOARM_SMALL.json": "7c9185c6bcbfa00e1f8823685af9c4dd512146886cc712f0847ab84555cc63b1",
+    "CODE/O_2_2_L1_BASES.json": "7a18d78a708dbf4b4623b81810d5cae05dfb5a609a0da49fe7cc5ade5d3312ba",
+    "CODE/O_2_2_L1_CONSTRUCTOR.py": "ec1c39829e28152f22ff754c2b9edeb7403bf296b9f7f30ddd17349fa7fd78da",
+    "CODE/SHORT_ARM_CONSTRUCTORS.py": "c78882e2d1f9275b4ccbcfb686f6a3cf2b42e319b69072b0578ffe476739937a",
+    "CODE/core_routes.py": "9fc27520e646db81f3573b9d5fdc882397379ba6beb9ed8eeb679ba026d486d7",
+    "CODE/even_boundary.py": "885bb9ea22da809e7ee579f3d54a57b7e9de6ff4d820ad210a8d7bea2fe5bc2f",
+    "CODE/fixed_twoarm.py": "5a165df19d4656f9839f60d8e201a654458abff31c6f100f6a0a152a8c8b7b2d",
+    "CODE/global_seven.py": "1e7509b03ddd6ebeca6718e278da3f59d95c5356d6345189fc596d72abb675a6",
+    "CODE/global_seven_audit.py": "7a946f7ae05de456eb9dcb1bd338941d9b29e8488eed86382a8e9f20c272cea7",
+    "CODE/independent_outer_path.py": "6a6972c696fb335efb1d488fb026ce82a7aa2e7c82fb3d757b84fa10c60a245b",
+    "CODE/three_equal_seven.py": "7bbd9d36c209ec35de16465daa75cf2abbd191a10363f598888760a257c669f3"
+  },
+  "input_sha256": {
+    "inherited_pieces_small": "34608f493ea341c0f11d19fa787be7f2039c4dff8b8d920fb10c16646867b790",
+    "inherited_library": "cbb8a254ef0dfa7b0ca6a6de0acb234665b503e7b0609b804ef4923d1382fb0a",
+    "inherited_cert37": "49515dc66f991a9f91db8556c815802e2877898424bbf044f049fe6c82803307",
+    "new_cert6": "82e29c1f8fdf1c824e29bc2b1ea694f7012dd129af1062727ffb3b896594311c",
+    "new_finite_135": "2fa6d45c4129bbdab91bad84e52e740d18754fdfe7ef7f767c5a4fc7be0b1f0c",
+    "random_log_128": "11f9852a1261ec82afa0e343ba414656a13ab7bf11f8b3fb87972807a1a8323c"
+  },
+  "finite_certificates": {
+    "six_actual_certificates": 6,
+    "inherited_seven_actual_certificates": 37,
+    "combined_exception_actual_certificates": 43,
+    "independent_exception_universe": 792,
+    "independently_enumerated_exceptions": 43,
+    "inherited_O_MIN_actual_certificates": 164,
+    "new_finite_O_MIN_actual_certificates": 135,
+    "random_log_records": 128,
+    "random_log_actual_certificates_verified": 59,
+    "random_log_unresolved_not_solutions": 69,
+    "random_log_unresolved_node_limit": 69,
+    "unresolved_are_not_counterexamples": true
+  },
+  "negative_checker_tests": {
+    "count": 19,
+    "rejected_cases": [
+      "hub_bool",
+      "hub_float",
+      "hub_string",
+      "hub_out_of_range",
+      "vertex_bool",
+      "vertex_float",
+      "vertex_out_of_range",
+      "duplicate_vertex",
+      "unique_vertices_but_duplicate_differences",
+      "truncated_arm",
+      "wrong_arm_count",
+      "noninteger_arm_length",
+      "missing_hub",
+      "wrong_q",
+      "valid_spider_in_wrong_input_arm_order",
+      "offset_nonzero_hub",
+      "offset_bool",
+      "offset_vertex_duplicate",
+      "offset_unique_vertices_but_duplicate_differences"
+    ],
+    "checks_survive_python_optimization": "All checks use explicit conditionals and exceptions."
+  },
+  "full_integration": {
+    "exhaustive_sorted_max_arm": 12,
+    "exhaustive_sorted_count": 31824,
+    "exhaustive_seconds": 11.035344563999999,
+    "seed": 20261114,
+    "random_cases": 1000,
+    "random_unsorted_cases": 750,
+    "random_sorted_cases": 250,
+    "random_seconds": 58.58213442000002,
+    "targeted_BS_cases": [
+      {
+        "case": "ordinary",
+        "lengths": [
+          8,
+          8,
+          9,
+          9,
+          10,
+          10,
+          11
+        ],
+        "edges": 65
+      },
+      {
+        "case": "left_resonance_escape",
+        "lengths": [
+          6,
+          12,
+          13,
+          13,
+          14,
+          14,
+          15
+        ],
+        "edges": 87
+      },
+      {
+        "case": "right_resonance_escape",
+        "lengths": [
+          6,
+          13,
+          13,
+          14,
+          14,
+          15,
+          15
+        ],
+        "edges": 90
+      }
+    ],
+    "large_cases": [
+      {
+        "name": "balanced_consecutive_40000",
+        "lengths": [
+          40000,
+          40001,
+          40002,
+          40003,
+          40004,
+          40005,
+          40006
+        ],
+        "edges": 280021,
+        "hub": 60005,
+        "plan": {
+          "global_route": "balanced_outer_pair",
+          "case": "ordinary",
+          "A": [
+            40001,
+            40005,
+            40006
+          ],
+          "w": 40000,
+          "a": 40002,
+          "u": 40004,
+          "v": 40003,
+          "c": 20000,
+          "s": 40001,
+          "K": 60001
+        },
+        "seconds": 1.5943285689999982,
+        "actual_output_sha256_compact_json": "c5a991acc7305d740504587eeb662911417436e7209d56ef204864b59cf16e2b"
+      },
+      {
+        "name": "three_equal_large_odd_surgery",
+        "lengths": [
+          40003,
+          40001,
+          20000,
+          40004,
+          40001,
+          40002,
+          40001
+        ],
+        "edges": 260012,
+        "hub": 60004,
+        "plan": {
+          "global_route": "three_equal",
+          "subplan": {
+            "route": "bridge",
+            "A": [
+              40002,
+              40003,
+              40004
+            ],
+            "w": 20000,
+            "T": [
+              40001,
+              40001,
+              40001
+            ],
+            "c": 10000,
+            "core": "equal"
+          }
+        },
+        "seconds": 1.9113108139999895,
+        "actual_output_sha256_compact_json": "db6a85fab16801e8bfb102fe87b6cc966897a4beaec0acc8db1ce889bacf38f9"
+      },
+      {
+        "name": "fixed_226_266_with_long_arm",
+        "lengths": [
+          2,
+          6,
+          2,
+          250000,
+          6,
+          2,
+          6
+        ],
+        "edges": 250024,
+        "hub": 125000,
+        "plan": {
+          "global_route": "three_equal",
+          "subplan": {
+            "route": "fixed_266_226",
+            "w": 250000
+          }
+        },
+        "seconds": 1.5680060029999936,
+        "actual_output_sha256_compact_json": "fd10e27128c7c1fb561dae6d358cf4393bd7805a9e53489fa41d740c00e32290"
+      },
+      {
+        "name": "extreme_imbalance",
+        "lengths": [
+          300000,
+          1,
+          6,
+          2,
+          5,
+          3,
+          4
+        ],
+        "edges": 300021,
+        "hub": 150005,
+        "plan": {
+          "global_route": "four_short",
+          "subplan": {
+            "route": "bridge",
+            "A": [
+              5,
+              6,
+              300000
+            ],
+            "w": 1,
+            "T": [
+              2,
+              3,
+              4
+            ],
+            "c": 0,
+            "core": "finite_164"
+          }
+        },
+        "seconds": 2.7194538409999893,
+        "actual_output_sha256_compact_json": "8fc3bbb67d1a49c1921089f0d0be454bbf75d60c52d2d49b0a399e6120491d12"
+      }
+    ],
+    "generated_seven_spiders_total": 32831,
+    "independently_verified_generated_edges_total": 13444419,
+    "largest_verified_edge_count": 300021,
+    "global_route_counts": {
+      "balanced_outer_pair": 283,
+      "exceptional_short_triple": 405,
+      "finite_base8": 3432,
+      "four_short": 10167,
+      "long_largest": 5154,
+      "three_equal": 13390
+    },
+    "subroute_counts": {
+      "bridge": 25485,
+      "fixed_266_226": 5,
+      "literal43": 43,
+      "long_arm": 7011,
+      "three_pendants": 4
+    },
+    "balanced_case_counts": {
+      "left_resonance_escape": 1,
+      "ordinary": 281,
+      "right_resonance_escape": 1
+    }
+  },
+  "code_unchanged_during_run": true,
+  "finished_utc": "2026-11-16T00:21:59.503784+00:00",
+  "elapsed_seconds": 77.515987546
+}

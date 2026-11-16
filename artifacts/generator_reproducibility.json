@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "checked_files": {
+    "Ariadne/Compact/Certificates.lean": "9dcc24acf82ca9668cf55f559d9080db429d821cb42d66f25ac6805e79053154",
+    "Ariadne/Compact/CertificatesAlpha.lean": "789a322c1e63012e1576575ce7936c387a03c60e57ae6762fd8552aa4236873d",
+    "Ariadne/Compact/CertificatesCoverage.lean": "59ca31b9f22a9f6dd839e17e7b3cdfe9a60e8437b58e876944bcc19e6354c6bf",
+    "Ariadne/Compact/CertificatesFinite00.lean": "1e4aac45b6668b2c63d1ec54f083b15a240deca86c08729b298c04a868e62dda",
+    "Ariadne/Compact/CertificatesFinite01.lean": "fb4445d739ecdfd65c83aa51e38f56f04ae36eb5122ef247dc29ed93181f36ec",
+    "Ariadne/Compact/CertificatesFinite02.lean": "1c2c19384bc9369b41b9527724f93d0cc27bc7cbd57beec7d9b7a3c8f7c56f84",
+    "Ariadne/Compact/CertificatesFinite03.lean": "38d38d1480b8d220e71bd93f75193e801a625104c31e3fd2749f601143f27685",
+    "Ariadne/Compact/CertificatesFinite04.lean": "69427bd256a19084c9a2b8f1170ddd17f0e54231728b7119a5a19703cae32b55",
+    "Ariadne/Compact/CertificatesFinite05.lean": "8af3878f443b9e732eae5b2780f034ec44232f37cd63572f265f6cdc9e44a5d2",
+    "Ariadne/Compact/CertificatesFinite06.lean": "137254314bfffe907b062634affca6bac85534685a3b3d10401d6497040a696b",
+    "Ariadne/Compact/CertificatesFinite07.lean": "b61e206ea50eb3bf21a237dc36a511f1be179b7fb79545cae3519bbba9c47e15",
+    "Ariadne/Compact/CertificatesFinite08.lean": "e1d9f2e167de2278a2c6c7fa438e32397c81b432995959c6f78380c7334f0d00",
+    "Ariadne/Compact/CertificatesHub.lean": "6785bcc6232922fcd1a78011610cbc1f251502235b2ddfa11f5c639670e4a9f2",
+    "Ariadne/Compact/CertificatesOffset.lean": "445ad426b1d99f0b45af95da5663dfb6c4206acb22d221ddd290146d657a7298",
+    "Ariadne/Compact/CertificatesSeven.lean": "74d14b801085b76aa39c2fa125fe8b36698ae58805dcbc67628ffeeb40882273",
+    "Ariadne/Compact/CertificatesSix.lean": "02dff0ccc98523fa2fa9c3d840e1d54314c0431d02067819fafcf86c1ff29c3e",
+    "Ariadne/Compact/CertificatesTests.lean": "624d2659340ab02aa2ec8ca3f3b98ea1ebf214d684ba951501bf580fc4ab060d",
+    "Ariadne/Compact/Supply.lean": "02dd33a9a7426df5a324678eced74ed431bf4cfa5fefb34b8cb850bb0f9e3d25",
+    "Ariadne/Seven/FiniteBaseSelector.lean": "3a9961d0d194b15edfad672a0abea97b50ee24d3a29e0d48cc6de34b196ee511",
+    "artifacts/compact_certificate_manifest.json": "d6d6a18180fdcb80e26422a16f5a12a7a315acdc8a7decf8c79e4982373725df"
+  },
+  "method": "Regenerated in isolated temporary directory; compared bytes without touching built source tree."
+}
